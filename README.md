@@ -1,3 +1,3 @@
 # PZI_Projekt
 
-Opis projekta za kolegij PZI
+Opis projekta za kolegij PZI 
