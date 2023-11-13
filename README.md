@@ -1,0 +1,2 @@
+# pzitest
+Opis pzi kolegij
