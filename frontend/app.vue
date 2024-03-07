@@ -39,7 +39,7 @@
             <h4>Načini kupnje</h4>
             <p>Molimo pročitajte naše uvjete korištenja prije kupnje.</p>
             
-            <router-link to="/uvjeti-koristenja">Linkovi</router-link>
+            <p>Linkovi</p>
           </v-col>
         </v-row>
       </v-container>
