@@ -4,57 +4,57 @@
     {
       "name": "vite:load-fallback",
       "result": "<template>\r\n  <div>\r\n    <v-container>\r\n      <v-row justify=\"center\">\r\n        <v-col cols=\"12\" sm=\"8\" md=\"6\">\r\n          <v-card class=\"small-card\">\r\n            <v-card-title class=\"text-h6 text-center\" style=\"font-family: ; color: #2b9300;\">Prodaja umjetnine</v-card-title>\r\n            <v-card-text>\r\n              <v-form @submit.prevent=\"submitForm\">\r\n                <v-text-field v-model=\"naslov\" label=\"Naslov umjetnine\" required persistent></v-text-field>\r\n                <v-text-field v-model=\"cijena\" label=\"Cijena umjetnine\" required persistent></v-text-field>\r\n                <v-text-field v-model=\"autor\" label=\"Autor umjetnine\" required persistent></v-text-field>\r\n                <v-text-field v-model=\"godina\" label=\"Godina stvaranja\" required persistent></v-text-field>\r\n                <v-text-field v-model=\"tehnika\" label=\"Tehnika\" required persistent></v-text-field>\r\n                <v-text-field v-model=\"url\" label=\"URL\" required persistent></v-text-field>\r\n                <input type=\"file\" ref=\"fileInput\" @change=\"handleFileChange\" accept=\".jpg, .jpeg, .png\" />\r\n                <br><br>\r\n                <v-btn type=\"submit\" color=\"green\">Potvrdi</v-btn>\r\n              </v-form>\r\n              <br>\r\n            </v-card-text>\r\n          </v-card>\r\n        </v-col>\r\n      </v-row>\r\n    </v-container>\r\n  </div>\r\n</template>\r\n\r\n\r\n<script>\r\nexport default {\r\n  data() {\r\n    return {\r\n      naslov: '',\r\n      cijena: '',\r\n      autor: '',\r\n      godina: '',\r\n      tehnika: '',\r\n      url: ''\r\n    };\r\n  },\r\n  methods: {\r\n    async submitForm() {\r\n      try {\r\n        const response = await $fetch('http://localhost:5000/products', {\r\n          method: 'POST',\r\n          body: {\r\n            name: this.naslov,\r\n            price: this.cijena,\r\n            author: this.autor,\r\n            year: this.godina,\r\n            technique: this.tehnika,\r\n            url: this.url,\r\n            seller_id: 1\r\n          }\r\n        })\r\n      } catch (error) {\r\n        console.log(error);\r\n      }\r\n    }\r\n  }\r\n}\r\n</script>\r\n",
-      "start": 1709832456194,
-      "end": 1709832456953,
+      "start": 1709881161122,
+      "end": 1709881161864,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1709832456953,
-      "end": 1709832456953,
+      "start": 1709881161864,
+      "end": 1709881161864,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1709832456953,
-      "end": 1709832456953,
+      "start": 1709881161864,
+      "end": 1709881161864,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1709832456953,
-      "end": 1709832456953,
+      "start": 1709881161864,
+      "end": 1709881161864,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1709832456953,
-      "end": 1709832456953,
+      "start": 1709881161864,
+      "end": 1709881161864,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1709832456953,
-      "end": 1709832456953,
+      "start": 1709881161864,
+      "end": 1709881161864,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1709832456953,
-      "end": 1709832456953,
+      "start": 1709881161864,
+      "end": 1709881161864,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1709832456953,
-      "end": 1709832456953,
+      "start": 1709881161864,
+      "end": 1709881161864,
       "order": "normal"
     },
     {
       "name": "vite:vue",
       "result": "\r\nconst _sfc_main = {\r\n  data() {\r\n    return {\r\n      naslov: '',\r\n      cijena: '',\r\n      autor: '',\r\n      godina: '',\r\n      tehnika: '',\r\n      url: ''\r\n    };\r\n  },\r\n  methods: {\r\n    async submitForm() {\r\n      try {\r\n        const response = await $fetch('http://localhost:5000/products', {\r\n          method: 'POST',\r\n          body: {\r\n            name: this.naslov,\r\n            price: this.cijena,\r\n            author: this.autor,\r\n            year: this.godina,\r\n            technique: this.tehnika,\r\n            url: this.url,\r\n            seller_id: 1\r\n          }\r\n        })\r\n      } catch (error) {\r\n        console.log(error);\r\n      }\r\n    }\r\n  }\r\n}\r\n\nimport { createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, createElementVNode as _createElementVNode, withModifiers as _withModifiers, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"br\", null, null, -1)\nconst _hoisted_2 = /*#__PURE__*/_createElementVNode(\"br\", null, null, -1)\nconst _hoisted_3 = /*#__PURE__*/_createElementVNode(\"br\", null, null, -1)\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_v_card_title = _resolveComponent(\"v-card-title\")\n  const _component_v_text_field = _resolveComponent(\"v-text-field\")\n  const _component_v_btn = _resolveComponent(\"v-btn\")\n  const _component_v_form = _resolveComponent(\"v-form\")\n  const _component_v_card_text = _resolveComponent(\"v-card-text\")\n  const _component_v_card = _resolveComponent(\"v-card\")\n  const _component_v_col = _resolveComponent(\"v-col\")\n  const _component_v_row = _resolveComponent(\"v-row\")\n  const _component_v_container = _resolveComponent(\"v-container\")\n\n  return (_openBlock(), _createElementBlock(\"div\", null, [\n    _createVNode(_component_v_container, null, {\n      default: _withCtx(() => [\n        _createVNode(_component_v_row, { justify: \"center\" }, {\n          default: _withCtx(() => [\n            _createVNode(_component_v_col, {\n              cols: \"12\",\n              sm: \"8\",\n              md: \"6\"\n            }, {\n              default: _withCtx(() => [\n                _createVNode(_component_v_card, { class: \"small-card\" }, {\n                  default: _withCtx(() => [\n                    _createVNode(_component_v_card_title, {\n                      class: \"text-h6 text-center\",\n                      style: {\"font-family\":\"\",\"color\":\"#2b9300\"}\n                    }, {\n                      default: _withCtx(() => [\n                        _createTextVNode(\"Prodaja umjetnine\")\n                      ]),\n                      _: 1\n                    }),\n                    _createVNode(_component_v_card_text, null, {\n                      default: _withCtx(() => [\n                        _createVNode(_component_v_form, {\n                          onSubmit: _withModifiers($options.submitForm, [\"prevent\"])\n                        }, {\n                          default: _withCtx(() => [\n                            _createVNode(_component_v_text_field, {\n                              modelValue: $data.naslov,\n                              \"onUpdate:modelValue\": _cache[0] || (_cache[0] = $event => (($data.naslov) = $event)),\n                              label: \"Naslov umjetnine\",\n                              required: \"\",\n                              persistent: \"\"\n                            }, null, 8, [\"modelValue\"]),\n                            _createVNode(_component_v_text_field, {\n                              modelValue: $data.cijena,\n                              \"onUpdate:modelValue\": _cache[1] || (_cache[1] = $event => (($data.cijena) = $event)),\n                              label: \"Cijena umjetnine\",\n                              required: \"\",\n                              persistent: \"\"\n                            }, null, 8, [\"modelValue\"]),\n                            _createVNode(_component_v_text_field, {\n                              modelValue: $data.autor,\n                              \"onUpdate:modelValue\": _cache[2] || (_cache[2] = $event => (($data.autor) = $event)),\n                              label: \"Autor umjetnine\",\n                              required: \"\",\n                              persistent: \"\"\n                            }, null, 8, [\"modelValue\"]),\n                            _createVNode(_component_v_text_field, {\n                              modelValue: $data.godina,\n                              \"onUpdate:modelValue\": _cache[3] || (_cache[3] = $event => (($data.godina) = $event)),\n                              label: \"Godina stvaranja\",\n                              required: \"\",\n                              persistent: \"\"\n                            }, null, 8, [\"modelValue\"]),\n                            _createVNode(_component_v_text_field, {\n                              modelValue: $data.tehnika,\n                              \"onUpdate:modelValue\": _cache[4] || (_cache[4] = $event => (($data.tehnika) = $event)),\n                              label: \"Tehnika\",\n                              required: \"\",\n                              persistent: \"\"\n                            }, null, 8, [\"modelValue\"]),\n                            _createVNode(_component_v_text_field, {\n                              modelValue: $data.url,\n                              \"onUpdate:modelValue\": _cache[5] || (_cache[5] = $event => (($data.url) = $event)),\n                              label: \"URL\",\n                              required: \"\",\n                              persistent: \"\"\n                            }, null, 8, [\"modelValue\"]),\n                            _createElementVNode(\"input\", {\n                              type: \"file\",\n                              ref: \"fileInput\",\n                              onChange: _cache[6] || (_cache[6] = (...args) => (_ctx.handleFileChange && _ctx.handleFileChange(...args))),\n                              accept: \".jpg, .jpeg, .png\"\n                            }, null, 544),\n                            _hoisted_1,\n                            _hoisted_2,\n                            _createVNode(_component_v_btn, {\n                              type: \"submit\",\n                              color: \"green\"\n                            }, {\n                              default: _withCtx(() => [\n                                _createTextVNode(\"Potvrdi\")\n                              ]),\n                              _: 1\n                            })\n                          ]),\n                          _: 1\n                        }, 8, [\"onSubmit\"]),\n                        _hoisted_3\n                      ]),\n                      _: 1\n                    })\n                  ]),\n                  _: 1\n                })\n              ]),\n              _: 1\n            })\n          ]),\n          _: 1\n        })\n      ]),\n      _: 1\n    })\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
-      "start": 1709832456953,
-      "end": 1709832456962,
+      "start": 1709881161864,
+      "end": 1709881161867,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -62,160 +62,160 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1709832456962,
-      "end": 1709832456962,
+      "start": 1709881161868,
+      "end": 1709881161868,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1709832456962,
-      "end": 1709832456962,
+      "start": 1709881161868,
+      "end": 1709881161868,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1709832456962,
-      "end": 1709832456962,
+      "start": 1709881161868,
+      "end": 1709881161868,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1709832456962,
-      "end": 1709832456962,
+      "start": 1709881161868,
+      "end": 1709881161868,
       "order": "normal"
     },
     {
       "name": "vuetify:import",
       "result": "\r\nconst _sfc_main = {\r\n  data() {\r\n    return {\r\n      naslov: '',\r\n      cijena: '',\r\n      autor: '',\r\n      godina: '',\r\n      tehnika: '',\r\n      url: ''\r\n    };\r\n  },\r\n  methods: {\r\n    async submitForm() {\r\n      try {\r\n        const response = await $fetch('http://localhost:5000/products', {\r\n          method: 'POST',\r\n          body: {\r\n            name: this.naslov,\r\n            price: this.cijena,\r\n            author: this.autor,\r\n            year: this.godina,\r\n            technique: this.tehnika,\r\n            url: this.url,\r\n            seller_id: 1\r\n          }\r\n        })\r\n      } catch (error) {\r\n        console.log(error);\r\n      }\r\n    }\r\n  }\r\n}\r\n\nimport { createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, createElementVNode as _createElementVNode, withModifiers as _withModifiers, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"br\", null, null, -1)\nconst _hoisted_2 = /*#__PURE__*/_createElementVNode(\"br\", null, null, -1)\nconst _hoisted_3 = /*#__PURE__*/_createElementVNode(\"br\", null, null, -1)\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n                                                                   \n                                                                   \n                                                     \n                                                       \n                                                                 \n                                                       \n                                                     \n                                                     \n                                                                 \n\n  return (_openBlock(), _createElementBlock(\"div\", null, [\n    _createVNode(_component_v_container, null, {\n      default: _withCtx(() => [\n        _createVNode(_component_v_row, { justify: \"center\" }, {\n          default: _withCtx(() => [\n            _createVNode(_component_v_col, {\n              cols: \"12\",\n              sm: \"8\",\n              md: \"6\"\n            }, {\n              default: _withCtx(() => [\n                _createVNode(_component_v_card, { class: \"small-card\" }, {\n                  default: _withCtx(() => [\n                    _createVNode(_component_v_card_title, {\n                      class: \"text-h6 text-center\",\n                      style: {\"font-family\":\"\",\"color\":\"#2b9300\"}\n                    }, {\n                      default: _withCtx(() => [\n                        _createTextVNode(\"Prodaja umjetnine\")\n                      ]),\n                      _: 1\n                    }),\n                    _createVNode(_component_v_card_text, null, {\n                      default: _withCtx(() => [\n                        _createVNode(_component_v_form, {\n                          onSubmit: _withModifiers($options.submitForm, [\"prevent\"])\n                        }, {\n                          default: _withCtx(() => [\n                            _createVNode(_component_v_text_field, {\n                              modelValue: $data.naslov,\n                              \"onUpdate:modelValue\": _cache[0] || (_cache[0] = $event => (($data.naslov) = $event)),\n                              label: \"Naslov umjetnine\",\n                              required: \"\",\n                              persistent: \"\"\n                            }, null, 8, [\"modelValue\"]),\n                            _createVNode(_component_v_text_field, {\n                              modelValue: $data.cijena,\n                              \"onUpdate:modelValue\": _cache[1] || (_cache[1] = $event => (($data.cijena) = $event)),\n                              label: \"Cijena umjetnine\",\n                              required: \"\",\n                              persistent: \"\"\n                            }, null, 8, [\"modelValue\"]),\n                            _createVNode(_component_v_text_field, {\n                              modelValue: $data.autor,\n                              \"onUpdate:modelValue\": _cache[2] || (_cache[2] = $event => (($data.autor) = $event)),\n                              label: \"Autor umjetnine\",\n                              required: \"\",\n                              persistent: \"\"\n                            }, null, 8, [\"modelValue\"]),\n                            _createVNode(_component_v_text_field, {\n                              modelValue: $data.godina,\n                              \"onUpdate:modelValue\": _cache[3] || (_cache[3] = $event => (($data.godina) = $event)),\n                              label: \"Godina stvaranja\",\n                              required: \"\",\n                              persistent: \"\"\n                            }, null, 8, [\"modelValue\"]),\n                            _createVNode(_component_v_text_field, {\n                              modelValue: $data.tehnika,\n                              \"onUpdate:modelValue\": _cache[4] || (_cache[4] = $event => (($data.tehnika) = $event)),\n                              label: \"Tehnika\",\n                              required: \"\",\n                              persistent: \"\"\n                            }, null, 8, [\"modelValue\"]),\n                            _createVNode(_component_v_text_field, {\n                              modelValue: $data.url,\n                              \"onUpdate:modelValue\": _cache[5] || (_cache[5] = $event => (($data.url) = $event)),\n                              label: \"URL\",\n                              required: \"\",\n                              persistent: \"\"\n                            }, null, 8, [\"modelValue\"]),\n                            _createElementVNode(\"input\", {\n                              type: \"file\",\n                              ref: \"fileInput\",\n                              onChange: _cache[6] || (_cache[6] = (...args) => (_ctx.handleFileChange && _ctx.handleFileChange(...args))),\n                              accept: \".jpg, .jpeg, .png\"\n                            }, null, 544),\n                            _hoisted_1,\n                            _hoisted_2,\n                            _createVNode(_component_v_btn, {\n                              type: \"submit\",\n                              color: \"green\"\n                            }, {\n                              default: _withCtx(() => [\n                                _createTextVNode(\"Potvrdi\")\n                              ]),\n                              _: 1\n                            })\n                          ]),\n                          _: 1\n                        }, 8, [\"onSubmit\"]),\n                        _hoisted_3\n                      ]),\n                      _: 1\n                    })\n                  ]),\n                  _: 1\n                })\n              ]),\n              _: 1\n            })\n          ]),\n          _: 1\n        })\n      ]),\n      _: 1\n    })\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])\n\n/* Vuetify */\nimport { VBtn as _component_v_btn } from \"vuetify/lib/components/VBtn/index.mjs\"\nimport { VCardTitle as _component_v_card_title, VCardText as _component_v_card_text, VCard as _component_v_card } from \"vuetify/lib/components/VCard/index.mjs\"\nimport { VForm as _component_v_form } from \"vuetify/lib/components/VForm/index.mjs\"\nimport { VCol as _component_v_col, VRow as _component_v_row, VContainer as _component_v_container } from \"vuetify/lib/components/VGrid/index.mjs\"\nimport { VTextField as _component_v_text_field } from \"vuetify/lib/components/VTextField/index.mjs\"\n\n",
-      "start": 1709832456962,
-      "end": 1709832456963,
+      "start": 1709881161868,
+      "end": 1709881161868,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1709832456963,
-      "end": 1709832456963,
+      "start": 1709881161868,
+      "end": 1709881161868,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1709832456963,
-      "end": 1709832456963,
+      "start": 1709881161868,
+      "end": 1709881161868,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1709832456963,
-      "end": 1709832456963,
+      "start": 1709881161868,
+      "end": 1709881161868,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1709832456963,
-      "end": 1709832456963,
+      "start": 1709881161868,
+      "end": 1709881161868,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1709832456963,
-      "end": 1709832456963,
+      "start": 1709881161868,
+      "end": 1709881161868,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1709832456963,
-      "end": 1709832456963,
+      "start": 1709881161868,
+      "end": 1709881161868,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1709832456963,
-      "end": 1709832456964,
+      "start": 1709881161868,
+      "end": 1709881161868,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1709832456964,
-      "end": 1709832456964,
+      "start": 1709881161868,
+      "end": 1709881161868,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1709832456964,
-      "end": 1709832456964,
+      "start": 1709881161868,
+      "end": 1709881161868,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1709832456964,
-      "end": 1709832456964,
+      "start": 1709881161868,
+      "end": 1709881161868,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1709832456964,
-      "end": 1709832456964,
+      "start": 1709881161868,
+      "end": 1709881161868,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1709832456964,
-      "end": 1709832456964,
+      "start": 1709881161868,
+      "end": 1709881161868,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1709832456964,
-      "end": 1709832456969,
+      "start": 1709881161868,
+      "end": 1709881161870,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1709832456969,
-      "end": 1709832456969,
+      "start": 1709881161871,
+      "end": 1709881161871,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1709832456970,
-      "end": 1709832456970,
+      "start": 1709881161871,
+      "end": 1709881161871,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1709832456970,
-      "end": 1709832456970,
+      "start": 1709881161871,
+      "end": 1709881161871,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1709832456970,
-      "end": 1709832456970,
+      "start": 1709881161871,
+      "end": 1709881161871,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1709832456970,
-      "end": 1709832456970,
+      "start": 1709881161871,
+      "end": 1709881161871,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1709832456970,
-      "end": 1709832456970,
+      "start": 1709881161871,
+      "end": 1709881161871,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1709832456970,
-      "end": 1709832456970,
+      "start": 1709881161871,
+      "end": 1709881161871,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1709832456970,
-      "end": 1709832456970,
+      "start": 1709881161871,
+      "end": 1709881161871,
       "order": "normal"
     }
   ]
