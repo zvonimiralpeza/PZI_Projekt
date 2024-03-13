@@ -42,7 +42,7 @@ export default {
   methods: {
     async submitForm() {
       try {
-        const response = await $fetch('http://localhost:5000/products', {
+        const response = await $fetch(`${this.$config.public.BASE_URL}/products`, {
           method: 'POST',
           body: {
             name: this.naslov,

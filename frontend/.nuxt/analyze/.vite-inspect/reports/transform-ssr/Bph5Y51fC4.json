@@ -1,0 +1,290 @@
+{
+  "resolvedId": "C:/Users/DT User/Desktop/ProjektPZI/frontend/app.vue?vue&type=style&index=0&lang.css",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "\n/* Add your custom styles here */\n",
+      "start": 1710361563888,
+      "end": 1710361563888,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "C:/Users/DT User/Desktop/ProjektPZI/frontend/app.vue"
+        ],
+        "names": [],
+        "mappings": ";AA4FA,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC",
+        "file": "C:/Users/DT User/Desktop/ProjektPZI/frontend/app.vue",
+        "sourceRoot": "",
+        "sourcesContent": [
+          "<template>\n  <v-app>\n    <v-app-bar location=\"top\" color=\"black\" >\n      <v-toolbar-title>\n        PRODAJA & KUPOVINA UMJETNICKIH DJELA\n      </v-toolbar-title>\n\n\n      <NuxtLink to=\"/\" class=\"mx-5\">NASLOVNA</NuxtLink>\n      <NuxtLink to=\"/akcija\" class=\"mx-5\" v-if=\"!user\">UVID ZA GOSTE</NuxtLink>\n      <NuxtLink to=\"/kupovina\" class=\"mx-5\" v-if=\"user\">KUPOVINA SLIKA</NuxtLink>\n      <NuxtLink to=\"/prodaja\" class=\"mx-5\" v-if=\"user\">PRODAJA SLIKA</NuxtLink>\n      <NuxtLink to=\"/login\" class=\"mx-5\" v-if=\"!user\">LOGIN</NuxtLink>\n      <NuxtLink to=\"/registracija\" class=\"mx-5\" v-if=\"!user\">REGISTRACIJA</NuxtLink>\n      <NuxtLink to=\"/Onama\" class=\"mx-5\">O NAMA</NuxtLink>\n      <v-btn v-if=\"user\" @click=\"userLogout\" color=\"red\">Logout</v-btn>\n    </v-app-bar>\n    \n    <NuxtPage style=\"padding-top: 64px; height: 100%;\"/>\n\n    <v-footer color=\"black\">\n      <v-spacer></v-spacer>\n\n      <v-container>\n        <v-row>\n          <v-col>\n            <h4>Kontaktirajte nas</h4>\n            <p>Broj telefona: +123 456 789</p>\n            <p>Email: info@umjetnickagalerija.com</p>\n          </v-col>\n\n          <v-col>\n            <h4>Lokacija</h4>\n            <p>Adresa: Matice hrvatske, Mostar, BiH</p>\n            <p>Radno vrijeme: Pon - Pet: 8:00 - 16:00</p>\n          </v-col>\n\n          <v-col>\n            <h4>Načini kupnje</h4>\n            <p>Molimo pročitajte naše uvjete korištenja prije kupnje.</p>\n            \n            <p>Linkovi</p>\n          </v-col>\n        </v-row>\n      </v-container>\n      \n      <v-spacer></v-spacer>\n    </v-footer>\n  </v-app>\n</template>\n\n<script>\nimport { mapWritableState  } from 'pinia';\nimport { useUsersStore } from './stores/users.js'\n\nexport default {\n  mounted () {\n    if (!this.user) {\n      this.user = JSON.parse(localStorage.getItem('user'))\n    }\n  },\n  data() {\n    return {\n      drawer: false,\n      selectedItem1: null,\n      selectedItem2: null,\n      menuItems1: ['Opcija 1', 'Opcija 2', 'Opcija 3'],\n      menuItems2: ['Opcija A', 'Opcija B', 'Opcija C'],\n    };\n  },\n  methods: {\n    handleButtonClick() {\n      // Implementirajte logiku kada se pritisne gumb\n      console.log('Button clicked!');\n    },\n    handleAuthorClick(author) {\n      // Implementirajte logiku kada se odabere autor iz opadajućeg izbornika\n      console.log(`Selected Author: ${author}`);\n    },\n    userLogout () {\n      this.user = null\n      localStorage.removeItem('user')\n      navigateTo('/')\n    }\n  },\n  computed: {\n    ...mapWritableState(useUsersStore, ['user'])\n  }\n};\n</script>\n\n<style>\n/* Add your custom styles here */\n</style>"
+        ]
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1710361563888,
+      "end": 1710361563888,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1710361563888,
+      "end": 1710361563888,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1710361563890,
+      "end": 1710361563890,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1710361563890,
+      "end": 1710361563890,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1710361563890,
+      "end": 1710361563890,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": "",
+      "start": 1710361563890,
+      "end": 1710361563915,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "C:/Users/DT User/Desktop/ProjektPZI/frontend/app.vue",
+        "mappings": "",
+        "names": [],
+        "sources": [],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1710361563915,
+      "end": 1710361563915,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1710361563915,
+      "end": 1710361563915,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1710361563915,
+      "end": 1710361563915,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "",
+      "start": 1710361563915,
+      "end": 1710361563916,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "C:/Users/DT User/Desktop/ProjektPZI/frontend/app.vue",
+        "mappings": "",
+        "names": [],
+        "sources": [],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1710361563916,
+      "end": 1710361563916,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1710361563916,
+      "end": 1710361563916,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1710361563916,
+      "end": 1710361563916,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1710361563916,
+      "end": 1710361563916,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1710361563916,
+      "end": 1710361563916,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1710361563916,
+      "end": 1710361563916,
+      "order": "normal"
+    },
+    {
+      "name": "vuetify:import",
+      "start": 1710361563916,
+      "end": 1710361563916,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1710361563916,
+      "end": 1710361563916,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1710361563916,
+      "end": 1710361563916,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1710361563916,
+      "end": 1710361563916,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1710361563916,
+      "end": 1710361563916,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "export default ''",
+      "start": 1710361563916,
+      "end": 1710361563916,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1710361563916,
+      "end": 1710361563917,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1710361563917,
+      "end": 1710361563917,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1710361563917,
+      "end": 1710361563917,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1710361563917,
+      "end": 1710361563917,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1710361563917,
+      "end": 1710361563917,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1710361563917,
+      "end": 1710361563917,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1710361563917,
+      "end": 1710361563917,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1710361563917,
+      "end": 1710361563917,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1710361563917,
+      "end": 1710361563917,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1710361563917,
+      "end": 1710361563917,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1710361563917,
+      "end": 1710361563917,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1710361563917,
+      "end": 1710361563917,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1710361563917,
+      "end": 1710361563917,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1710361563917,
+      "end": 1710361563917,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1710361563917,
+      "end": 1710361563917,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1710361563917,
+      "end": 1710361563917,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1710361563917,
+      "end": 1710361563918,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1710361563918,
+      "end": 1710361563918,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1710361563918,
+      "end": 1710361563918,
+      "order": "normal"
+    }
+  ]
+}

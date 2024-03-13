@@ -43,7 +43,7 @@ export default {
           return; // Prekini izvršavanje funkcije
         }
         
-        const response = await $fetch('http://localhost:5000/login', {
+        const response = await $fetch(`${this.$config.public.BASE_URL}/login`, {
           method: 'POST',
           body: {
             email: this.email,

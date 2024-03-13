@@ -60,7 +60,7 @@ export default {
   methods: {
     async deleteImage(slikaId) {
       try {
-        const response = await $fetch(`http://localhost:5000/products/${slikaId}`, {
+        const response = await $fetch(`${this.$config.public.BASE_URL}/products/${slikaId}`, {
           method: 'DELETE'
         });
         const matchingIndex = this.slike.findIndex(el => el.id === slikaId);
@@ -80,7 +80,7 @@ export default {
     },
     async dohvatiSlike() {
       try {
-        const response = await $fetch('http://localhost:5000/products', {
+        const response = await $fetch(`${this.$config.public.BASE_URL}/products`, {
           method: 'GET'
         });
         console.log(response);

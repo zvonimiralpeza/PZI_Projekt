@@ -1,5 +1,10 @@
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      BASE_URL: process.env.BASE_URL || 'http://localhost:5000',
+    },
+  },
   //...
   build: {
     transpile: ['vuetify'],

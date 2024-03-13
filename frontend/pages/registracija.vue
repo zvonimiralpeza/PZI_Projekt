@@ -41,7 +41,7 @@ export default {
   methods: {
     async submitForm() {
       try {
-        const response = await $fetch('http://localhost:5000/users', {
+        const response = await $fetch(`${this.$config.public.BASE_URL}/users`, {
           method: 'POST',
           body: {
             first_name: this.ime,
