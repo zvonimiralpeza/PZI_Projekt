@@ -108,9 +108,6 @@ svoja djela online kupcima širom svijeta. Ako ste zainteresirani za prodaju na 
         
     </div>
 
-
-    
-    
 </template>
 
 <script>
