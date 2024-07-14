@@ -4,11 +4,11 @@
       <v-row justify="center">
         <v-col cols="12" sm="8" md="6">
           <v-card>
-            <v-card-title class="text-h5 text-center" style="font-family: ; color: #2b9300;">Prijava</v-card-title>
+            <v-card-title class="text-h5 text-center" style="color: #2b9300;">Prijava</v-card-title>
             <v-card-text>
               <v-form @submit.prevent="submitForm">
                 <v-text-field v-model="email" label="Email" required persistent></v-text-field>
-                <v-text-field v-model="lozinka" label="Lozinka" type="password" required persistent></v-text-field>
+                <v-text-field v-model="lozinka" label="Lozinka" type="password" required persistent autocomplete="off"></v-text-field>
 
                 <v-btn type="submit" color="green">Prijavi se</v-btn>
               </v-form>

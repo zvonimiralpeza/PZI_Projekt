@@ -13,7 +13,7 @@ export default {
     "file": "VTextField.5436da5e.css",
     "src": "VTextField.css"
   },
-  "_VCard.10a80801.js": {
+  "_VCard.c0bd9a27.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
@@ -21,7 +21,7 @@ export default {
     "css": [
       "VCard.fb0072d0.css"
     ],
-    "file": "VCard.10a80801.js",
+    "file": "VCard.c0bd9a27.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -32,18 +32,18 @@ export default {
     "prefetch": true,
     "preload": true
   },
-  "_VForm.ad6c5d57.js": {
+  "_VForm.61ce4da0.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "VForm.ad6c5d57.js",
+    "file": "VForm.61ce4da0.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_VTextField.391a029e.js"
+      "_VTextField.14af2d7c.js"
     ]
   },
-  "_VTextField.391a029e.js": {
+  "_VTextField.14af2d7c.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
@@ -51,7 +51,7 @@ export default {
     "css": [
       "VTextField.5436da5e.css"
     ],
-    "file": "VTextField.391a029e.js",
+    "file": "VTextField.14af2d7c.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -62,12 +62,12 @@ export default {
     "prefetch": true,
     "preload": true
   },
-  "_vue.f36acd1f.7a795478.js": {
+  "_vue.f36acd1f.fa1d7793.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "vue.f36acd1f.7a795478.js",
+    "file": "vue.f36acd1f.fa1d7793.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -109,10 +109,10 @@ export default {
     "prefetch": true,
     "preload": true,
     "css": [],
-    "file": "error-404.fd788ebf.js",
+    "file": "error-404.555fd4f0.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_vue.f36acd1f.7a795478.js"
+      "_vue.f36acd1f.fa1d7793.js"
     ],
     "isDynamicEntry": true,
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue"
@@ -136,9 +136,9 @@ export default {
     "prefetch": true,
     "preload": true,
     "css": [],
-    "file": "error-500.f3f8e9ec.js",
+    "file": "error-500.7d7851d7.js",
     "imports": [
-      "_vue.f36acd1f.7a795478.js",
+      "_vue.f36acd1f.fa1d7793.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -175,7 +175,7 @@ export default {
       "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
       "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue"
     ],
-    "file": "entry.d85652a6.js",
+    "file": "entry.7f938c3c.js",
     "isEntry": true,
     "src": "node_modules/nuxt/dist/app/entry.js",
     "_globalCSS": true
@@ -211,10 +211,10 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "Akcija.c19e9962.js",
+    "file": "Akcija.497d7c58.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_VCard.10a80801.js"
+      "_VCard.c0bd9a27.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/Akcija.vue"
@@ -224,7 +224,7 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "Onama.2ec11bde.js",
+    "file": "Onama.42e84d03.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -236,10 +236,10 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "index.4769666f.js",
+    "file": "index.45f7c351.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_VCard.10a80801.js"
+      "_VCard.c0bd9a27.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/index.vue"
@@ -257,11 +257,11 @@ export default {
     "prefetch": true,
     "preload": true,
     "css": [],
-    "file": "kupovina.be04a0a5.js",
+    "file": "kupovina.3a633d99.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_VTextField.391a029e.js",
-      "_VCard.10a80801.js"
+      "_VTextField.14af2d7c.js",
+      "_VCard.c0bd9a27.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/kupovina.vue"
@@ -277,12 +277,12 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "login.e8007fd3.js",
+    "file": "login.0d65b55c.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_VCard.10a80801.js",
-      "_VForm.ad6c5d57.js",
-      "_VTextField.391a029e.js"
+      "_VCard.c0bd9a27.js",
+      "_VForm.61ce4da0.js",
+      "_VTextField.14af2d7c.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/login.vue"
@@ -292,12 +292,12 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "prodaja.3bbdd941.js",
+    "file": "prodaja.6bcfb879.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_VCard.10a80801.js",
-      "_VForm.ad6c5d57.js",
-      "_VTextField.391a029e.js"
+      "_VCard.c0bd9a27.js",
+      "_VForm.61ce4da0.js",
+      "_VTextField.14af2d7c.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/prodaja.vue"
@@ -306,7 +306,7 @@ export default {
     "resourceType": "style",
     "prefetch": true,
     "preload": true,
-    "file": "registracija.caa5c282.css",
+    "file": "registracija.2ad210bf.css",
     "src": "pages/registracija.css"
   },
   "pages/registracija.vue": {
@@ -315,18 +315,18 @@ export default {
     "prefetch": true,
     "preload": true,
     "css": [],
-    "file": "registracija.633fb043.js",
+    "file": "registracija.742dc020.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_VCard.10a80801.js",
-      "_VForm.ad6c5d57.js",
-      "_VTextField.391a029e.js"
+      "_VCard.c0bd9a27.js",
+      "_VForm.61ce4da0.js",
+      "_VTextField.14af2d7c.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/registracija.vue"
   },
-  "registracija.caa5c282.css": {
-    "file": "registracija.caa5c282.css",
+  "registracija.2ad210bf.css": {
+    "file": "registracija.2ad210bf.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
@@ -336,7 +336,7 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "test.f6bd441e.js",
+    "file": "test.80567313.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],

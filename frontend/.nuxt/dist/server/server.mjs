@@ -501,7 +501,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import("./_nuxt/login-889f9280.js").then((m) => m.default || m)
+    component: () => import("./_nuxt/login-65df76d8.js").then((m) => m.default || m)
   },
   {
     name: "Onama",
@@ -525,7 +525,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import("./_nuxt/registracija-9fa5a6df.js").then((m) => m.default || m)
+    component: () => import("./_nuxt/registracija-622f16a7.js").then((m) => m.default || m)
   },
   {
     name: "test",
