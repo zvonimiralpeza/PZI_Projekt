@@ -11,7 +11,7 @@
                 <v-text-field v-model="prezime" label="Prezime" required persistent></v-text-field>
                 <v-text-field v-model="brojTelefona" label="Broj telefona" required persistent></v-text-field>
                 <v-text-field v-model="email" label="Email" required persistent></v-text-field>
-                <v-text-field v-model="lozinka" label="Lozinka" type="password" required persistent autocomplete="off"></v-text-field>
+                <v-text-field v-model="lozinka" label="Lozinka" type="password" required persistent autocomplete="current-password"></v-text-field>
                 <v-btn type="submit" color="green">Potvrdi</v-btn>
               </v-form>
               <br>

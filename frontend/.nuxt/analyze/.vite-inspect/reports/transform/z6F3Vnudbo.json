@@ -4,57 +4,57 @@
     {
       "name": "vite:load-fallback",
       "result": "<template>\n    <div>\n        \n        <v-img\n            src=\"https://images.pexels.com/photos/5466867/pexels-photo-5466867.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1\"\n            alt=\"Mona Lisa pozadinska slika\"\n            class=\"mb-5\"\n            width=\"100%\"\n            height=\"auto\"\n            max-height=\"300\"\n            cover=\"object-fit: cover; object-position: top;\"\n        ></v-img>\n\n        <div align=\"center\">\n            <p style=\"font-size: 20px; color:red\"> PRODAJA & KUPOVINA UMJETNICKIH DJELA ONLINE </p><br>\nPridružite se našoj online umetničkoj zajednici i započnite sa prodajom umetničkih djela danas! <br>\nMi smo online galerija za kupovinu i prodaju originalnih slika, fotografija i još mnogo toga. <br>\nSa samo nekoliko klikova možete napraviti Vaš račun, učitati proizvode koje želite prodati, postaviti cijene i početi prodavati ili kupovati <br>\nsvoja djela online kupcima širom svijeta. Ako ste zainteresirani za prodaju na internet mreži, došli ste na pravo mjesto. <br>\n        </div>\n\n        <v-container align=center>\n            <v-row class=\"flex justify-center\">\n            <v-col>\n                <v-card color=blue-grey-lighten-1 class=\"mx-auto\">\n                <v-img\n                    src=\"https://img001.prntscr.com/file/img001/gkl0O2lzRl2tRdzXGzvZbA.png\"\n                    alt=\"Slika 1\"\n                    class=\"my-3\"\n                    width=\"300\"\n                    height=\"300\"\n                ></v-img>\n                <v-card-text>\n                    PRONADJI SLIKARA !\n                    <v-spacer></v-spacer>\n                </v-card-text>\n                </v-card>\n            </v-col>\n\n            <v-col>\n                <v-card color=blue-grey-lighten-1>\n                <v-img\n                    src=\"https://img001.prntscr.com/file/img001/R3uLOyWcS0OdpOk80CaMuw.png\"\n                    alt=\"Slika 2\"\n                    class=\"my-3\"\n                    width=\"300\"\n                    height=\"300\"\n                ></v-img>\n                <v-card-text>\n                    PRONADJI ZELJENU TEHNIKU !\n                    <v-spacer></v-spacer>    \n                </v-card-text>\n                </v-card>\n            </v-col>\n\n            <v-col>\n                <v-card color=blue-grey-lighten-1>\n                <v-img\n                    src=\"https://img001.prntscr.com/file/img001/29xZgQNLQbOCB4Tmj5pp6Q.png\"\n                    alt=\"Slika 2\"\n                    class=\"my-3\"\n                    width=\"300\"\n                    height=\"300\"\n                ></v-img>\n                <v-card-text>\n                    PRONADJI NAJNOVIJE SLIKE !\n                    <v-spacer></v-spacer>    \n                </v-card-text>\n                </v-card>\n            </v-col>\n\n        \n            <v-col>\n                <v-card color=blue-grey-lighten-1>\n                <v-img\n                    src=\"https://img001.prntscr.com/file/img001/2vk2LpMwSvOQDjDFFzH_ZA.png\"\n                    alt=\"Slika 2\"\n                    class=\"my-3\"\n                    width=\"300\"\n                    height=\"300\"\n                ></v-img>\n                <v-card-text>\n                    SIGURNO PLACANJE I DOSTAVA !\n                    <v-spacer></v-spacer>    \n                </v-card-text>\n                </v-card>\n            </v-col>\n\n\n            <v-col>\n                <v-card color=blue-grey-lighten-1>\n                <v-img\n                    src=\"https://img001.prntscr.com/file/img001/coC5xQenQXS8NrX8dLDuVg.png\"\n                    alt=\"Slika 3\"\n                    class=\"my-3\"\n                    width=\"300\"\n                    height=\"300\"\n                ></v-img>\n                <v-card-text>\n                    PRONADJI SLIKU PREMA MOTIVU !\n                    <v-spacer></v-spacer>\n                </v-card-text>\n                </v-card>\n            </v-col>\n            </v-row>\n        </v-container>\n\n        \n    </div>\n\n</template>\n\n<script>\nexport default {\n    beforeMount () {\n        this.dohvatiSlike()\n    },\n    data () {\n        return {\n            slike: []\n        }\n    },\n    methods: {\n        async dohvatiSlike () {\n            try {\n                const response = await $fetch(`${this.$config.public.BASE_URL}/products`, {\n                method: 'GET'\n                })\n                console.log(response)\n                this.slike = response.products\n            } catch (error) {\n                console.error('Error making POST request:', error);\n            }\n        }\n    }\n}\n</script>",
-      "start": 1720959338930,
-      "end": 1720959339838,
+      "start": 1720959829193,
+      "end": 1720959829790,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720959339839,
-      "end": 1720959339839,
+      "start": 1720959829790,
+      "end": 1720959829790,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720959339839,
-      "end": 1720959339839,
+      "start": 1720959829790,
+      "end": 1720959829790,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1720959339839,
-      "end": 1720959339839,
+      "start": 1720959829790,
+      "end": 1720959829790,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1720959339839,
-      "end": 1720959339839,
+      "start": 1720959829790,
+      "end": 1720959829790,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1720959339839,
-      "end": 1720959339839,
+      "start": 1720959829790,
+      "end": 1720959829791,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720959339839,
-      "end": 1720959339839,
+      "start": 1720959829791,
+      "end": 1720959829791,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720959339839,
-      "end": 1720959339839,
+      "start": 1720959829791,
+      "end": 1720959829791,
       "order": "normal"
     },
     {
       "name": "vite:vue",
       "result": "\nconst _sfc_main = {\n    beforeMount () {\n        this.dohvatiSlike()\n    },\n    data () {\n        return {\n            slike: []\n        }\n    },\n    methods: {\n        async dohvatiSlike () {\n            try {\n                const response = await $fetch(`${this.$config.public.BASE_URL}/products`, {\n                method: 'GET'\n                })\n                console.log(response)\n                this.slike = response.products\n            } catch (error) {\n                console.error('Error making POST request:', error);\n            }\n        }\n    }\n}\n\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, withCtx as _withCtx, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"div\", { align: \"center\" }, [\n  /*#__PURE__*/_createElementVNode(\"p\", { style: {\"font-size\":\"20px\",\"color\":\"red\"} }, \" PRODAJA & KUPOVINA UMJETNICKIH DJELA ONLINE \"),\n  /*#__PURE__*/_createElementVNode(\"br\"),\n  /*#__PURE__*/_createTextVNode(\" Pridružite se našoj online umetničkoj zajednici i započnite sa prodajom umetničkih djela danas! \"),\n  /*#__PURE__*/_createElementVNode(\"br\"),\n  /*#__PURE__*/_createTextVNode(\" Mi smo online galerija za kupovinu i prodaju originalnih slika, fotografija i još mnogo toga. \"),\n  /*#__PURE__*/_createElementVNode(\"br\"),\n  /*#__PURE__*/_createTextVNode(\" Sa samo nekoliko klikova možete napraviti Vaš račun, učitati proizvode koje želite prodati, postaviti cijene i početi prodavati ili kupovati \"),\n  /*#__PURE__*/_createElementVNode(\"br\"),\n  /*#__PURE__*/_createTextVNode(\" svoja djela online kupcima širom svijeta. Ako ste zainteresirani za prodaju na internet mreži, došli ste na pravo mjesto. \"),\n  /*#__PURE__*/_createElementVNode(\"br\")\n], -1)\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_v_img = _resolveComponent(\"v-img\")\n  const _component_v_spacer = _resolveComponent(\"v-spacer\")\n  const _component_v_card_text = _resolveComponent(\"v-card-text\")\n  const _component_v_card = _resolveComponent(\"v-card\")\n  const _component_v_col = _resolveComponent(\"v-col\")\n  const _component_v_row = _resolveComponent(\"v-row\")\n  const _component_v_container = _resolveComponent(\"v-container\")\n\n  return (_openBlock(), _createElementBlock(\"div\", null, [\n    _createVNode(_component_v_img, {\n      src: \"https://images.pexels.com/photos/5466867/pexels-photo-5466867.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1\",\n      alt: \"Mona Lisa pozadinska slika\",\n      class: \"mb-5\",\n      width: \"100%\",\n      height: \"auto\",\n      \"max-height\": \"300\",\n      cover: \"object-fit: cover; object-position: top;\"\n    }),\n    _hoisted_1,\n    _createVNode(_component_v_container, { align: \"center\" }, {\n      default: _withCtx(() => [\n        _createVNode(_component_v_row, { class: \"flex justify-center\" }, {\n          default: _withCtx(() => [\n            _createVNode(_component_v_col, null, {\n              default: _withCtx(() => [\n                _createVNode(_component_v_card, {\n                  color: \"blue-grey-lighten-1\",\n                  class: \"mx-auto\"\n                }, {\n                  default: _withCtx(() => [\n                    _createVNode(_component_v_img, {\n                      src: \"https://img001.prntscr.com/file/img001/gkl0O2lzRl2tRdzXGzvZbA.png\",\n                      alt: \"Slika 1\",\n                      class: \"my-3\",\n                      width: \"300\",\n                      height: \"300\"\n                    }),\n                    _createVNode(_component_v_card_text, null, {\n                      default: _withCtx(() => [\n                        _createTextVNode(\" PRONADJI SLIKARA ! \"),\n                        _createVNode(_component_v_spacer)\n                      ]),\n                      _: 1\n                    })\n                  ]),\n                  _: 1\n                })\n              ]),\n              _: 1\n            }),\n            _createVNode(_component_v_col, null, {\n              default: _withCtx(() => [\n                _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                  default: _withCtx(() => [\n                    _createVNode(_component_v_img, {\n                      src: \"https://img001.prntscr.com/file/img001/R3uLOyWcS0OdpOk80CaMuw.png\",\n                      alt: \"Slika 2\",\n                      class: \"my-3\",\n                      width: \"300\",\n                      height: \"300\"\n                    }),\n                    _createVNode(_component_v_card_text, null, {\n                      default: _withCtx(() => [\n                        _createTextVNode(\" PRONADJI ZELJENU TEHNIKU ! \"),\n                        _createVNode(_component_v_spacer)\n                      ]),\n                      _: 1\n                    })\n                  ]),\n                  _: 1\n                })\n              ]),\n              _: 1\n            }),\n            _createVNode(_component_v_col, null, {\n              default: _withCtx(() => [\n                _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                  default: _withCtx(() => [\n                    _createVNode(_component_v_img, {\n                      src: \"https://img001.prntscr.com/file/img001/29xZgQNLQbOCB4Tmj5pp6Q.png\",\n                      alt: \"Slika 2\",\n                      class: \"my-3\",\n                      width: \"300\",\n                      height: \"300\"\n                    }),\n                    _createVNode(_component_v_card_text, null, {\n                      default: _withCtx(() => [\n                        _createTextVNode(\" PRONADJI NAJNOVIJE SLIKE ! \"),\n                        _createVNode(_component_v_spacer)\n                      ]),\n                      _: 1\n                    })\n                  ]),\n                  _: 1\n                })\n              ]),\n              _: 1\n            }),\n            _createVNode(_component_v_col, null, {\n              default: _withCtx(() => [\n                _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                  default: _withCtx(() => [\n                    _createVNode(_component_v_img, {\n                      src: \"https://img001.prntscr.com/file/img001/2vk2LpMwSvOQDjDFFzH_ZA.png\",\n                      alt: \"Slika 2\",\n                      class: \"my-3\",\n                      width: \"300\",\n                      height: \"300\"\n                    }),\n                    _createVNode(_component_v_card_text, null, {\n                      default: _withCtx(() => [\n                        _createTextVNode(\" SIGURNO PLACANJE I DOSTAVA ! \"),\n                        _createVNode(_component_v_spacer)\n                      ]),\n                      _: 1\n                    })\n                  ]),\n                  _: 1\n                })\n              ]),\n              _: 1\n            }),\n            _createVNode(_component_v_col, null, {\n              default: _withCtx(() => [\n                _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                  default: _withCtx(() => [\n                    _createVNode(_component_v_img, {\n                      src: \"https://img001.prntscr.com/file/img001/coC5xQenQXS8NrX8dLDuVg.png\",\n                      alt: \"Slika 3\",\n                      class: \"my-3\",\n                      width: \"300\",\n                      height: \"300\"\n                    }),\n                    _createVNode(_component_v_card_text, null, {\n                      default: _withCtx(() => [\n                        _createTextVNode(\" PRONADJI SLIKU PREMA MOTIVU ! \"),\n                        _createVNode(_component_v_spacer)\n                      ]),\n                      _: 1\n                    })\n                  ]),\n                  _: 1\n                })\n              ]),\n              _: 1\n            })\n          ]),\n          _: 1\n        })\n      ]),\n      _: 1\n    })\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
-      "start": 1720959339839,
-      "end": 1720959339848,
+      "start": 1720959829791,
+      "end": 1720959829795,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -62,160 +62,160 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1720959339848,
-      "end": 1720959339848,
+      "start": 1720959829795,
+      "end": 1720959829795,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720959339848,
-      "end": 1720959339848,
+      "start": 1720959829795,
+      "end": 1720959829795,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720959339848,
-      "end": 1720959339849,
+      "start": 1720959829795,
+      "end": 1720959829795,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1720959339849,
-      "end": 1720959339849,
+      "start": 1720959829795,
+      "end": 1720959829795,
       "order": "normal"
     },
     {
       "name": "vuetify:import",
       "result": "\nconst _sfc_main = {\n    beforeMount () {\n        this.dohvatiSlike()\n    },\n    data () {\n        return {\n            slike: []\n        }\n    },\n    methods: {\n        async dohvatiSlike () {\n            try {\n                const response = await $fetch(`${this.$config.public.BASE_URL}/products`, {\n                method: 'GET'\n                })\n                console.log(response)\n                this.slike = response.products\n            } catch (error) {\n                console.error('Error making POST request:', error);\n            }\n        }\n    }\n}\n\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, withCtx as _withCtx, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"div\", { align: \"center\" }, [\n  /*#__PURE__*/_createElementVNode(\"p\", { style: {\"font-size\":\"20px\",\"color\":\"red\"} }, \" PRODAJA & KUPOVINA UMJETNICKIH DJELA ONLINE \"),\n  /*#__PURE__*/_createElementVNode(\"br\"),\n  /*#__PURE__*/_createTextVNode(\" Pridružite se našoj online umetničkoj zajednici i započnite sa prodajom umetničkih djela danas! \"),\n  /*#__PURE__*/_createElementVNode(\"br\"),\n  /*#__PURE__*/_createTextVNode(\" Mi smo online galerija za kupovinu i prodaju originalnih slika, fotografija i još mnogo toga. \"),\n  /*#__PURE__*/_createElementVNode(\"br\"),\n  /*#__PURE__*/_createTextVNode(\" Sa samo nekoliko klikova možete napraviti Vaš račun, učitati proizvode koje želite prodati, postaviti cijene i početi prodavati ili kupovati \"),\n  /*#__PURE__*/_createElementVNode(\"br\"),\n  /*#__PURE__*/_createTextVNode(\" svoja djela online kupcima širom svijeta. Ako ste zainteresirani za prodaju na internet mreži, došli ste na pravo mjesto. \"),\n  /*#__PURE__*/_createElementVNode(\"br\")\n], -1)\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n                                                     \n                                                           \n                                                                 \n                                                       \n                                                     \n                                                     \n                                                                 \n\n  return (_openBlock(), _createElementBlock(\"div\", null, [\n    _createVNode(_component_v_img, {\n      src: \"https://images.pexels.com/photos/5466867/pexels-photo-5466867.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1\",\n      alt: \"Mona Lisa pozadinska slika\",\n      class: \"mb-5\",\n      width: \"100%\",\n      height: \"auto\",\n      \"max-height\": \"300\",\n      cover: \"object-fit: cover; object-position: top;\"\n    }),\n    _hoisted_1,\n    _createVNode(_component_v_container, { align: \"center\" }, {\n      default: _withCtx(() => [\n        _createVNode(_component_v_row, { class: \"flex justify-center\" }, {\n          default: _withCtx(() => [\n            _createVNode(_component_v_col, null, {\n              default: _withCtx(() => [\n                _createVNode(_component_v_card, {\n                  color: \"blue-grey-lighten-1\",\n                  class: \"mx-auto\"\n                }, {\n                  default: _withCtx(() => [\n                    _createVNode(_component_v_img, {\n                      src: \"https://img001.prntscr.com/file/img001/gkl0O2lzRl2tRdzXGzvZbA.png\",\n                      alt: \"Slika 1\",\n                      class: \"my-3\",\n                      width: \"300\",\n                      height: \"300\"\n                    }),\n                    _createVNode(_component_v_card_text, null, {\n                      default: _withCtx(() => [\n                        _createTextVNode(\" PRONADJI SLIKARA ! \"),\n                        _createVNode(_component_v_spacer)\n                      ]),\n                      _: 1\n                    })\n                  ]),\n                  _: 1\n                })\n              ]),\n              _: 1\n            }),\n            _createVNode(_component_v_col, null, {\n              default: _withCtx(() => [\n                _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                  default: _withCtx(() => [\n                    _createVNode(_component_v_img, {\n                      src: \"https://img001.prntscr.com/file/img001/R3uLOyWcS0OdpOk80CaMuw.png\",\n                      alt: \"Slika 2\",\n                      class: \"my-3\",\n                      width: \"300\",\n                      height: \"300\"\n                    }),\n                    _createVNode(_component_v_card_text, null, {\n                      default: _withCtx(() => [\n                        _createTextVNode(\" PRONADJI ZELJENU TEHNIKU ! \"),\n                        _createVNode(_component_v_spacer)\n                      ]),\n                      _: 1\n                    })\n                  ]),\n                  _: 1\n                })\n              ]),\n              _: 1\n            }),\n            _createVNode(_component_v_col, null, {\n              default: _withCtx(() => [\n                _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                  default: _withCtx(() => [\n                    _createVNode(_component_v_img, {\n                      src: \"https://img001.prntscr.com/file/img001/29xZgQNLQbOCB4Tmj5pp6Q.png\",\n                      alt: \"Slika 2\",\n                      class: \"my-3\",\n                      width: \"300\",\n                      height: \"300\"\n                    }),\n                    _createVNode(_component_v_card_text, null, {\n                      default: _withCtx(() => [\n                        _createTextVNode(\" PRONADJI NAJNOVIJE SLIKE ! \"),\n                        _createVNode(_component_v_spacer)\n                      ]),\n                      _: 1\n                    })\n                  ]),\n                  _: 1\n                })\n              ]),\n              _: 1\n            }),\n            _createVNode(_component_v_col, null, {\n              default: _withCtx(() => [\n                _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                  default: _withCtx(() => [\n                    _createVNode(_component_v_img, {\n                      src: \"https://img001.prntscr.com/file/img001/2vk2LpMwSvOQDjDFFzH_ZA.png\",\n                      alt: \"Slika 2\",\n                      class: \"my-3\",\n                      width: \"300\",\n                      height: \"300\"\n                    }),\n                    _createVNode(_component_v_card_text, null, {\n                      default: _withCtx(() => [\n                        _createTextVNode(\" SIGURNO PLACANJE I DOSTAVA ! \"),\n                        _createVNode(_component_v_spacer)\n                      ]),\n                      _: 1\n                    })\n                  ]),\n                  _: 1\n                })\n              ]),\n              _: 1\n            }),\n            _createVNode(_component_v_col, null, {\n              default: _withCtx(() => [\n                _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                  default: _withCtx(() => [\n                    _createVNode(_component_v_img, {\n                      src: \"https://img001.prntscr.com/file/img001/coC5xQenQXS8NrX8dLDuVg.png\",\n                      alt: \"Slika 3\",\n                      class: \"my-3\",\n                      width: \"300\",\n                      height: \"300\"\n                    }),\n                    _createVNode(_component_v_card_text, null, {\n                      default: _withCtx(() => [\n                        _createTextVNode(\" PRONADJI SLIKU PREMA MOTIVU ! \"),\n                        _createVNode(_component_v_spacer)\n                      ]),\n                      _: 1\n                    })\n                  ]),\n                  _: 1\n                })\n              ]),\n              _: 1\n            })\n          ]),\n          _: 1\n        })\n      ]),\n      _: 1\n    })\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])\n\n/* Vuetify */\nimport { VCardText as _component_v_card_text, VCard as _component_v_card } from \"vuetify/lib/components/VCard/index.mjs\"\nimport { VSpacer as _component_v_spacer, VCol as _component_v_col, VRow as _component_v_row, VContainer as _component_v_container } from \"vuetify/lib/components/VGrid/index.mjs\"\nimport { VImg as _component_v_img } from \"vuetify/lib/components/VImg/index.mjs\"\n\n",
-      "start": 1720959339849,
-      "end": 1720959339849,
+      "start": 1720959829796,
+      "end": 1720959829796,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1720959339849,
-      "end": 1720959339849,
+      "start": 1720959829796,
+      "end": 1720959829796,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720959339849,
-      "end": 1720959339849,
+      "start": 1720959829796,
+      "end": 1720959829796,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1720959339849,
-      "end": 1720959339849,
+      "start": 1720959829796,
+      "end": 1720959829796,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720959339849,
-      "end": 1720959339850,
+      "start": 1720959829796,
+      "end": 1720959829796,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1720959339850,
-      "end": 1720959339850,
+      "start": 1720959829797,
+      "end": 1720959829797,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1720959339850,
-      "end": 1720959339850,
+      "start": 1720959829797,
+      "end": 1720959829797,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720959339850,
-      "end": 1720959339850,
+      "start": 1720959829797,
+      "end": 1720959829797,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720959339850,
-      "end": 1720959339850,
+      "start": 1720959829797,
+      "end": 1720959829797,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1720959339850,
-      "end": 1720959339850,
+      "start": 1720959829797,
+      "end": 1720959829797,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720959339850,
-      "end": 1720959339850,
+      "start": 1720959829797,
+      "end": 1720959829797,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720959339850,
-      "end": 1720959339850,
+      "start": 1720959829797,
+      "end": 1720959829797,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720959339850,
-      "end": 1720959339850,
+      "start": 1720959829797,
+      "end": 1720959829797,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1720959339850,
-      "end": 1720959339855,
+      "start": 1720959829797,
+      "end": 1720959829800,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1720959339856,
-      "end": 1720959339856,
+      "start": 1720959829800,
+      "end": 1720959829800,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1720959339856,
-      "end": 1720959339856,
+      "start": 1720959829800,
+      "end": 1720959829800,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1720959339856,
-      "end": 1720959339856,
+      "start": 1720959829800,
+      "end": 1720959829801,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1720959339856,
-      "end": 1720959339856,
+      "start": 1720959829801,
+      "end": 1720959829801,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1720959339856,
-      "end": 1720959339856,
+      "start": 1720959829801,
+      "end": 1720959829801,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1720959339856,
-      "end": 1720959339856,
+      "start": 1720959829801,
+      "end": 1720959829801,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1720959339856,
-      "end": 1720959339857,
+      "start": 1720959829801,
+      "end": 1720959829801,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1720959339857,
-      "end": 1720959339857,
+      "start": 1720959829801,
+      "end": 1720959829801,
       "order": "normal"
     }
   ]

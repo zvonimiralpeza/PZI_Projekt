@@ -8,7 +8,7 @@
             <v-card-text>
               <v-form @submit.prevent="submitForm">
                 <v-text-field v-model="email" label="Email" required persistent></v-text-field>
-                <v-text-field v-model="lozinka" label="Lozinka" type="password" required persistent autocomplete="off"></v-text-field>
+                <v-text-field v-model="lozinka" label="Lozinka" type="password" required persistent autocomplete="current-password"></v-text-field>
 
                 <v-btn type="submit" color="green">Prijavi se</v-btn>
               </v-form>
