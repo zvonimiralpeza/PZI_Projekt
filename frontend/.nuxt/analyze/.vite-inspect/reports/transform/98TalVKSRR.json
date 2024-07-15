@@ -4,214 +4,214 @@
     {
       "name": "virtual",
       "result": "import { default as Akcija1DLpZdGtfbMeta } from \"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/Akcija.vue?macro=true\";\nimport { default as indexz6F3VnudboMeta } from \"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/index.vue?macro=true\";\nimport { default as kupovinaOStBHKn9nVMeta } from \"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/kupovina.vue?macro=true\";\nimport { default as loginnb5jo2kPRsMeta } from \"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/login.vue?macro=true\";\nimport { default as OnamahY58e68XKwMeta } from \"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/Onama.vue?macro=true\";\nimport { default as prodajaUiAQaJcKVXMeta } from \"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/prodaja.vue?macro=true\";\nimport { default as registracija4afRJeay0CMeta } from \"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/registracija.vue?macro=true\";\nimport { default as test6Z83WRoDYDMeta } from \"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/test.vue?macro=true\";\nexport default [\n  {\n    name: Akcija1DLpZdGtfbMeta?.name ?? \"Akcija\",\n    path: Akcija1DLpZdGtfbMeta?.path ?? \"/Akcija\",\n    meta: Akcija1DLpZdGtfbMeta || {},\n    alias: Akcija1DLpZdGtfbMeta?.alias || [],\n    redirect: Akcija1DLpZdGtfbMeta?.redirect || undefined,\n    component: () => import(\"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/Akcija.vue\").then(m => m.default || m)\n  },\n  {\n    name: indexz6F3VnudboMeta?.name ?? \"index\",\n    path: indexz6F3VnudboMeta?.path ?? \"/\",\n    meta: indexz6F3VnudboMeta || {},\n    alias: indexz6F3VnudboMeta?.alias || [],\n    redirect: indexz6F3VnudboMeta?.redirect || undefined,\n    component: () => import(\"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: kupovinaOStBHKn9nVMeta?.name ?? \"kupovina\",\n    path: kupovinaOStBHKn9nVMeta?.path ?? \"/kupovina\",\n    meta: kupovinaOStBHKn9nVMeta || {},\n    alias: kupovinaOStBHKn9nVMeta?.alias || [],\n    redirect: kupovinaOStBHKn9nVMeta?.redirect || undefined,\n    component: () => import(\"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/kupovina.vue\").then(m => m.default || m)\n  },\n  {\n    name: loginnb5jo2kPRsMeta?.name ?? \"login\",\n    path: loginnb5jo2kPRsMeta?.path ?? \"/login\",\n    meta: loginnb5jo2kPRsMeta || {},\n    alias: loginnb5jo2kPRsMeta?.alias || [],\n    redirect: loginnb5jo2kPRsMeta?.redirect || undefined,\n    component: () => import(\"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/login.vue\").then(m => m.default || m)\n  },\n  {\n    name: OnamahY58e68XKwMeta?.name ?? \"Onama\",\n    path: OnamahY58e68XKwMeta?.path ?? \"/Onama\",\n    meta: OnamahY58e68XKwMeta || {},\n    alias: OnamahY58e68XKwMeta?.alias || [],\n    redirect: OnamahY58e68XKwMeta?.redirect || undefined,\n    component: () => import(\"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/Onama.vue\").then(m => m.default || m)\n  },\n  {\n    name: prodajaUiAQaJcKVXMeta?.name ?? \"prodaja\",\n    path: prodajaUiAQaJcKVXMeta?.path ?? \"/prodaja\",\n    meta: prodajaUiAQaJcKVXMeta || {},\n    alias: prodajaUiAQaJcKVXMeta?.alias || [],\n    redirect: prodajaUiAQaJcKVXMeta?.redirect || undefined,\n    component: () => import(\"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/prodaja.vue\").then(m => m.default || m)\n  },\n  {\n    name: registracija4afRJeay0CMeta?.name ?? \"registracija\",\n    path: registracija4afRJeay0CMeta?.path ?? \"/registracija\",\n    meta: registracija4afRJeay0CMeta || {},\n    alias: registracija4afRJeay0CMeta?.alias || [],\n    redirect: registracija4afRJeay0CMeta?.redirect || undefined,\n    component: () => import(\"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/registracija.vue\").then(m => m.default || m)\n  },\n  {\n    name: test6Z83WRoDYDMeta?.name ?? \"test\",\n    path: test6Z83WRoDYDMeta?.path ?? \"/test\",\n    meta: test6Z83WRoDYDMeta || {},\n    alias: test6Z83WRoDYDMeta?.alias || [],\n    redirect: test6Z83WRoDYDMeta?.redirect || undefined,\n    component: () => import(\"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/test.vue\").then(m => m.default || m)\n  }\n]",
-      "start": 1720959828983,
-      "end": 1720959828983,
+      "start": 1721074013385,
+      "end": 1721074013385,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720959828983,
-      "end": 1720959828983,
+      "start": 1721074013385,
+      "end": 1721074013386,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720959828983,
-      "end": 1720959828984,
+      "start": 1721074013386,
+      "end": 1721074013386,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1720959828984,
-      "end": 1720959828984,
+      "start": 1721074013386,
+      "end": 1721074013386,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1720959828984,
-      "end": 1720959828984,
+      "start": 1721074013386,
+      "end": 1721074013386,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1720959828984,
-      "end": 1720959828984,
+      "start": 1721074013386,
+      "end": 1721074013390,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720959828984,
-      "end": 1720959828984,
+      "start": 1721074013390,
+      "end": 1721074013390,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720959828984,
-      "end": 1720959828984,
+      "start": 1721074013391,
+      "end": 1721074013391,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1720959828984,
-      "end": 1720959828984,
+      "start": 1721074013391,
+      "end": 1721074013392,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1720959828984,
-      "end": 1720959828984,
+      "start": 1721074013392,
+      "end": 1721074013392,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720959828984,
-      "end": 1720959828984,
+      "start": 1721074013393,
+      "end": 1721074013393,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720959828984,
-      "end": 1720959828984,
+      "start": 1721074013393,
+      "end": 1721074013393,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1720959828984,
-      "end": 1720959828984,
+      "start": 1721074013395,
+      "end": 1721074013395,
       "order": "normal"
     },
     {
       "name": "vuetify:import",
-      "start": 1720959828984,
-      "end": 1720959828985,
+      "start": 1721074013395,
+      "end": 1721074013395,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1720959828985,
-      "end": 1720959828985,
+      "start": 1721074013396,
+      "end": 1721074013396,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720959828985,
-      "end": 1720959828985,
+      "start": 1721074013396,
+      "end": 1721074013396,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1720959828985,
-      "end": 1720959828985,
+      "start": 1721074013396,
+      "end": 1721074013396,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720959828985,
-      "end": 1720959828985,
+      "start": 1721074013397,
+      "end": 1721074013397,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1720959828985,
-      "end": 1720959828985,
+      "start": 1721074013397,
+      "end": 1721074013398,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1720959828986,
-      "end": 1720959828986,
+      "start": 1721074013398,
+      "end": 1721074013398,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720959828986,
-      "end": 1720959828986,
+      "start": 1721074013402,
+      "end": 1721074013402,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720959828986,
-      "end": 1720959828986,
+      "start": 1721074013403,
+      "end": 1721074013403,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1720959828986,
-      "end": 1720959828986,
+      "start": 1721074013403,
+      "end": 1721074013403,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720959828986,
-      "end": 1720959828987,
+      "start": 1721074013404,
+      "end": 1721074013405,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720959828987,
-      "end": 1720959828987,
+      "start": 1721074013405,
+      "end": 1721074013405,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720959828987,
-      "end": 1720959828987,
+      "start": 1721074013406,
+      "end": 1721074013406,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1720959828987,
-      "end": 1720959828989,
+      "start": 1721074013409,
+      "end": 1721074013416,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1720959828989,
-      "end": 1720959828990,
+      "start": 1721074013416,
+      "end": 1721074013417,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1720959828990,
-      "end": 1720959828990,
+      "start": 1721074013417,
+      "end": 1721074013417,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1720959828990,
-      "end": 1720959828990,
+      "start": 1721074013418,
+      "end": 1721074013418,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1720959828990,
-      "end": 1720959828990,
+      "start": 1721074013418,
+      "end": 1721074013418,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1720959828990,
-      "end": 1720959828990,
+      "start": 1721074013418,
+      "end": 1721074013418,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1720959828990,
-      "end": 1720959828991,
+      "start": 1721074013419,
+      "end": 1721074013419,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
       "result": "import { __vitePreload } from \"\u0000vite/preload-helper\";import { default as Akcija1DLpZdGtfbMeta } from \"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/Akcija.vue?macro=true\";\nimport { default as indexz6F3VnudboMeta } from \"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/index.vue?macro=true\";\nimport { default as kupovinaOStBHKn9nVMeta } from \"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/kupovina.vue?macro=true\";\nimport { default as loginnb5jo2kPRsMeta } from \"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/login.vue?macro=true\";\nimport { default as OnamahY58e68XKwMeta } from \"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/Onama.vue?macro=true\";\nimport { default as prodajaUiAQaJcKVXMeta } from \"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/prodaja.vue?macro=true\";\nimport { default as registracija4afRJeay0CMeta } from \"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/registracija.vue?macro=true\";\nimport { default as test6Z83WRoDYDMeta } from \"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/test.vue?macro=true\";\nexport default [\n  {\n    name: Akcija1DLpZdGtfbMeta?.name ?? \"Akcija\",\n    path: Akcija1DLpZdGtfbMeta?.path ?? \"/Akcija\",\n    meta: Akcija1DLpZdGtfbMeta || {},\n    alias: Akcija1DLpZdGtfbMeta?.alias || [],\n    redirect: Akcija1DLpZdGtfbMeta?.redirect || undefined,\n    component: () => __vitePreload(() => import(\"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/Akcija.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: indexz6F3VnudboMeta?.name ?? \"index\",\n    path: indexz6F3VnudboMeta?.path ?? \"/\",\n    meta: indexz6F3VnudboMeta || {},\n    alias: indexz6F3VnudboMeta?.alias || [],\n    redirect: indexz6F3VnudboMeta?.redirect || undefined,\n    component: () => __vitePreload(() => import(\"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: kupovinaOStBHKn9nVMeta?.name ?? \"kupovina\",\n    path: kupovinaOStBHKn9nVMeta?.path ?? \"/kupovina\",\n    meta: kupovinaOStBHKn9nVMeta || {},\n    alias: kupovinaOStBHKn9nVMeta?.alias || [],\n    redirect: kupovinaOStBHKn9nVMeta?.redirect || undefined,\n    component: () => __vitePreload(() => import(\"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/kupovina.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: loginnb5jo2kPRsMeta?.name ?? \"login\",\n    path: loginnb5jo2kPRsMeta?.path ?? \"/login\",\n    meta: loginnb5jo2kPRsMeta || {},\n    alias: loginnb5jo2kPRsMeta?.alias || [],\n    redirect: loginnb5jo2kPRsMeta?.redirect || undefined,\n    component: () => __vitePreload(() => import(\"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/login.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: OnamahY58e68XKwMeta?.name ?? \"Onama\",\n    path: OnamahY58e68XKwMeta?.path ?? \"/Onama\",\n    meta: OnamahY58e68XKwMeta || {},\n    alias: OnamahY58e68XKwMeta?.alias || [],\n    redirect: OnamahY58e68XKwMeta?.redirect || undefined,\n    component: () => __vitePreload(() => import(\"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/Onama.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: prodajaUiAQaJcKVXMeta?.name ?? \"prodaja\",\n    path: prodajaUiAQaJcKVXMeta?.path ?? \"/prodaja\",\n    meta: prodajaUiAQaJcKVXMeta || {},\n    alias: prodajaUiAQaJcKVXMeta?.alias || [],\n    redirect: prodajaUiAQaJcKVXMeta?.redirect || undefined,\n    component: () => __vitePreload(() => import(\"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/prodaja.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: registracija4afRJeay0CMeta?.name ?? \"registracija\",\n    path: registracija4afRJeay0CMeta?.path ?? \"/registracija\",\n    meta: registracija4afRJeay0CMeta || {},\n    alias: registracija4afRJeay0CMeta?.alias || [],\n    redirect: registracija4afRJeay0CMeta?.redirect || undefined,\n    component: () => __vitePreload(() => import(\"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/registracija.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: test6Z83WRoDYDMeta?.name ?? \"test\",\n    path: test6Z83WRoDYDMeta?.path ?? \"/test\",\n    meta: test6Z83WRoDYDMeta || {},\n    alias: test6Z83WRoDYDMeta?.alias || [],\n    redirect: test6Z83WRoDYDMeta?.redirect || undefined,\n    component: () => __vitePreload(() => import(\"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/test.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  }\n]",
-      "start": 1720959828991,
-      "end": 1720959828992,
+      "start": 1721074013420,
+      "end": 1721074013422,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "vite:reporter",
-      "start": 1720959828994,
-      "end": 1720959828994,
+      "start": 1721074013424,
+      "end": 1721074013424,
       "order": "normal"
     }
   ]

@@ -4,123 +4,123 @@
     {
       "name": "vite:load-fallback",
       "result": "import { getCurrentInstance, reactive, toRefs } from \"vue\";\nimport { useHead } from \"@unhead/vue\";\nimport { useNuxtApp } from \"../nuxt.js\";\nimport { useAsyncData } from \"./asyncData.js\";\nimport { useRoute } from \"./router.js\";\nimport { createError } from \"./error.js\";\nexport const NuxtComponentIndicator = \"__nuxt_component\";\nasync function runLegacyAsyncData(res, fn) {\n  const nuxtApp = useNuxtApp();\n  const route = useRoute();\n  const vm = getCurrentInstance();\n  const { fetchKey, _fetchKeyBase } = vm.proxy.$options;\n  const key = (typeof fetchKey === \"function\" ? fetchKey(() => \"\") : fetchKey) || [_fetchKeyBase, route.fullPath, route.matched.findIndex((r) => Object.values(r.components || {}).includes(vm.type))].join(\":\");\n  const { data, error } = await useAsyncData(`options:asyncdata:${key}`, () => nuxtApp.runWithContext(() => fn(nuxtApp)));\n  if (error.value) {\n    throw createError(error.value);\n  }\n  if (data.value && typeof data.value === \"object\") {\n    Object.assign(await res, toRefs(reactive(data.value)));\n  } else if (import.meta.dev) {\n    console.warn(\"[nuxt] asyncData should return an object\", data);\n  }\n}\n/*! @__NO_SIDE_EFFECTS__ */\nexport const defineNuxtComponent = /* @__NO_SIDE_EFFECTS__ */ function defineNuxtComponent2(...args) {\n  const [options, key] = args;\n  const { setup } = options;\n  if (!setup && !options.asyncData && !options.head) {\n    return {\n      [NuxtComponentIndicator]: true,\n      ...options\n    };\n  }\n  return {\n    [NuxtComponentIndicator]: true,\n    _fetchKeyBase: key,\n    ...options,\n    setup(props, ctx) {\n      const nuxtApp = useNuxtApp();\n      const res = setup ? Promise.resolve(nuxtApp.runWithContext(() => setup(props, ctx))).then((r) => r || {}) : {};\n      const promises = [];\n      if (options.asyncData) {\n        promises.push(runLegacyAsyncData(res, options.asyncData));\n      }\n      if (options.head) {\n        const nuxtApp2 = useNuxtApp();\n        useHead(typeof options.head === \"function\" ? () => options.head(nuxtApp2) : options.head);\n      }\n      return Promise.resolve(res).then(() => Promise.all(promises)).then(() => res).finally(() => {\n        promises.length = 0;\n      });\n    }\n  };\n};\n",
-      "start": 1720959848171,
-      "end": 1720959851973,
+      "start": 1721074033105,
+      "end": 1721074036912,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720959851973,
-      "end": 1720959851973,
+      "start": 1721074036912,
+      "end": 1721074036912,
       "order": "pre"
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720959851973,
-      "end": 1720959851973,
+      "start": 1721074036912,
+      "end": 1721074036912,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720959851973,
-      "end": 1720959851973,
+      "start": 1721074036912,
+      "end": 1721074036912,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720959851973,
-      "end": 1720959851973,
+      "start": 1721074036912,
+      "end": 1721074036912,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1720959851973,
-      "end": 1720959851973,
+      "start": 1721074036912,
+      "end": 1721074036912,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1720959851973,
-      "end": 1720959851973,
+      "start": 1721074036912,
+      "end": 1721074036912,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1720959851973,
-      "end": 1720959851973,
+      "start": 1721074036912,
+      "end": 1721074036912,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720959851973,
-      "end": 1720959851973,
+      "start": 1721074036912,
+      "end": 1721074036912,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720959851974,
-      "end": 1720959851974,
+      "start": 1721074036912,
+      "end": 1721074036912,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1720959851974,
-      "end": 1720959851974,
+      "start": 1721074036912,
+      "end": 1721074036912,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1720959851974,
-      "end": 1720959851974,
+      "start": 1721074036912,
+      "end": 1721074036912,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720959851974,
-      "end": 1720959851974,
+      "start": 1721074036912,
+      "end": 1721074036912,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720959851974,
-      "end": 1720959851974,
+      "start": 1721074036912,
+      "end": 1721074036912,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720959852010,
-      "end": 1720959852010,
+      "start": 1721074036912,
+      "end": 1721074036912,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720959852010,
-      "end": 1720959852010,
+      "start": 1721074036912,
+      "end": 1721074036912,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720959852013,
-      "end": 1720959852014,
+      "start": 1721074036912,
+      "end": 1721074036912,
       "order": "normal"
     },
     {
       "name": "vuetify:import",
-      "start": 1720959852015,
-      "end": 1720959852015,
+      "start": 1721074036912,
+      "end": 1721074036912,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1720959852017,
-      "end": 1720959852018,
+      "start": 1721074036912,
+      "end": 1721074036912,
       "order": "normal"
     },
     {
       "name": "replace",
       "result": "import { getCurrentInstance, reactive, toRefs } from \"vue\";\nimport { useHead } from \"@unhead/vue\";\nimport { useNuxtApp } from \"../nuxt.js\";\nimport { useAsyncData } from \"./asyncData.js\";\nimport { useRoute } from \"./router.js\";\nimport { createError } from \"./error.js\";\nexport const NuxtComponentIndicator = \"__nuxt_component\";\nasync function runLegacyAsyncData(res, fn) {\n  const nuxtApp = useNuxtApp();\n  const route = useRoute();\n  const vm = getCurrentInstance();\n  const { fetchKey, _fetchKeyBase } = vm.proxy.$options;\n  const key = (typeof fetchKey === \"function\" ? fetchKey(() => \"\") : fetchKey) || [_fetchKeyBase, route.fullPath, route.matched.findIndex((r) => Object.values(r.components || {}).includes(vm.type))].join(\":\");\n  const { data, error } = await useAsyncData(`options:asyncdata:${key}`, () => nuxtApp.runWithContext(() => fn(nuxtApp)));\n  if (error.value) {\n    throw createError(error.value);\n  }\n  if (data.value && typeof data.value === \"object\") {\n    Object.assign(await res, toRefs(reactive(data.value)));\n  } else if (false) {\n    console.warn(\"[nuxt] asyncData should return an object\", data);\n  }\n}\n/*! @__NO_SIDE_EFFECTS__ */\nexport const defineNuxtComponent = /* @__NO_SIDE_EFFECTS__ */ function defineNuxtComponent2(...args) {\n  const [options, key] = args;\n  const { setup } = options;\n  if (!setup && !options.asyncData && !options.head) {\n    return {\n      [NuxtComponentIndicator]: true,\n      ...options\n    };\n  }\n  return {\n    [NuxtComponentIndicator]: true,\n    _fetchKeyBase: key,\n    ...options,\n    setup(props, ctx) {\n      const nuxtApp = useNuxtApp();\n      const res = setup ? Promise.resolve(nuxtApp.runWithContext(() => setup(props, ctx))).then((r) => r || {}) : {};\n      const promises = [];\n      if (options.asyncData) {\n        promises.push(runLegacyAsyncData(res, options.asyncData));\n      }\n      if (options.head) {\n        const nuxtApp2 = useNuxtApp();\n        useHead(typeof options.head === \"function\" ? () => options.head(nuxtApp2) : options.head);\n      }\n      return Promise.resolve(res).then(() => Promise.all(promises)).then(() => res).finally(() => {\n        promises.length = 0;\n      });\n    }\n  };\n};\n",
-      "start": 1720959852020,
-      "end": 1720959852020,
+      "start": 1721074036912,
+      "end": 1721074036912,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -133,134 +133,134 @@
     },
     {
       "name": "ssr-styles",
-      "start": 1720959852020,
-      "end": 1720959852020,
+      "start": 1721074036913,
+      "end": 1721074036913,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720959852020,
-      "end": 1720959852021,
+      "start": 1721074036913,
+      "end": 1721074036913,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1720959852054,
-      "end": 1720959852054,
+      "start": 1721074036913,
+      "end": 1721074036913,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1720959852056,
-      "end": 1720959852057,
+      "start": 1721074036913,
+      "end": 1721074036913,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720959852063,
-      "end": 1720959852063,
+      "start": 1721074036913,
+      "end": 1721074036913,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720959852067,
-      "end": 1720959852067,
+      "start": 1721074036913,
+      "end": 1721074036913,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1720959852068,
-      "end": 1720959852069,
+      "start": 1721074036913,
+      "end": 1721074036913,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720959852069,
-      "end": 1720959852069,
+      "start": 1721074036913,
+      "end": 1721074036913,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720959852094,
-      "end": 1720959852094,
+      "start": 1721074036913,
+      "end": 1721074036913,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720959852095,
-      "end": 1720959852096,
+      "start": 1721074036914,
+      "end": 1721074036914,
       "order": "post"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720959852095,
-      "end": 1720959852096,
+      "start": 1721074036914,
+      "end": 1721074036914,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1720959852097,
-      "end": 1720959852100,
+      "start": 1721074036914,
+      "end": 1721074036914,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1720959852097,
-      "end": 1720959852101,
+      "start": 1721074036914,
+      "end": 1721074036914,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1720959852102,
-      "end": 1720959852103,
+      "start": 1721074036914,
+      "end": 1721074036914,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1720959852102,
-      "end": 1720959852103,
+      "start": 1721074036914,
+      "end": 1721074036914,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1720959852104,
-      "end": 1720959852104,
+      "start": 1721074036914,
+      "end": 1721074036914,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1720959852104,
-      "end": 1720959852104,
+      "start": 1721074036914,
+      "end": 1721074036914,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-template",
-      "start": 1720959852104,
-      "end": 1720959852104,
+      "start": 1721074036914,
+      "end": 1721074036914,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1720959852133,
-      "end": 1720959852133,
+      "start": 1721074036914,
+      "end": 1721074036914,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1720959852134,
-      "end": 1720959852135,
+      "start": 1721074036914,
+      "end": 1721074036914,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1720959852136,
-      "end": 1720959852136,
+      "start": 1721074036914,
+      "end": 1721074036914,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1720959852139,
-      "end": 1720959852140,
+      "start": 1721074036914,
+      "end": 1721074036914,
       "order": "normal"
     }
   ]

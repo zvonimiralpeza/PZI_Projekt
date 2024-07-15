@@ -4,57 +4,57 @@
     {
       "name": "vite:load-fallback",
       "result": "<template>\n  <v-app>\n    <v-app-bar location=\"top\" color=\"black\" >\n      <v-toolbar-title>\n        PRODAJA & KUPOVINA UMJETNICKIH DJELA\n      </v-toolbar-title>\n\n\n      <NuxtLink to=\"/\" class=\"mx-5\">NASLOVNA</NuxtLink>\n      <NuxtLink to=\"/akcija\" class=\"mx-5\" v-if=\"!user\">UVID ZA GOSTE</NuxtLink>\n      <NuxtLink to=\"/kupovina\" class=\"mx-5\" v-if=\"user\">KUPOVINA SLIKA</NuxtLink>\n      <NuxtLink to=\"/prodaja\" class=\"mx-5\" v-if=\"user\">PRODAJA SLIKA</NuxtLink>\n      <NuxtLink to=\"/login\" class=\"mx-5\" v-if=\"!user\">LOGIN</NuxtLink>\n      <NuxtLink to=\"/registracija\" class=\"mx-5\" v-if=\"!user\">REGISTRACIJA</NuxtLink>\n      <NuxtLink to=\"/Onama\" class=\"mx-5\">O NAMA</NuxtLink>\n      <v-btn v-if=\"user\" @click=\"userLogout\" color=\"red\">Logout</v-btn>\n    </v-app-bar>\n    \n    <NuxtPage style=\"padding-top: 64px; height: 100%;\"/>\n\n    <v-footer color=\"black\">\n      <v-spacer></v-spacer>\n\n      <v-container>\n        <v-row>\n          <v-col>\n            <h4>Kontaktirajte nas</h4>\n            <p>Broj telefona: +123 456 789</p>\n            <p>Email: info@umjetnickagalerija.com</p>\n          </v-col>\n\n          <v-col>\n            <h4>Lokacija</h4>\n            <p>Adresa: Matice hrvatske, Mostar, BiH</p>\n            <p>Radno vrijeme: Pon - Pet: 8:00 - 16:00</p>\n          </v-col>\n\n          <v-col>\n            <h4>Načini kupnje</h4>\n            <p>Molimo pročitajte naše uvjete korištenja prije kupnje.</p>\n            \n            <p>Linkovi</p>\n          </v-col>\n        </v-row>\n      </v-container>\n      \n      <v-spacer></v-spacer>\n    </v-footer>\n  </v-app>\n</template>\n\n<script>\nimport { mapWritableState  } from 'pinia';\nimport { useUsersStore } from './stores/users.js'\n\nexport default {\n  mounted () {\n    if (!this.user) {\n      this.user = JSON.parse(localStorage.getItem('user'))\n    }\n  },\n  data() {\n    return {\n      drawer: false,\n      selectedItem1: null,\n      selectedItem2: null,\n      menuItems1: ['Opcija 1', 'Opcija 2', 'Opcija 3'],\n      menuItems2: ['Opcija A', 'Opcija B', 'Opcija C'],\n    };\n  },\n  methods: {\n    handleButtonClick() {\n      // Implementirajte logiku kada se pritisne gumb\n      console.log('Button clicked!');\n    },\n    handleAuthorClick(author) {\n      // Implementirajte logiku kada se odabere autor iz opadajućeg izbornika\n      console.log(`Selected Author: ${author}`);\n    },\n    userLogout () {\n      this.user = null\n      localStorage.removeItem('user')\n      navigateTo('/')\n    }\n  },\n  computed: {\n    ...mapWritableState(useUsersStore, ['user'])\n  }\n};\n</script>\n\n<style>\n/* Add your custom styles here */\n</style>",
-      "start": 1720959832378,
-      "end": 1720959832978,
+      "start": 1721074015305,
+      "end": 1721074016051,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720959832978,
-      "end": 1720959832978,
+      "start": 1721074016052,
+      "end": 1721074016052,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720959832978,
-      "end": 1720959832978,
+      "start": 1721074016052,
+      "end": 1721074016052,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1720959832978,
-      "end": 1720959832978,
+      "start": 1721074016052,
+      "end": 1721074016052,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1720959832978,
-      "end": 1720959832978,
+      "start": 1721074016052,
+      "end": 1721074016052,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1720959832978,
-      "end": 1720959832978,
+      "start": 1721074016052,
+      "end": 1721074016052,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720959832978,
-      "end": 1720959832978,
+      "start": 1721074016052,
+      "end": 1721074016052,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720959832978,
-      "end": 1720959832978,
+      "start": 1721074016052,
+      "end": 1721074016052,
       "order": "normal"
     },
     {
       "name": "vite:vue",
       "result": "\nimport { mapWritableState  } from 'pinia';\nimport { useUsersStore } from './stores/users.js'\n\nconst _sfc_main = {\n  mounted () {\n    if (!this.user) {\n      this.user = JSON.parse(localStorage.getItem('user'))\n    }\n  },\n  data() {\n    return {\n      drawer: false,\n      selectedItem1: null,\n      selectedItem2: null,\n      menuItems1: ['Opcija 1', 'Opcija 2', 'Opcija 3'],\n      menuItems2: ['Opcija A', 'Opcija B', 'Opcija C'],\n    };\n  },\n  methods: {\n    handleButtonClick() {\n      // Implementirajte logiku kada se pritisne gumb\n      console.log('Button clicked!');\n    },\n    handleAuthorClick(author) {\n      // Implementirajte logiku kada se odabere autor iz opadajućeg izbornika\n      console.log(`Selected Author: ${author}`);\n    },\n    userLogout () {\n      this.user = null\n      localStorage.removeItem('user')\n      navigateTo('/')\n    }\n  },\n  computed: {\n    ...mapWritableState(useUsersStore, ['user'])\n  }\n};\n\nimport { createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, createElementVNode as _createElementVNode } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"h4\", null, \"Kontaktirajte nas\", -1)\nconst _hoisted_2 = /*#__PURE__*/_createElementVNode(\"p\", null, \"Broj telefona: +123 456 789\", -1)\nconst _hoisted_3 = /*#__PURE__*/_createElementVNode(\"p\", null, \"Email: info@umjetnickagalerija.com\", -1)\nconst _hoisted_4 = /*#__PURE__*/_createElementVNode(\"h4\", null, \"Lokacija\", -1)\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"p\", null, \"Adresa: Matice hrvatske, Mostar, BiH\", -1)\nconst _hoisted_6 = /*#__PURE__*/_createElementVNode(\"p\", null, \"Radno vrijeme: Pon - Pet: 8:00 - 16:00\", -1)\nconst _hoisted_7 = /*#__PURE__*/_createElementVNode(\"h4\", null, \"Načini kupnje\", -1)\nconst _hoisted_8 = /*#__PURE__*/_createElementVNode(\"p\", null, \"Molimo pročitajte naše uvjete korištenja prije kupnje.\", -1)\nconst _hoisted_9 = /*#__PURE__*/_createElementVNode(\"p\", null, \"Linkovi\", -1)\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_v_toolbar_title = _resolveComponent(\"v-toolbar-title\")\n  const _component_NuxtLink = _resolveComponent(\"NuxtLink\")\n  const _component_v_btn = _resolveComponent(\"v-btn\")\n  const _component_v_app_bar = _resolveComponent(\"v-app-bar\")\n  const _component_NuxtPage = _resolveComponent(\"NuxtPage\")\n  const _component_v_spacer = _resolveComponent(\"v-spacer\")\n  const _component_v_col = _resolveComponent(\"v-col\")\n  const _component_v_row = _resolveComponent(\"v-row\")\n  const _component_v_container = _resolveComponent(\"v-container\")\n  const _component_v_footer = _resolveComponent(\"v-footer\")\n  const _component_v_app = _resolveComponent(\"v-app\")\n\n  return (_openBlock(), _createBlock(_component_v_app, null, {\n    default: _withCtx(() => [\n      _createVNode(_component_v_app_bar, {\n        location: \"top\",\n        color: \"black\"\n      }, {\n        default: _withCtx(() => [\n          _createVNode(_component_v_toolbar_title, null, {\n            default: _withCtx(() => [\n              _createTextVNode(\" PRODAJA & KUPOVINA UMJETNICKIH DJELA \")\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_NuxtLink, {\n            to: \"/\",\n            class: \"mx-5\"\n          }, {\n            default: _withCtx(() => [\n              _createTextVNode(\"NASLOVNA\")\n            ]),\n            _: 1\n          }),\n          (!_ctx.user)\n            ? (_openBlock(), _createBlock(_component_NuxtLink, {\n                key: 0,\n                to: \"/akcija\",\n                class: \"mx-5\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"UVID ZA GOSTE\")\n                ]),\n                _: 1\n              }))\n            : _createCommentVNode(\"\", true),\n          (_ctx.user)\n            ? (_openBlock(), _createBlock(_component_NuxtLink, {\n                key: 1,\n                to: \"/kupovina\",\n                class: \"mx-5\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"KUPOVINA SLIKA\")\n                ]),\n                _: 1\n              }))\n            : _createCommentVNode(\"\", true),\n          (_ctx.user)\n            ? (_openBlock(), _createBlock(_component_NuxtLink, {\n                key: 2,\n                to: \"/prodaja\",\n                class: \"mx-5\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"PRODAJA SLIKA\")\n                ]),\n                _: 1\n              }))\n            : _createCommentVNode(\"\", true),\n          (!_ctx.user)\n            ? (_openBlock(), _createBlock(_component_NuxtLink, {\n                key: 3,\n                to: \"/login\",\n                class: \"mx-5\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"LOGIN\")\n                ]),\n                _: 1\n              }))\n            : _createCommentVNode(\"\", true),\n          (!_ctx.user)\n            ? (_openBlock(), _createBlock(_component_NuxtLink, {\n                key: 4,\n                to: \"/registracija\",\n                class: \"mx-5\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"REGISTRACIJA\")\n                ]),\n                _: 1\n              }))\n            : _createCommentVNode(\"\", true),\n          _createVNode(_component_NuxtLink, {\n            to: \"/Onama\",\n            class: \"mx-5\"\n          }, {\n            default: _withCtx(() => [\n              _createTextVNode(\"O NAMA\")\n            ]),\n            _: 1\n          }),\n          (_ctx.user)\n            ? (_openBlock(), _createBlock(_component_v_btn, {\n                key: 5,\n                onClick: $options.userLogout,\n                color: \"red\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"Logout\")\n                ]),\n                _: 1\n              }, 8, [\"onClick\"]))\n            : _createCommentVNode(\"\", true)\n        ]),\n        _: 1\n      }),\n      _createVNode(_component_NuxtPage, { style: {\"padding-top\":\"64px\",\"height\":\"100%\"} }),\n      _createVNode(_component_v_footer, { color: \"black\" }, {\n        default: _withCtx(() => [\n          _createVNode(_component_v_spacer),\n          _createVNode(_component_v_container, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_row, null, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_col, null, {\n                    default: _withCtx(() => [\n                      _hoisted_1,\n                      _hoisted_2,\n                      _hoisted_3\n                    ]),\n                    _: 1\n                  }),\n                  _createVNode(_component_v_col, null, {\n                    default: _withCtx(() => [\n                      _hoisted_4,\n                      _hoisted_5,\n                      _hoisted_6\n                    ]),\n                    _: 1\n                  }),\n                  _createVNode(_component_v_col, null, {\n                    default: _withCtx(() => [\n                      _hoisted_7,\n                      _hoisted_8,\n                      _hoisted_9\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_spacer)\n        ]),\n        _: 1\n      })\n    ]),\n    _: 1\n  }))\n}\n\nimport \"C:/Users/DT User/Desktop/ProjektPZI/frontend/app.vue?vue&type=style&index=0&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
-      "start": 1720959832978,
-      "end": 1720959832984,
+      "start": 1721074016052,
+      "end": 1721074016060,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -62,113 +62,113 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1720959832984,
-      "end": 1720959832984,
+      "start": 1721074016060,
+      "end": 1721074016060,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720959832984,
-      "end": 1720959832984,
+      "start": 1721074016060,
+      "end": 1721074016060,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720959832984,
-      "end": 1720959832984,
+      "start": 1721074016060,
+      "end": 1721074016061,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1720959832984,
-      "end": 1720959832984,
+      "start": 1721074016061,
+      "end": 1721074016061,
       "order": "normal"
     },
     {
       "name": "vuetify:import",
       "result": "\nimport { mapWritableState  } from 'pinia';\nimport { useUsersStore } from './stores/users.js'\n\nconst _sfc_main = {\n  mounted () {\n    if (!this.user) {\n      this.user = JSON.parse(localStorage.getItem('user'))\n    }\n  },\n  data() {\n    return {\n      drawer: false,\n      selectedItem1: null,\n      selectedItem2: null,\n      menuItems1: ['Opcija 1', 'Opcija 2', 'Opcija 3'],\n      menuItems2: ['Opcija A', 'Opcija B', 'Opcija C'],\n    };\n  },\n  methods: {\n    handleButtonClick() {\n      // Implementirajte logiku kada se pritisne gumb\n      console.log('Button clicked!');\n    },\n    handleAuthorClick(author) {\n      // Implementirajte logiku kada se odabere autor iz opadajućeg izbornika\n      console.log(`Selected Author: ${author}`);\n    },\n    userLogout () {\n      this.user = null\n      localStorage.removeItem('user')\n      navigateTo('/')\n    }\n  },\n  computed: {\n    ...mapWritableState(useUsersStore, ['user'])\n  }\n};\n\nimport { createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, createElementVNode as _createElementVNode } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"h4\", null, \"Kontaktirajte nas\", -1)\nconst _hoisted_2 = /*#__PURE__*/_createElementVNode(\"p\", null, \"Broj telefona: +123 456 789\", -1)\nconst _hoisted_3 = /*#__PURE__*/_createElementVNode(\"p\", null, \"Email: info@umjetnickagalerija.com\", -1)\nconst _hoisted_4 = /*#__PURE__*/_createElementVNode(\"h4\", null, \"Lokacija\", -1)\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"p\", null, \"Adresa: Matice hrvatske, Mostar, BiH\", -1)\nconst _hoisted_6 = /*#__PURE__*/_createElementVNode(\"p\", null, \"Radno vrijeme: Pon - Pet: 8:00 - 16:00\", -1)\nconst _hoisted_7 = /*#__PURE__*/_createElementVNode(\"h4\", null, \"Načini kupnje\", -1)\nconst _hoisted_8 = /*#__PURE__*/_createElementVNode(\"p\", null, \"Molimo pročitajte naše uvjete korištenja prije kupnje.\", -1)\nconst _hoisted_9 = /*#__PURE__*/_createElementVNode(\"p\", null, \"Linkovi\", -1)\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n                                                                         \n  const _component_NuxtLink = _resolveComponent(\"NuxtLink\")\n                                                     \n                                                             \n  const _component_NuxtPage = _resolveComponent(\"NuxtPage\")\n                                                           \n                                                     \n                                                     \n                                                                 \n                                                           \n                                                     \n\n  return (_openBlock(), _createBlock(_component_v_app, null, {\n    default: _withCtx(() => [\n      _createVNode(_component_v_app_bar, {\n        location: \"top\",\n        color: \"black\"\n      }, {\n        default: _withCtx(() => [\n          _createVNode(_component_v_toolbar_title, null, {\n            default: _withCtx(() => [\n              _createTextVNode(\" PRODAJA & KUPOVINA UMJETNICKIH DJELA \")\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_NuxtLink, {\n            to: \"/\",\n            class: \"mx-5\"\n          }, {\n            default: _withCtx(() => [\n              _createTextVNode(\"NASLOVNA\")\n            ]),\n            _: 1\n          }),\n          (!_ctx.user)\n            ? (_openBlock(), _createBlock(_component_NuxtLink, {\n                key: 0,\n                to: \"/akcija\",\n                class: \"mx-5\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"UVID ZA GOSTE\")\n                ]),\n                _: 1\n              }))\n            : _createCommentVNode(\"\", true),\n          (_ctx.user)\n            ? (_openBlock(), _createBlock(_component_NuxtLink, {\n                key: 1,\n                to: \"/kupovina\",\n                class: \"mx-5\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"KUPOVINA SLIKA\")\n                ]),\n                _: 1\n              }))\n            : _createCommentVNode(\"\", true),\n          (_ctx.user)\n            ? (_openBlock(), _createBlock(_component_NuxtLink, {\n                key: 2,\n                to: \"/prodaja\",\n                class: \"mx-5\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"PRODAJA SLIKA\")\n                ]),\n                _: 1\n              }))\n            : _createCommentVNode(\"\", true),\n          (!_ctx.user)\n            ? (_openBlock(), _createBlock(_component_NuxtLink, {\n                key: 3,\n                to: \"/login\",\n                class: \"mx-5\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"LOGIN\")\n                ]),\n                _: 1\n              }))\n            : _createCommentVNode(\"\", true),\n          (!_ctx.user)\n            ? (_openBlock(), _createBlock(_component_NuxtLink, {\n                key: 4,\n                to: \"/registracija\",\n                class: \"mx-5\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"REGISTRACIJA\")\n                ]),\n                _: 1\n              }))\n            : _createCommentVNode(\"\", true),\n          _createVNode(_component_NuxtLink, {\n            to: \"/Onama\",\n            class: \"mx-5\"\n          }, {\n            default: _withCtx(() => [\n              _createTextVNode(\"O NAMA\")\n            ]),\n            _: 1\n          }),\n          (_ctx.user)\n            ? (_openBlock(), _createBlock(_component_v_btn, {\n                key: 5,\n                onClick: $options.userLogout,\n                color: \"red\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"Logout\")\n                ]),\n                _: 1\n              }, 8, [\"onClick\"]))\n            : _createCommentVNode(\"\", true)\n        ]),\n        _: 1\n      }),\n      _createVNode(_component_NuxtPage, { style: {\"padding-top\":\"64px\",\"height\":\"100%\"} }),\n      _createVNode(_component_v_footer, { color: \"black\" }, {\n        default: _withCtx(() => [\n          _createVNode(_component_v_spacer),\n          _createVNode(_component_v_container, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_row, null, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_col, null, {\n                    default: _withCtx(() => [\n                      _hoisted_1,\n                      _hoisted_2,\n                      _hoisted_3\n                    ]),\n                    _: 1\n                  }),\n                  _createVNode(_component_v_col, null, {\n                    default: _withCtx(() => [\n                      _hoisted_4,\n                      _hoisted_5,\n                      _hoisted_6\n                    ]),\n                    _: 1\n                  }),\n                  _createVNode(_component_v_col, null, {\n                    default: _withCtx(() => [\n                      _hoisted_7,\n                      _hoisted_8,\n                      _hoisted_9\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_spacer)\n        ]),\n        _: 1\n      })\n    ]),\n    _: 1\n  }))\n}\n\nimport \"C:/Users/DT User/Desktop/ProjektPZI/frontend/app.vue?vue&type=style&index=0&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])\n\n/* Vuetify */\nimport { VApp as _component_v_app } from \"vuetify/lib/components/VApp/index.mjs\"\nimport { VAppBar as _component_v_app_bar } from \"vuetify/lib/components/VAppBar/index.mjs\"\nimport { VBtn as _component_v_btn } from \"vuetify/lib/components/VBtn/index.mjs\"\nimport { VFooter as _component_v_footer } from \"vuetify/lib/components/VFooter/index.mjs\"\nimport { VSpacer as _component_v_spacer, VCol as _component_v_col, VRow as _component_v_row, VContainer as _component_v_container } from \"vuetify/lib/components/VGrid/index.mjs\"\nimport { VToolbarTitle as _component_v_toolbar_title } from \"vuetify/lib/components/VToolbar/index.mjs\"\n\n",
-      "start": 1720959832984,
-      "end": 1720959832984,
+      "start": 1721074016061,
+      "end": 1721074016061,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1720959832984,
-      "end": 1720959832984,
+      "start": 1721074016061,
+      "end": 1721074016061,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720959832984,
-      "end": 1720959832984,
+      "start": 1721074016061,
+      "end": 1721074016061,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1720959832984,
-      "end": 1720959832984,
+      "start": 1721074016061,
+      "end": 1721074016061,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720959832984,
-      "end": 1720959832985,
+      "start": 1721074016061,
+      "end": 1721074016061,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1720959832985,
-      "end": 1720959832985,
+      "start": 1721074016061,
+      "end": 1721074016061,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1720959832985,
-      "end": 1720959832985,
+      "start": 1721074016062,
+      "end": 1721074016062,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720959832985,
-      "end": 1720959832985,
+      "start": 1721074016062,
+      "end": 1721074016062,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720959832985,
-      "end": 1720959832985,
+      "start": 1721074016062,
+      "end": 1721074016062,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1720959832985,
-      "end": 1720959832985,
+      "start": 1721074016062,
+      "end": 1721074016062,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720959832985,
-      "end": 1720959832985,
+      "start": 1721074016062,
+      "end": 1721074016062,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720959832985,
-      "end": 1720959832985,
+      "start": 1721074016062,
+      "end": 1721074016062,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720959832985,
-      "end": 1720959832985,
+      "start": 1721074016062,
+      "end": 1721074016062,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
       "result": "import { navigateTo } from '#app/composables/router';\n\nimport { mapWritableState  } from 'pinia';\nimport { useUsersStore } from './stores/users.js'\n\nconst _sfc_main = {\n  mounted () {\n    if (!this.user) {\n      this.user = JSON.parse(localStorage.getItem('user'))\n    }\n  },\n  data() {\n    return {\n      drawer: false,\n      selectedItem1: null,\n      selectedItem2: null,\n      menuItems1: ['Opcija 1', 'Opcija 2', 'Opcija 3'],\n      menuItems2: ['Opcija A', 'Opcija B', 'Opcija C'],\n    };\n  },\n  methods: {\n    handleButtonClick() {\n      // Implementirajte logiku kada se pritisne gumb\n      console.log('Button clicked!');\n    },\n    handleAuthorClick(author) {\n      // Implementirajte logiku kada se odabere autor iz opadajućeg izbornika\n      console.log(`Selected Author: ${author}`);\n    },\n    userLogout () {\n      this.user = null\n      localStorage.removeItem('user')\n      navigateTo('/')\n    }\n  },\n  computed: {\n    ...mapWritableState(useUsersStore, ['user'])\n  }\n};\n\nimport { createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, createElementVNode as _createElementVNode } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"h4\", null, \"Kontaktirajte nas\", -1)\nconst _hoisted_2 = /*#__PURE__*/_createElementVNode(\"p\", null, \"Broj telefona: +123 456 789\", -1)\nconst _hoisted_3 = /*#__PURE__*/_createElementVNode(\"p\", null, \"Email: info@umjetnickagalerija.com\", -1)\nconst _hoisted_4 = /*#__PURE__*/_createElementVNode(\"h4\", null, \"Lokacija\", -1)\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"p\", null, \"Adresa: Matice hrvatske, Mostar, BiH\", -1)\nconst _hoisted_6 = /*#__PURE__*/_createElementVNode(\"p\", null, \"Radno vrijeme: Pon - Pet: 8:00 - 16:00\", -1)\nconst _hoisted_7 = /*#__PURE__*/_createElementVNode(\"h4\", null, \"Načini kupnje\", -1)\nconst _hoisted_8 = /*#__PURE__*/_createElementVNode(\"p\", null, \"Molimo pročitajte naše uvjete korištenja prije kupnje.\", -1)\nconst _hoisted_9 = /*#__PURE__*/_createElementVNode(\"p\", null, \"Linkovi\", -1)\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n                                                                         \n  const _component_NuxtLink = _resolveComponent(\"NuxtLink\")\n                                                     \n                                                             \n  const _component_NuxtPage = _resolveComponent(\"NuxtPage\")\n                                                           \n                                                     \n                                                     \n                                                                 \n                                                           \n                                                     \n\n  return (_openBlock(), _createBlock(_component_v_app, null, {\n    default: _withCtx(() => [\n      _createVNode(_component_v_app_bar, {\n        location: \"top\",\n        color: \"black\"\n      }, {\n        default: _withCtx(() => [\n          _createVNode(_component_v_toolbar_title, null, {\n            default: _withCtx(() => [\n              _createTextVNode(\" PRODAJA & KUPOVINA UMJETNICKIH DJELA \")\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_NuxtLink, {\n            to: \"/\",\n            class: \"mx-5\"\n          }, {\n            default: _withCtx(() => [\n              _createTextVNode(\"NASLOVNA\")\n            ]),\n            _: 1\n          }),\n          (!_ctx.user)\n            ? (_openBlock(), _createBlock(_component_NuxtLink, {\n                key: 0,\n                to: \"/akcija\",\n                class: \"mx-5\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"UVID ZA GOSTE\")\n                ]),\n                _: 1\n              }))\n            : _createCommentVNode(\"\", true),\n          (_ctx.user)\n            ? (_openBlock(), _createBlock(_component_NuxtLink, {\n                key: 1,\n                to: \"/kupovina\",\n                class: \"mx-5\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"KUPOVINA SLIKA\")\n                ]),\n                _: 1\n              }))\n            : _createCommentVNode(\"\", true),\n          (_ctx.user)\n            ? (_openBlock(), _createBlock(_component_NuxtLink, {\n                key: 2,\n                to: \"/prodaja\",\n                class: \"mx-5\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"PRODAJA SLIKA\")\n                ]),\n                _: 1\n              }))\n            : _createCommentVNode(\"\", true),\n          (!_ctx.user)\n            ? (_openBlock(), _createBlock(_component_NuxtLink, {\n                key: 3,\n                to: \"/login\",\n                class: \"mx-5\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"LOGIN\")\n                ]),\n                _: 1\n              }))\n            : _createCommentVNode(\"\", true),\n          (!_ctx.user)\n            ? (_openBlock(), _createBlock(_component_NuxtLink, {\n                key: 4,\n                to: \"/registracija\",\n                class: \"mx-5\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"REGISTRACIJA\")\n                ]),\n                _: 1\n              }))\n            : _createCommentVNode(\"\", true),\n          _createVNode(_component_NuxtLink, {\n            to: \"/Onama\",\n            class: \"mx-5\"\n          }, {\n            default: _withCtx(() => [\n              _createTextVNode(\"O NAMA\")\n            ]),\n            _: 1\n          }),\n          (_ctx.user)\n            ? (_openBlock(), _createBlock(_component_v_btn, {\n                key: 5,\n                onClick: $options.userLogout,\n                color: \"red\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"Logout\")\n                ]),\n                _: 1\n              }, 8, [\"onClick\"]))\n            : _createCommentVNode(\"\", true)\n        ]),\n        _: 1\n      }),\n      _createVNode(_component_NuxtPage, { style: {\"padding-top\":\"64px\",\"height\":\"100%\"} }),\n      _createVNode(_component_v_footer, { color: \"black\" }, {\n        default: _withCtx(() => [\n          _createVNode(_component_v_spacer),\n          _createVNode(_component_v_container, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_row, null, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_col, null, {\n                    default: _withCtx(() => [\n                      _hoisted_1,\n                      _hoisted_2,\n                      _hoisted_3\n                    ]),\n                    _: 1\n                  }),\n                  _createVNode(_component_v_col, null, {\n                    default: _withCtx(() => [\n                      _hoisted_4,\n                      _hoisted_5,\n                      _hoisted_6\n                    ]),\n                    _: 1\n                  }),\n                  _createVNode(_component_v_col, null, {\n                    default: _withCtx(() => [\n                      _hoisted_7,\n                      _hoisted_8,\n                      _hoisted_9\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_spacer)\n        ]),\n        _: 1\n      })\n    ]),\n    _: 1\n  }))\n}\n\nimport \"C:/Users/DT User/Desktop/ProjektPZI/frontend/app.vue?vue&type=style&index=0&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])\n\n/* Vuetify */\nimport { VApp as _component_v_app } from \"vuetify/lib/components/VApp/index.mjs\"\nimport { VAppBar as _component_v_app_bar } from \"vuetify/lib/components/VAppBar/index.mjs\"\nimport { VBtn as _component_v_btn } from \"vuetify/lib/components/VBtn/index.mjs\"\nimport { VFooter as _component_v_footer } from \"vuetify/lib/components/VFooter/index.mjs\"\nimport { VSpacer as _component_v_spacer, VCol as _component_v_col, VRow as _component_v_row, VContainer as _component_v_container } from \"vuetify/lib/components/VGrid/index.mjs\"\nimport { VToolbarTitle as _component_v_toolbar_title } from \"vuetify/lib/components/VToolbar/index.mjs\"\n\n",
-      "start": 1720959832985,
-      "end": 1720959832989,
+      "start": 1721074016062,
+      "end": 1721074016067,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -181,51 +181,51 @@
     },
     {
       "name": "unctx:transform",
-      "start": 1720959832989,
-      "end": 1720959832989,
+      "start": 1721074016067,
+      "end": 1721074016067,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1720959832989,
-      "end": 1720959832989,
+      "start": 1721074016067,
+      "end": 1721074016067,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1720959832989,
-      "end": 1720959832989,
+      "start": 1721074016067,
+      "end": 1721074016067,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1720959832989,
-      "end": 1720959832989,
+      "start": 1721074016067,
+      "end": 1721074016067,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
       "result": "import { default as __nuxt_component_0 } from \"C:/Users/DT User/Desktop/ProjektPZI/frontend/node_modules/nuxt/dist/app/components/nuxt-link\";\nimport { default as __nuxt_component_1 } from \"C:/Users/DT User/Desktop/ProjektPZI/frontend/node_modules/nuxt/dist/pages/runtime/page\";\nimport { navigateTo } from '#app/composables/router';\n\nimport { mapWritableState  } from 'pinia';\nimport { useUsersStore } from './stores/users.js'\n\nconst _sfc_main = {\n  mounted () {\n    if (!this.user) {\n      this.user = JSON.parse(localStorage.getItem('user'))\n    }\n  },\n  data() {\n    return {\n      drawer: false,\n      selectedItem1: null,\n      selectedItem2: null,\n      menuItems1: ['Opcija 1', 'Opcija 2', 'Opcija 3'],\n      menuItems2: ['Opcija A', 'Opcija B', 'Opcija C'],\n    };\n  },\n  methods: {\n    handleButtonClick() {\n      // Implementirajte logiku kada se pritisne gumb\n      console.log('Button clicked!');\n    },\n    handleAuthorClick(author) {\n      // Implementirajte logiku kada se odabere autor iz opadajućeg izbornika\n      console.log(`Selected Author: ${author}`);\n    },\n    userLogout () {\n      this.user = null\n      localStorage.removeItem('user')\n      navigateTo('/')\n    }\n  },\n  computed: {\n    ...mapWritableState(useUsersStore, ['user'])\n  }\n};\n\nimport { createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock, createCommentVNode as _createCommentVNode, createElementVNode as _createElementVNode } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"h4\", null, \"Kontaktirajte nas\", -1)\nconst _hoisted_2 = /*#__PURE__*/_createElementVNode(\"p\", null, \"Broj telefona: +123 456 789\", -1)\nconst _hoisted_3 = /*#__PURE__*/_createElementVNode(\"p\", null, \"Email: info@umjetnickagalerija.com\", -1)\nconst _hoisted_4 = /*#__PURE__*/_createElementVNode(\"h4\", null, \"Lokacija\", -1)\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"p\", null, \"Adresa: Matice hrvatske, Mostar, BiH\", -1)\nconst _hoisted_6 = /*#__PURE__*/_createElementVNode(\"p\", null, \"Radno vrijeme: Pon - Pet: 8:00 - 16:00\", -1)\nconst _hoisted_7 = /*#__PURE__*/_createElementVNode(\"h4\", null, \"Načini kupnje\", -1)\nconst _hoisted_8 = /*#__PURE__*/_createElementVNode(\"p\", null, \"Molimo pročitajte naše uvjete korištenja prije kupnje.\", -1)\nconst _hoisted_9 = /*#__PURE__*/_createElementVNode(\"p\", null, \"Linkovi\", -1)\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n                                                                         \n  const _component_NuxtLink = __nuxt_component_0\n                                                     \n                                                             \n  const _component_NuxtPage = __nuxt_component_1\n                                                           \n                                                     \n                                                     \n                                                                 \n                                                           \n                                                     \n\n  return (_openBlock(), _createBlock(_component_v_app, null, {\n    default: _withCtx(() => [\n      _createVNode(_component_v_app_bar, {\n        location: \"top\",\n        color: \"black\"\n      }, {\n        default: _withCtx(() => [\n          _createVNode(_component_v_toolbar_title, null, {\n            default: _withCtx(() => [\n              _createTextVNode(\" PRODAJA & KUPOVINA UMJETNICKIH DJELA \")\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_NuxtLink, {\n            to: \"/\",\n            class: \"mx-5\"\n          }, {\n            default: _withCtx(() => [\n              _createTextVNode(\"NASLOVNA\")\n            ]),\n            _: 1\n          }),\n          (!_ctx.user)\n            ? (_openBlock(), _createBlock(_component_NuxtLink, {\n                key: 0,\n                to: \"/akcija\",\n                class: \"mx-5\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"UVID ZA GOSTE\")\n                ]),\n                _: 1\n              }))\n            : _createCommentVNode(\"\", true),\n          (_ctx.user)\n            ? (_openBlock(), _createBlock(_component_NuxtLink, {\n                key: 1,\n                to: \"/kupovina\",\n                class: \"mx-5\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"KUPOVINA SLIKA\")\n                ]),\n                _: 1\n              }))\n            : _createCommentVNode(\"\", true),\n          (_ctx.user)\n            ? (_openBlock(), _createBlock(_component_NuxtLink, {\n                key: 2,\n                to: \"/prodaja\",\n                class: \"mx-5\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"PRODAJA SLIKA\")\n                ]),\n                _: 1\n              }))\n            : _createCommentVNode(\"\", true),\n          (!_ctx.user)\n            ? (_openBlock(), _createBlock(_component_NuxtLink, {\n                key: 3,\n                to: \"/login\",\n                class: \"mx-5\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"LOGIN\")\n                ]),\n                _: 1\n              }))\n            : _createCommentVNode(\"\", true),\n          (!_ctx.user)\n            ? (_openBlock(), _createBlock(_component_NuxtLink, {\n                key: 4,\n                to: \"/registracija\",\n                class: \"mx-5\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"REGISTRACIJA\")\n                ]),\n                _: 1\n              }))\n            : _createCommentVNode(\"\", true),\n          _createVNode(_component_NuxtLink, {\n            to: \"/Onama\",\n            class: \"mx-5\"\n          }, {\n            default: _withCtx(() => [\n              _createTextVNode(\"O NAMA\")\n            ]),\n            _: 1\n          }),\n          (_ctx.user)\n            ? (_openBlock(), _createBlock(_component_v_btn, {\n                key: 5,\n                onClick: $options.userLogout,\n                color: \"red\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"Logout\")\n                ]),\n                _: 1\n              }, 8, [\"onClick\"]))\n            : _createCommentVNode(\"\", true)\n        ]),\n        _: 1\n      }),\n      _createVNode(_component_NuxtPage, { style: {\"padding-top\":\"64px\",\"height\":\"100%\"} }),\n      _createVNode(_component_v_footer, { color: \"black\" }, {\n        default: _withCtx(() => [\n          _createVNode(_component_v_spacer),\n          _createVNode(_component_v_container, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_row, null, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_col, null, {\n                    default: _withCtx(() => [\n                      _hoisted_1,\n                      _hoisted_2,\n                      _hoisted_3\n                    ]),\n                    _: 1\n                  }),\n                  _createVNode(_component_v_col, null, {\n                    default: _withCtx(() => [\n                      _hoisted_4,\n                      _hoisted_5,\n                      _hoisted_6\n                    ]),\n                    _: 1\n                  }),\n                  _createVNode(_component_v_col, null, {\n                    default: _withCtx(() => [\n                      _hoisted_7,\n                      _hoisted_8,\n                      _hoisted_9\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_spacer)\n        ]),\n        _: 1\n      })\n    ]),\n    _: 1\n  }))\n}\n\nimport \"C:/Users/DT User/Desktop/ProjektPZI/frontend/app.vue?vue&type=style&index=0&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])\n\n/* Vuetify */\nimport { VApp as _component_v_app } from \"vuetify/lib/components/VApp/index.mjs\"\nimport { VAppBar as _component_v_app_bar } from \"vuetify/lib/components/VAppBar/index.mjs\"\nimport { VBtn as _component_v_btn } from \"vuetify/lib/components/VBtn/index.mjs\"\nimport { VFooter as _component_v_footer } from \"vuetify/lib/components/VFooter/index.mjs\"\nimport { VSpacer as _component_v_spacer, VCol as _component_v_col, VRow as _component_v_row, VContainer as _component_v_container } from \"vuetify/lib/components/VGrid/index.mjs\"\nimport { VToolbarTitle as _component_v_toolbar_title } from \"vuetify/lib/components/VToolbar/index.mjs\"\n\n",
-      "start": 1720959832989,
-      "end": 1720959832989,
+      "start": 1721074016067,
+      "end": 1721074016068,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1720959832989,
-      "end": 1720959832990,
+      "start": 1721074016068,
+      "end": 1721074016068,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1720959832990,
-      "end": 1720959832990,
+      "start": 1721074016068,
+      "end": 1721074016069,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1720959832990,
-      "end": 1720959832990,
+      "start": 1721074016069,
+      "end": 1721074016069,
       "order": "normal"
     }
   ]

@@ -4,57 +4,57 @@
     {
       "name": "vite:load-fallback",
       "result": "<template>\r\n  <v-app>\r\n    <v-container>\r\n      <v-row>\r\n        <v-container class=\"black\">\r\n            <!-- Red sa izbornicima i gumbom -->\r\n            <v-row>\r\n              <v-col>\r\n                <v-select\r\n                  v-model=\"odabraniAutor\"\r\n                  :items=\"autori\"\r\n                  label=\"Autori\"\r\n                  clearable\r\n                ></v-select>\r\n              </v-col>\r\n            </v-row>\r\n        </v-container>\r\n\r\n        <v-col v-for=\"slika in filtriraneSlike\" :key=\"slika.id\" cols=\"12\" md=\"6\" lg=\"4\">\r\n          <v-card color=blue-grey-lighten-1>\r\n            <!-- Slika -->\r\n            <v-img\r\n              :src=\"slika.url\"\r\n              alt=\"Umjetničko djelo\"\r\n              class=\"grey lighten-2\"\r\n              height=\"200\"\r\n            ></v-img>\r\n\r\n            <v-card-title :style=\"{ color: 'cyan', fontSize: '22px'}\">{{ slika.name }}</v-card-title>\r\n            <v-card-subtitle :style=\"{ color: 'orange', fontSize: '17px', fontWeight: 'bold'}\">Cijena : {{slika.price}}€</v-card-subtitle>\r\n            <br>\r\n            <v-card-subtitle :style=\"{ color: 'white', fontSize: '17px'}\">Ime autora : {{ slika.author }}</v-card-subtitle>\r\n            <v-card-subtitle :style=\"{ color: 'white', fontSize: '17px'}\">Godina stvaranja : {{ slika.year }}.</v-card-subtitle>\r\n            <v-card-subtitle :style=\"{ color: 'white', fontSize: '17px'}\">Tehnika : {{ slika.technique }}</v-card-subtitle>\r\n            <v-card-actions>\r\n              <v-btn @click=\"redirectToPayPal()\" color=\"yellow\">Kupi</v-btn>\r\n              <v-btn @click=\"deleteImage(slika.id)\" color=\"red\" v-if=\"user && user.role === 'Admin'\">Obriši sliku</v-btn>\r\n            </v-card-actions>\r\n          </v-card>\r\n        </v-col>\r\n      </v-row>\r\n    </v-container>\r\n  </v-app>\r\n</template>\r\n\r\n<script>\r\nimport { mapWritableState } from 'pinia';\r\nimport { useUsersStore } from '../stores/users.js';\r\n\r\nexport default {\r\n  beforeMount() {\r\n    this.dohvatiSlike();\r\n  },\r\n  data() {\r\n    return {\r\n      slike: [],\r\n      odabraniAutor: null\r\n    };\r\n  },\r\n  methods: {\r\n    async deleteImage(slikaId) {\r\n      try {\r\n        const response = await $fetch(`${this.$config.public.BASE_URL}/products/${slikaId}`, {\r\n          method: 'DELETE'\r\n        });\r\n        const matchingIndex = this.slike.findIndex(el => el.id === slikaId);\r\n        if (matchingIndex > -1) {\r\n          this.slike.splice(matchingIndex, 1);\r\n        }\r\n      } catch (error) {\r\n        console.error('Greška prilikom brisanja slike:', error);\r\n      }\r\n    },\r\n    redirectToPayPal() {\r\n      const paypalURL = 'https://www.paypal.com/ba/home';\r\n      window.open(paypalURL, '_blank');\r\n    },\r\n    buyArtwork(artwork) {\r\n      console.log(`Kupljeno umjetničko djelo: ${artwork.title}`);\r\n    },\r\n    async dohvatiSlike() {\r\n      try {\r\n        const response = await $fetch(`${this.$config.public.BASE_URL}/products`, {\r\n          method: 'GET'\r\n        });\r\n        console.log(response);\r\n        this.slike = response.products;\r\n      } catch (error) {\r\n        console.error('Error making POST request:', error);\r\n      }\r\n    }\r\n  },\r\n  computed: {\r\n    ...mapWritableState(useUsersStore, ['user']),\r\n    autori() {\r\n      const tempArray = [];\r\n      this.slike.forEach(el => {\r\n        if (!tempArray.includes(el.author)) {\r\n          tempArray.push(el.author);\r\n        }\r\n      });\r\n      return tempArray;\r\n    },\r\n    filtriraneSlike() {\r\n      if (this.odabraniAutor) {\r\n        return this.slike.filter(el => el.author === this.odabraniAutor);\r\n      } else {\r\n        return this.slike;\r\n      }\r\n    }\r\n  }\r\n};\r\n</script>\r\n",
-      "start": 1720959829195,
-      "end": 1720959829809,
+      "start": 1721074014039,
+      "end": 1721074014703,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720959829809,
-      "end": 1720959829809,
+      "start": 1721074014703,
+      "end": 1721074014703,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720959829809,
-      "end": 1720959829809,
+      "start": 1721074014703,
+      "end": 1721074014703,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1720959829809,
-      "end": 1720959829809,
+      "start": 1721074014703,
+      "end": 1721074014703,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1720959829809,
-      "end": 1720959829809,
+      "start": 1721074014703,
+      "end": 1721074014703,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1720959829809,
-      "end": 1720959829809,
+      "start": 1721074014703,
+      "end": 1721074014703,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720959829809,
-      "end": 1720959829809,
+      "start": 1721074014703,
+      "end": 1721074014703,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720959829809,
-      "end": 1720959829809,
+      "start": 1721074014703,
+      "end": 1721074014703,
       "order": "normal"
     },
     {
       "name": "vite:vue",
       "result": "\r\nimport { mapWritableState } from 'pinia';\r\nimport { useUsersStore } from '../stores/users.js';\r\n\r\nconst _sfc_main = {\r\n  beforeMount() {\r\n    this.dohvatiSlike();\r\n  },\r\n  data() {\r\n    return {\r\n      slike: [],\r\n      odabraniAutor: null\r\n    };\r\n  },\r\n  methods: {\r\n    async deleteImage(slikaId) {\r\n      try {\r\n        const response = await $fetch(`${this.$config.public.BASE_URL}/products/${slikaId}`, {\r\n          method: 'DELETE'\r\n        });\r\n        const matchingIndex = this.slike.findIndex(el => el.id === slikaId);\r\n        if (matchingIndex > -1) {\r\n          this.slike.splice(matchingIndex, 1);\r\n        }\r\n      } catch (error) {\r\n        console.error('Greška prilikom brisanja slike:', error);\r\n      }\r\n    },\r\n    redirectToPayPal() {\r\n      const paypalURL = 'https://www.paypal.com/ba/home';\r\n      window.open(paypalURL, '_blank');\r\n    },\r\n    buyArtwork(artwork) {\r\n      console.log(`Kupljeno umjetničko djelo: ${artwork.title}`);\r\n    },\r\n    async dohvatiSlike() {\r\n      try {\r\n        const response = await $fetch(`${this.$config.public.BASE_URL}/products`, {\r\n          method: 'GET'\r\n        });\r\n        console.log(response);\r\n        this.slike = response.products;\r\n      } catch (error) {\r\n        console.error('Error making POST request:', error);\r\n      }\r\n    }\r\n  },\r\n  computed: {\r\n    ...mapWritableState(useUsersStore, ['user']),\r\n    autori() {\r\n      const tempArray = [];\r\n      this.slike.forEach(el => {\r\n        if (!tempArray.includes(el.author)) {\r\n          tempArray.push(el.author);\r\n        }\r\n      });\r\n      return tempArray;\r\n    },\r\n    filtriraneSlike() {\r\n      if (this.odabraniAutor) {\r\n        return this.slike.filter(el => el.author === this.odabraniAutor);\r\n      } else {\r\n        return this.slike;\r\n      }\r\n    }\r\n  }\r\n};\r\n\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, withCtx as _withCtx, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, createElementVNode as _createElementVNode, createBlock as _createBlock, createCommentVNode as _createCommentVNode } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"br\", null, null, -1)\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_v_select = _resolveComponent(\"v-select\")\n  const _component_v_col = _resolveComponent(\"v-col\")\n  const _component_v_row = _resolveComponent(\"v-row\")\n  const _component_v_container = _resolveComponent(\"v-container\")\n  const _component_v_img = _resolveComponent(\"v-img\")\n  const _component_v_card_title = _resolveComponent(\"v-card-title\")\n  const _component_v_card_subtitle = _resolveComponent(\"v-card-subtitle\")\n  const _component_v_btn = _resolveComponent(\"v-btn\")\n  const _component_v_card_actions = _resolveComponent(\"v-card-actions\")\n  const _component_v_card = _resolveComponent(\"v-card\")\n  const _component_v_app = _resolveComponent(\"v-app\")\n\n  return (_openBlock(), _createBlock(_component_v_app, null, {\n    default: _withCtx(() => [\n      _createVNode(_component_v_container, null, {\n        default: _withCtx(() => [\n          _createVNode(_component_v_row, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_container, { class: \"black\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_row, null, {\n                    default: _withCtx(() => [\n                      _createVNode(_component_v_col, null, {\n                        default: _withCtx(() => [\n                          _createVNode(_component_v_select, {\n                            modelValue: $data.odabraniAutor,\n                            \"onUpdate:modelValue\": _cache[0] || (_cache[0] = $event => (($data.odabraniAutor) = $event)),\n                            items: $options.autori,\n                            label: \"Autori\",\n                            clearable: \"\"\n                          }, null, 8, [\"modelValue\", \"items\"])\n                        ]),\n                        _: 1\n                      })\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              }),\n              (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($options.filtriraneSlike, (slika) => {\n                return (_openBlock(), _createBlock(_component_v_col, {\n                  key: slika.id,\n                  cols: \"12\",\n                  md: \"6\",\n                  lg: \"4\"\n                }, {\n                  default: _withCtx(() => [\n                    _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                      default: _withCtx(() => [\n                        _createVNode(_component_v_img, {\n                          src: slika.url,\n                          alt: \"Umjetničko djelo\",\n                          class: \"grey lighten-2\",\n                          height: \"200\"\n                        }, null, 8, [\"src\"]),\n                        _createVNode(_component_v_card_title, { style: { color: 'cyan', fontSize: '22px'} }, {\n                          default: _withCtx(() => [\n                            _createTextVNode(_toDisplayString(slika.name), 1)\n                          ]),\n                          _: 2\n                        }, 1024),\n                        _createVNode(_component_v_card_subtitle, { style: { color: 'orange', fontSize: '17px', fontWeight: 'bold'} }, {\n                          default: _withCtx(() => [\n                            _createTextVNode(\"Cijena : \" + _toDisplayString(slika.price) + \"€\", 1)\n                          ]),\n                          _: 2\n                        }, 1024),\n                        _hoisted_1,\n                        _createVNode(_component_v_card_subtitle, { style: { color: 'white', fontSize: '17px'} }, {\n                          default: _withCtx(() => [\n                            _createTextVNode(\"Ime autora : \" + _toDisplayString(slika.author), 1)\n                          ]),\n                          _: 2\n                        }, 1024),\n                        _createVNode(_component_v_card_subtitle, { style: { color: 'white', fontSize: '17px'} }, {\n                          default: _withCtx(() => [\n                            _createTextVNode(\"Godina stvaranja : \" + _toDisplayString(slika.year) + \".\", 1)\n                          ]),\n                          _: 2\n                        }, 1024),\n                        _createVNode(_component_v_card_subtitle, { style: { color: 'white', fontSize: '17px'} }, {\n                          default: _withCtx(() => [\n                            _createTextVNode(\"Tehnika : \" + _toDisplayString(slika.technique), 1)\n                          ]),\n                          _: 2\n                        }, 1024),\n                        _createVNode(_component_v_card_actions, null, {\n                          default: _withCtx(() => [\n                            _createVNode(_component_v_btn, {\n                              onClick: _cache[1] || (_cache[1] = $event => ($options.redirectToPayPal())),\n                              color: \"yellow\"\n                            }, {\n                              default: _withCtx(() => [\n                                _createTextVNode(\"Kupi\")\n                              ]),\n                              _: 1\n                            }),\n                            (_ctx.user && _ctx.user.role === 'Admin')\n                              ? (_openBlock(), _createBlock(_component_v_btn, {\n                                  key: 0,\n                                  onClick: $event => ($options.deleteImage(slika.id)),\n                                  color: \"red\"\n                                }, {\n                                  default: _withCtx(() => [\n                                    _createTextVNode(\"Obriši sliku\")\n                                  ]),\n                                  _: 2\n                                }, 1032, [\"onClick\"]))\n                              : _createCommentVNode(\"\", true)\n                          ]),\n                          _: 2\n                        }, 1024)\n                      ]),\n                      _: 2\n                    }, 1024)\n                  ]),\n                  _: 2\n                }, 1024))\n              }), 128))\n            ]),\n            _: 1\n          })\n        ]),\n        _: 1\n      })\n    ]),\n    _: 1\n  }))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
-      "start": 1720959829809,
-      "end": 1720959829817,
+      "start": 1721074014703,
+      "end": 1721074014711,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -62,160 +62,160 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1720959829817,
-      "end": 1720959829817,
+      "start": 1721074014711,
+      "end": 1721074014711,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720959829817,
-      "end": 1720959829817,
+      "start": 1721074014711,
+      "end": 1721074014712,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720959829817,
-      "end": 1720959829817,
+      "start": 1721074014712,
+      "end": 1721074014712,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1720959829818,
-      "end": 1720959829818,
+      "start": 1721074014712,
+      "end": 1721074014712,
       "order": "normal"
     },
     {
       "name": "vuetify:import",
       "result": "\r\nimport { mapWritableState } from 'pinia';\r\nimport { useUsersStore } from '../stores/users.js';\r\n\r\nconst _sfc_main = {\r\n  beforeMount() {\r\n    this.dohvatiSlike();\r\n  },\r\n  data() {\r\n    return {\r\n      slike: [],\r\n      odabraniAutor: null\r\n    };\r\n  },\r\n  methods: {\r\n    async deleteImage(slikaId) {\r\n      try {\r\n        const response = await $fetch(`${this.$config.public.BASE_URL}/products/${slikaId}`, {\r\n          method: 'DELETE'\r\n        });\r\n        const matchingIndex = this.slike.findIndex(el => el.id === slikaId);\r\n        if (matchingIndex > -1) {\r\n          this.slike.splice(matchingIndex, 1);\r\n        }\r\n      } catch (error) {\r\n        console.error('Greška prilikom brisanja slike:', error);\r\n      }\r\n    },\r\n    redirectToPayPal() {\r\n      const paypalURL = 'https://www.paypal.com/ba/home';\r\n      window.open(paypalURL, '_blank');\r\n    },\r\n    buyArtwork(artwork) {\r\n      console.log(`Kupljeno umjetničko djelo: ${artwork.title}`);\r\n    },\r\n    async dohvatiSlike() {\r\n      try {\r\n        const response = await $fetch(`${this.$config.public.BASE_URL}/products`, {\r\n          method: 'GET'\r\n        });\r\n        console.log(response);\r\n        this.slike = response.products;\r\n      } catch (error) {\r\n        console.error('Error making POST request:', error);\r\n      }\r\n    }\r\n  },\r\n  computed: {\r\n    ...mapWritableState(useUsersStore, ['user']),\r\n    autori() {\r\n      const tempArray = [];\r\n      this.slike.forEach(el => {\r\n        if (!tempArray.includes(el.author)) {\r\n          tempArray.push(el.author);\r\n        }\r\n      });\r\n      return tempArray;\r\n    },\r\n    filtriraneSlike() {\r\n      if (this.odabraniAutor) {\r\n        return this.slike.filter(el => el.author === this.odabraniAutor);\r\n      } else {\r\n        return this.slike;\r\n      }\r\n    }\r\n  }\r\n};\r\n\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, withCtx as _withCtx, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, createElementVNode as _createElementVNode, createBlock as _createBlock, createCommentVNode as _createCommentVNode } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"br\", null, null, -1)\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n                                                           \n                                                     \n                                                     \n                                                                 \n                                                     \n                                                                   \n                                                                         \n                                                     \n                                                                       \n                                                       \n                                                     \n\n  return (_openBlock(), _createBlock(_component_v_app, null, {\n    default: _withCtx(() => [\n      _createVNode(_component_v_container, null, {\n        default: _withCtx(() => [\n          _createVNode(_component_v_row, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_container, { class: \"black\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_row, null, {\n                    default: _withCtx(() => [\n                      _createVNode(_component_v_col, null, {\n                        default: _withCtx(() => [\n                          _createVNode(_component_v_select, {\n                            modelValue: $data.odabraniAutor,\n                            \"onUpdate:modelValue\": _cache[0] || (_cache[0] = $event => (($data.odabraniAutor) = $event)),\n                            items: $options.autori,\n                            label: \"Autori\",\n                            clearable: \"\"\n                          }, null, 8, [\"modelValue\", \"items\"])\n                        ]),\n                        _: 1\n                      })\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              }),\n              (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($options.filtriraneSlike, (slika) => {\n                return (_openBlock(), _createBlock(_component_v_col, {\n                  key: slika.id,\n                  cols: \"12\",\n                  md: \"6\",\n                  lg: \"4\"\n                }, {\n                  default: _withCtx(() => [\n                    _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                      default: _withCtx(() => [\n                        _createVNode(_component_v_img, {\n                          src: slika.url,\n                          alt: \"Umjetničko djelo\",\n                          class: \"grey lighten-2\",\n                          height: \"200\"\n                        }, null, 8, [\"src\"]),\n                        _createVNode(_component_v_card_title, { style: { color: 'cyan', fontSize: '22px'} }, {\n                          default: _withCtx(() => [\n                            _createTextVNode(_toDisplayString(slika.name), 1)\n                          ]),\n                          _: 2\n                        }, 1024),\n                        _createVNode(_component_v_card_subtitle, { style: { color: 'orange', fontSize: '17px', fontWeight: 'bold'} }, {\n                          default: _withCtx(() => [\n                            _createTextVNode(\"Cijena : \" + _toDisplayString(slika.price) + \"€\", 1)\n                          ]),\n                          _: 2\n                        }, 1024),\n                        _hoisted_1,\n                        _createVNode(_component_v_card_subtitle, { style: { color: 'white', fontSize: '17px'} }, {\n                          default: _withCtx(() => [\n                            _createTextVNode(\"Ime autora : \" + _toDisplayString(slika.author), 1)\n                          ]),\n                          _: 2\n                        }, 1024),\n                        _createVNode(_component_v_card_subtitle, { style: { color: 'white', fontSize: '17px'} }, {\n                          default: _withCtx(() => [\n                            _createTextVNode(\"Godina stvaranja : \" + _toDisplayString(slika.year) + \".\", 1)\n                          ]),\n                          _: 2\n                        }, 1024),\n                        _createVNode(_component_v_card_subtitle, { style: { color: 'white', fontSize: '17px'} }, {\n                          default: _withCtx(() => [\n                            _createTextVNode(\"Tehnika : \" + _toDisplayString(slika.technique), 1)\n                          ]),\n                          _: 2\n                        }, 1024),\n                        _createVNode(_component_v_card_actions, null, {\n                          default: _withCtx(() => [\n                            _createVNode(_component_v_btn, {\n                              onClick: _cache[1] || (_cache[1] = $event => ($options.redirectToPayPal())),\n                              color: \"yellow\"\n                            }, {\n                              default: _withCtx(() => [\n                                _createTextVNode(\"Kupi\")\n                              ]),\n                              _: 1\n                            }),\n                            (_ctx.user && _ctx.user.role === 'Admin')\n                              ? (_openBlock(), _createBlock(_component_v_btn, {\n                                  key: 0,\n                                  onClick: $event => ($options.deleteImage(slika.id)),\n                                  color: \"red\"\n                                }, {\n                                  default: _withCtx(() => [\n                                    _createTextVNode(\"Obriši sliku\")\n                                  ]),\n                                  _: 2\n                                }, 1032, [\"onClick\"]))\n                              : _createCommentVNode(\"\", true)\n                          ]),\n                          _: 2\n                        }, 1024)\n                      ]),\n                      _: 2\n                    }, 1024)\n                  ]),\n                  _: 2\n                }, 1024))\n              }), 128))\n            ]),\n            _: 1\n          })\n        ]),\n        _: 1\n      })\n    ]),\n    _: 1\n  }))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])\n\n/* Vuetify */\nimport { VApp as _component_v_app } from \"vuetify/lib/components/VApp/index.mjs\"\nimport { VBtn as _component_v_btn } from \"vuetify/lib/components/VBtn/index.mjs\"\nimport { VCardTitle as _component_v_card_title, VCardSubtitle as _component_v_card_subtitle, VCardActions as _component_v_card_actions, VCard as _component_v_card } from \"vuetify/lib/components/VCard/index.mjs\"\nimport { VCol as _component_v_col, VRow as _component_v_row, VContainer as _component_v_container } from \"vuetify/lib/components/VGrid/index.mjs\"\nimport { VImg as _component_v_img } from \"vuetify/lib/components/VImg/index.mjs\"\nimport { VSelect as _component_v_select } from \"vuetify/lib/components/VSelect/index.mjs\"\n\n",
-      "start": 1720959829818,
-      "end": 1720959829818,
+      "start": 1721074014712,
+      "end": 1721074014712,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1720959829818,
-      "end": 1720959829818,
+      "start": 1721074014712,
+      "end": 1721074014712,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720959829818,
-      "end": 1720959829818,
+      "start": 1721074014712,
+      "end": 1721074014713,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1720959829818,
-      "end": 1720959829818,
+      "start": 1721074014713,
+      "end": 1721074014713,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720959829818,
-      "end": 1720959829818,
+      "start": 1721074014713,
+      "end": 1721074014713,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1720959829818,
-      "end": 1720959829818,
+      "start": 1721074014713,
+      "end": 1721074014713,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1720959829819,
-      "end": 1720959829819,
+      "start": 1721074014713,
+      "end": 1721074014713,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720959829819,
-      "end": 1720959829819,
+      "start": 1721074014713,
+      "end": 1721074014713,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720959829819,
-      "end": 1720959829819,
+      "start": 1721074014713,
+      "end": 1721074014713,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1720959829819,
-      "end": 1720959829819,
+      "start": 1721074014713,
+      "end": 1721074014713,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720959829819,
-      "end": 1720959829819,
+      "start": 1721074014713,
+      "end": 1721074014713,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720959829819,
-      "end": 1720959829819,
+      "start": 1721074014713,
+      "end": 1721074014713,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720959829819,
-      "end": 1720959829819,
+      "start": 1721074014713,
+      "end": 1721074014714,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1720959829819,
-      "end": 1720959829823,
+      "start": 1721074014714,
+      "end": 1721074014719,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1720959829823,
-      "end": 1720959829823,
+      "start": 1721074014719,
+      "end": 1721074014719,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1720959829823,
-      "end": 1720959829824,
+      "start": 1721074014719,
+      "end": 1721074014719,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1720959829824,
-      "end": 1720959829824,
+      "start": 1721074014719,
+      "end": 1721074014719,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1720959829824,
-      "end": 1720959829824,
+      "start": 1721074014719,
+      "end": 1721074014719,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1720959829824,
-      "end": 1720959829824,
+      "start": 1721074014719,
+      "end": 1721074014720,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1720959829824,
-      "end": 1720959829824,
+      "start": 1721074014720,
+      "end": 1721074014720,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1720959829824,
-      "end": 1720959829824,
+      "start": 1721074014720,
+      "end": 1721074014720,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1720959829825,
-      "end": 1720959829825,
+      "start": 1721074014720,
+      "end": 1721074014720,
       "order": "normal"
     }
   ]

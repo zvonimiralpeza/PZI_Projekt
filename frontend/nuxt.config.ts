@@ -2,7 +2,7 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
-      BASE_URL: process.env.BASE_URL || 'http://localhost:5000',
+      BASE_URL: process.env.BASE_URL || 'http://art.studenti.sum.ba',
     },
   },
   //...

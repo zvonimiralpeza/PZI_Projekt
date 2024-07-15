@@ -4,57 +4,57 @@
     {
       "name": "vite:load-fallback",
       "result": "<template>\r\n    <div>\r\n      <!-- This page correctly has only one single root element -->\r\n      <p>TEST!!!</p>\r\n      <NuxtLink to=\"/kupovina\">Link za kupovinu</NuxtLink>\r\n      <v-btn to=\"/\">Glavna stranica</v-btn>\r\n    </div>\r\n  </template>",
-      "start": 1720959829117,
-      "end": 1720959829743,
+      "start": 1721074013993,
+      "end": 1721074014637,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1720959829743,
-      "end": 1720959829743,
+      "start": 1721074014637,
+      "end": 1721074014637,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1720959829743,
-      "end": 1720959829743,
+      "start": 1721074014637,
+      "end": 1721074014637,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1720959829743,
-      "end": 1720959829743,
+      "start": 1721074014637,
+      "end": 1721074014637,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1720959829743,
-      "end": 1720959829743,
+      "start": 1721074014637,
+      "end": 1721074014637,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1720959829743,
-      "end": 1720959829743,
+      "start": 1721074014637,
+      "end": 1721074014637,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720959829743,
-      "end": 1720959829743,
+      "start": 1721074014637,
+      "end": 1721074014637,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720959829743,
-      "end": 1720959829743,
+      "start": 1721074014637,
+      "end": 1721074014637,
       "order": "normal"
     },
     {
       "name": "vite:vue",
       "result": "const _sfc_main = {}\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"p\", null, \"TEST!!!\", -1)\n\nfunction _sfc_render(_ctx, _cache) {\n  const _component_NuxtLink = _resolveComponent(\"NuxtLink\")\n  const _component_v_btn = _resolveComponent(\"v-btn\")\n\n  return (_openBlock(), _createElementBlock(\"div\", null, [\n    _hoisted_1,\n    _createVNode(_component_NuxtLink, { to: \"/kupovina\" }, {\n      default: _withCtx(() => [\n        _createTextVNode(\"Link za kupovinu\")\n      ]),\n      _: 1\n    }),\n    _createVNode(_component_v_btn, { to: \"/\" }, {\n      default: _withCtx(() => [\n        _createTextVNode(\"Glavna stranica\")\n      ]),\n      _: 1\n    })\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
-      "start": 1720959829743,
-      "end": 1720959829746,
+      "start": 1721074014637,
+      "end": 1721074014639,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -62,125 +62,125 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1720959829746,
-      "end": 1720959829746,
+      "start": 1721074014639,
+      "end": 1721074014639,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720959829746,
-      "end": 1720959829746,
+      "start": 1721074014639,
+      "end": 1721074014639,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1720959829746,
-      "end": 1720959829747,
+      "start": 1721074014639,
+      "end": 1721074014639,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1720959829747,
-      "end": 1720959829747,
+      "start": 1721074014639,
+      "end": 1721074014639,
       "order": "normal"
     },
     {
       "name": "vuetify:import",
       "result": "const _sfc_main = {}\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"p\", null, \"TEST!!!\", -1)\n\nfunction _sfc_render(_ctx, _cache) {\n  const _component_NuxtLink = _resolveComponent(\"NuxtLink\")\n                                                     \n\n  return (_openBlock(), _createElementBlock(\"div\", null, [\n    _hoisted_1,\n    _createVNode(_component_NuxtLink, { to: \"/kupovina\" }, {\n      default: _withCtx(() => [\n        _createTextVNode(\"Link za kupovinu\")\n      ]),\n      _: 1\n    }),\n    _createVNode(_component_v_btn, { to: \"/\" }, {\n      default: _withCtx(() => [\n        _createTextVNode(\"Glavna stranica\")\n      ]),\n      _: 1\n    })\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])\n\n/* Vuetify */\nimport { VBtn as _component_v_btn } from \"vuetify/lib/components/VBtn/index.mjs\"\n\n",
-      "start": 1720959829747,
-      "end": 1720959829747,
+      "start": 1721074014639,
+      "end": 1721074014640,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1720959829747,
-      "end": 1720959829747,
+      "start": 1721074014640,
+      "end": 1721074014640,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1720959829747,
-      "end": 1720959829748,
+      "start": 1721074014640,
+      "end": 1721074014640,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1720959829748,
-      "end": 1720959829748,
+      "start": 1721074014640,
+      "end": 1721074014640,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720959829748,
-      "end": 1720959829748,
+      "start": 1721074014640,
+      "end": 1721074014640,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1720959829748,
-      "end": 1720959829748,
+      "start": 1721074014640,
+      "end": 1721074014640,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1720959829748,
-      "end": 1720959829748,
+      "start": 1721074014640,
+      "end": 1721074014640,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720959829748,
-      "end": 1720959829748,
+      "start": 1721074014640,
+      "end": 1721074014640,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720959829748,
-      "end": 1720959829748,
+      "start": 1721074014640,
+      "end": 1721074014640,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1720959829748,
-      "end": 1720959829748,
+      "start": 1721074014640,
+      "end": 1721074014640,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720959829748,
-      "end": 1720959829748,
+      "start": 1721074014640,
+      "end": 1721074014640,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720959829748,
-      "end": 1720959829748,
+      "start": 1721074014640,
+      "end": 1721074014640,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1720959829748,
-      "end": 1720959829748,
+      "start": 1721074014640,
+      "end": 1721074014640,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1720959829748,
-      "end": 1720959829749,
+      "start": 1721074014640,
+      "end": 1721074014641,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1720959829749,
-      "end": 1720959829749,
+      "start": 1721074014641,
+      "end": 1721074014641,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
       "result": "\nconst __nuxt_page_meta = null\nexport default __nuxt_page_meta\n",
-      "start": 1720959829749,
-      "end": 1720959829750,
+      "start": 1721074014641,
+      "end": 1721074014641,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -193,38 +193,38 @@
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1720959829750,
-      "end": 1720959829750,
+      "start": 1721074014641,
+      "end": 1721074014641,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1720959829750,
-      "end": 1720959829750,
+      "start": 1721074014641,
+      "end": 1721074014641,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1720959829750,
-      "end": 1720959829750,
+      "start": 1721074014641,
+      "end": 1721074014641,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1720959829750,
-      "end": 1720959829750,
+      "start": 1721074014641,
+      "end": 1721074014641,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1720959829750,
-      "end": 1720959829750,
+      "start": 1721074014641,
+      "end": 1721074014641,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1720959829750,
-      "end": 1720959829750,
+      "start": 1721074014641,
+      "end": 1721074014641,
       "order": "normal"
     }
   ]

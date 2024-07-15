@@ -1,0 +1,1 @@
+import{_ as o,c,b as e,w as t,b8 as s,a as _,e as r,o as u,d as a}from"./entry.ca8d555d.js";const d={},i=_("p",null,"TEST!!!",-1);function l(p,f){const n=r;return u(),c("div",null,[i,e(n,{to:"/kupovina"},{default:t(()=>[a("Link za kupovinu")]),_:1}),e(s,{to:"/"},{default:t(()=>[a("Glavna stranica")]),_:1})])}const k=o(d,[["render",l]]);export{k as default};
