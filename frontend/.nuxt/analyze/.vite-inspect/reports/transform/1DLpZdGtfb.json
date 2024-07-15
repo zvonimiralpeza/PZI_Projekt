@@ -4,57 +4,57 @@
     {
       "name": "vite:load-fallback",
       "result": "<template>\r\n\r\n\r\n<v-container align=center>\r\n            <v-row class=\"flex justify-center\">\r\n            <v-col>\r\n                <v-card color=blue-grey-lighten-1 class=\"mx-auto\">\r\n                <v-img\r\n                    src=\"https://d2rdb56lmj4es2.cloudfront.net/data/photo/2021/7/3/070321B-DED1-4807-9CB3EA04DDDFF6AD.jpg\"\r\n                    alt=\"Slika 1\"\r\n                    class=\"my-3\"\r\n                    width=\"370\"\r\n                    height=\"300\"\r\n                ></v-img>\r\n                <v-card-text>\r\n                    <p :style=\"{ textTransform: 'uppercase', color: 'cyan', fontSize: '20px' }\">Yellowstone National Park</p>\r\n                    <v-spacer></v-spacer>\r\n                </v-card-text>\r\n                </v-card>\r\n            </v-col>\r\n\r\n            <v-col>\r\n                <v-card color=blue-grey-lighten-1>\r\n                <v-img\r\n                    src=\"https://d2rdb56lmj4es2.cloudfront.net/data/photo/2021/3/29/0329214-CD61-4099-B7007E2B9F68EBE9.jpg\"\r\n                    alt=\"Slika 2\"\r\n                    class=\"my-3\"\r\n                    width=\"370\"\r\n                    height=\"300\"\r\n                ></v-img>\r\n                <v-card-text>\r\n                    <p :style=\"{ textTransform: 'uppercase', color: 'cyan', fontSize: '20px' }\">Winter views</p>\r\n                    <v-spacer></v-spacer>    \r\n                </v-card-text>\r\n                </v-card>\r\n            </v-col>\r\n\r\n            <v-col>\r\n                <v-card color=blue-grey-lighten-1>\r\n                <v-img\r\n                    src=\"https://cdn.pixabay.com/photo/2024/02/11/12/44/landscape-8566451_1280.jpg\"\r\n                    alt=\"Slika 2\"\r\n                    class=\"my-3\"\r\n                    width=\"370\"\r\n                    height=\"300\"\r\n                ></v-img>\r\n                <v-card-text>\r\n                    <p :style=\"{ textTransform: 'uppercase', color: 'cyan', fontSize: '20px' }\">Landscape Island</p>\r\n                    <v-spacer></v-spacer>    \r\n                </v-card-text>\r\n                </v-card>\r\n            </v-col>\r\n\r\n        \r\n            <v-col>\r\n                <v-card color=blue-grey-lighten-1>\r\n                <v-img\r\n                    src=\"https://d2rdb56lmj4es2.cloudfront.net/data/photo/2022/1/21/0121228-C715-493A-8196DF8BD5CACF83.jpg\"\r\n                    alt=\"Slika 2\"\r\n                    class=\"my-3\"\r\n                    width=\"370\"\r\n                    height=\"300\"\r\n                ></v-img>\r\n                <v-card-text>\r\n                    <p :style=\"{ textTransform: 'uppercase', color: 'cyan', fontSize: '20px' }\">Skyline sign</p>\r\n                    <v-spacer></v-spacer>    \r\n                </v-card-text>\r\n                </v-card>\r\n            </v-col>\r\n\r\n            <v-col>\r\n                <v-card color=blue-grey-lighten-1>\r\n                <v-img\r\n                    src=\"https://cdn.pixabay.com/photo/2023/04/13/09/56/alps-7922246_1280.jpg\"\r\n                    alt=\"Slika 2\"\r\n                    class=\"my-3\"\r\n                    width=\"370\"\r\n                    height=\"300\"\r\n                ></v-img>\r\n                <v-card-text>\r\n                    <p :style=\"{ textTransform: 'uppercase', color: 'cyan', fontSize: '20px' }\">Alps mountain</p>\r\n                    <v-spacer></v-spacer>    \r\n                </v-card-text>\r\n                </v-card>\r\n            </v-col>\r\n\r\n            <v-col>\r\n                <v-card color=blue-grey-lighten-1>\r\n                <v-img\r\n                    src=\"https://d2rdb56lmj4es2.cloudfront.net/data/photo/2021/12/5/120521C-927D-4343-84085362F3F720EF.jpg\"\r\n                    alt=\"Slika 2\"\r\n                    class=\"my-3\"\r\n                    width=\"370\"\r\n                    height=\"300\"\r\n                ></v-img>\r\n                <v-card-text>\r\n                    <p :style=\"{ textTransform: 'uppercase', color: 'cyan', fontSize: '20px' }\">Beautiful Autumn Landscape</p>\r\n                    <v-spacer></v-spacer>    \r\n                </v-card-text>\r\n                </v-card>\r\n            </v-col>\r\n\r\n            <v-col>\r\n                <v-card color=blue-grey-lighten-1>\r\n                <v-img\r\n                    src=\"https://cdn.pixabay.com/photo/2024/03/05/10/38/boat-8614314_1280.jpg\"\r\n                    alt=\"Slika 2\"\r\n                    class=\"my-3\"\r\n                    width=\"370\"\r\n                    height=\"300\"\r\n                ></v-img>\r\n                <v-card-text>\r\n                    <p :style=\"{ textTransform: 'uppercase', color: 'cyan', fontSize: '20px' }\">Boat and sea</p>\r\n                    <v-spacer></v-spacer>    \r\n                </v-card-text>\r\n                </v-card>\r\n            </v-col>\r\n\r\n            <v-col>\r\n                <v-card color=blue-grey-lighten-1>\r\n                <v-img\r\n                    src=\"https://cdn.pixabay.com/photo/2023/04/11/13/27/bird-7917250_1280.jpg\"\r\n                    alt=\"Slika 2\"\r\n                    class=\"my-3\"\r\n                    width=\"370\"\r\n                    height=\"300\"\r\n                ></v-img>\r\n                <v-card-text>\r\n                    <p :style=\"{ textTransform: 'uppercase', color: 'cyan', fontSize: '20px' }\">Bird in river</p>\r\n                    <v-spacer></v-spacer>    \r\n                </v-card-text>\r\n                </v-card>\r\n            </v-col>\r\n\r\n            <v-col>\r\n                <v-card color=blue-grey-lighten-1>\r\n                <v-img\r\n                    src=\"https://cdn.pixabay.com/photo/2023/02/06/10/02/man-7771583_1280.jpg\"\r\n                    alt=\"Slika 2\"\r\n                    class=\"my-3\"\r\n                    width=\"370\"\r\n                    height=\"300\"\r\n                ></v-img>\r\n                <v-card-text>\r\n                    <p :style=\"{ textTransform: 'uppercase', color: 'cyan', fontSize: '20px' }\">Man model on telephone</p>\r\n                    <v-spacer></v-spacer>    \r\n                </v-card-text>\r\n                </v-card>\r\n            </v-col>\r\n\r\n            <v-col>\r\n                <v-card color=blue-grey-lighten-1>\r\n                <v-img\r\n                    src=\"https://cdn.pixabay.com/photo/2023/08/18/10/00/sea-8198149_1280.jpg\"\r\n                    alt=\"Slika 2\"\r\n                    class=\"my-3\"\r\n                    width=\"370\"\r\n                    height=\"300\"\r\n                ></v-img>\r\n                <v-card-text>\r\n                    <p :style=\"{ textTransform: 'uppercase', color: 'cyan', fontSize: '20px' }\">Sea and ocean</p>\r\n                    <v-spacer></v-spacer>    \r\n                </v-card-text>\r\n                </v-card>\r\n            </v-col>\r\n\r\n            <v-col>\r\n                <v-card color=blue-grey-lighten-1>\r\n                <v-img\r\n                    src=\"https://cdn.pixabay.com/photo/2023/09/29/07/50/rocks-8283171_1280.jpg\"\r\n                    alt=\"Slika 2\"\r\n                    class=\"my-3\"\r\n                    width=\"370\"\r\n                    height=\"300\"\r\n                ></v-img>\r\n                <v-card-text>\r\n                    <p :style=\"{ textTransform: 'uppercase', color: 'cyan', fontSize: '20px' }\">Rocks and mountains</p>\r\n                    <v-spacer></v-spacer>    \r\n                </v-card-text>\r\n                </v-card>\r\n            </v-col>\r\n\r\n            <v-col>\r\n                <v-card color=blue-grey-lighten-1>\r\n                <v-img\r\n                    src=\"https://cdn.pixabay.com/photo/2023/04/17/07/47/sunset-7931854_1280.jpg\"\r\n                    alt=\"Slika 2\"\r\n                    class=\"my-3\"\r\n                    width=\"370\"\r\n                    height=\"300\"\r\n                ></v-img>\r\n                <v-card-text>\r\n                    <p :style=\"{ textTransform: 'uppercase', color: 'cyan', fontSize: '20px' }\">Sunset</p>\r\n                    <v-spacer></v-spacer>    \r\n                </v-card-text>\r\n                </v-card>\r\n            </v-col>\r\n\r\n            <v-col>\r\n                <v-card color=blue-grey-lighten-1>\r\n                <v-img\r\n                    src=\"https://cdn.pixabay.com/photo/2023/05/05/06/19/street-7971714_1280.jpg\"\r\n                    alt=\"Slika 2\"\r\n                    class=\"my-3\"\r\n                    width=\"370\"\r\n                    height=\"300\"\r\n                ></v-img>\r\n                <v-card-text>\r\n                    <p :style=\"{ textTransform: 'uppercase', color: 'cyan', fontSize: '20px' }\">Street architecture</p>\r\n                    <v-spacer></v-spacer>    \r\n                </v-card-text>\r\n                </v-card>\r\n            </v-col>\r\n\r\n            <v-col>\r\n                <v-card color=blue-grey-lighten-1>\r\n                <v-img\r\n                    src=\"https://cdn.pixabay.com/photo/2023/04/16/11/27/bridge-7930004_960_720.jpg\"\r\n                    alt=\"Slika 2\"\r\n                    class=\"my-3\"\r\n                    width=\"370\"\r\n                    height=\"300\"\r\n                ></v-img>\r\n                <v-card-text>\r\n                    <p :style=\"{ textTransform: 'uppercase', color: 'cyan', fontSize: '20px' }\">Bridge</p>\r\n                    <v-spacer></v-spacer>    \r\n                </v-card-text>\r\n                </v-card>\r\n            </v-col>\r\n\r\n\r\n            <v-col>\r\n                <v-card color=blue-grey-lighten-1>\r\n                <v-img\r\n                    src=\"https://d2rdb56lmj4es2.cloudfront.net/data/photo/2022/6/20/0620225-C019-4DCB-9F20F125BA6B7BC1.jpg\"\r\n                    alt=\"Slika 3\"\r\n                    class=\"my-3\"\r\n                    width=\"370\"\r\n                    height=\"300\"\r\n                ></v-img>\r\n                <v-card-text>\r\n                    <p :style=\"{ textTransform: 'uppercase', color: 'cyan', fontSize: '20px' }\">Rain in the Sage Steppe</p>\r\n                    <v-spacer></v-spacer>\r\n                </v-card-text>\r\n                </v-card>\r\n            </v-col>\r\n            </v-row>\r\n        </v-container>\r\n\r\n\r\n</template>",
-      "start": 1721074014001,
-      "end": 1721074014642,
+      "start": 1721074657697,
+      "end": 1721074658338,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1721074014642,
-      "end": 1721074014642,
+      "start": 1721074658338,
+      "end": 1721074658338,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1721074014642,
-      "end": 1721074014642,
+      "start": 1721074658338,
+      "end": 1721074658338,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1721074014642,
-      "end": 1721074014642,
+      "start": 1721074658338,
+      "end": 1721074658338,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1721074014642,
-      "end": 1721074014642,
+      "start": 1721074658338,
+      "end": 1721074658338,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1721074014642,
-      "end": 1721074014642,
+      "start": 1721074658338,
+      "end": 1721074658338,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1721074014642,
-      "end": 1721074014642,
+      "start": 1721074658338,
+      "end": 1721074658338,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1721074014642,
-      "end": 1721074014642,
+      "start": 1721074658338,
+      "end": 1721074658338,
       "order": "normal"
     },
     {
       "name": "vite:vue",
       "result": "const _sfc_main = {}\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Yellowstone National Park\", -1)\nconst _hoisted_2 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Winter views\", -1)\nconst _hoisted_3 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Landscape Island\", -1)\nconst _hoisted_4 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Skyline sign\", -1)\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Alps mountain\", -1)\nconst _hoisted_6 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Beautiful Autumn Landscape\", -1)\nconst _hoisted_7 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Boat and sea\", -1)\nconst _hoisted_8 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Bird in river\", -1)\nconst _hoisted_9 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Man model on telephone\", -1)\nconst _hoisted_10 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Sea and ocean\", -1)\nconst _hoisted_11 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Rocks and mountains\", -1)\nconst _hoisted_12 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Sunset\", -1)\nconst _hoisted_13 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Street architecture\", -1)\nconst _hoisted_14 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Bridge\", -1)\nconst _hoisted_15 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Rain in the Sage Steppe\", -1)\n\nfunction _sfc_render(_ctx, _cache) {\n  const _component_v_img = _resolveComponent(\"v-img\")\n  const _component_v_spacer = _resolveComponent(\"v-spacer\")\n  const _component_v_card_text = _resolveComponent(\"v-card-text\")\n  const _component_v_card = _resolveComponent(\"v-card\")\n  const _component_v_col = _resolveComponent(\"v-col\")\n  const _component_v_row = _resolveComponent(\"v-row\")\n  const _component_v_container = _resolveComponent(\"v-container\")\n\n  return (_openBlock(), _createBlock(_component_v_container, { align: \"center\" }, {\n    default: _withCtx(() => [\n      _createVNode(_component_v_row, { class: \"flex justify-center\" }, {\n        default: _withCtx(() => [\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, {\n                color: \"blue-grey-lighten-1\",\n                class: \"mx-auto\"\n              }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://d2rdb56lmj4es2.cloudfront.net/data/photo/2021/7/3/070321B-DED1-4807-9CB3EA04DDDFF6AD.jpg\",\n                    alt: \"Slika 1\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_1,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://d2rdb56lmj4es2.cloudfront.net/data/photo/2021/3/29/0329214-CD61-4099-B7007E2B9F68EBE9.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_2,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://cdn.pixabay.com/photo/2024/02/11/12/44/landscape-8566451_1280.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_3,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://d2rdb56lmj4es2.cloudfront.net/data/photo/2022/1/21/0121228-C715-493A-8196DF8BD5CACF83.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_4,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://cdn.pixabay.com/photo/2023/04/13/09/56/alps-7922246_1280.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_5,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://d2rdb56lmj4es2.cloudfront.net/data/photo/2021/12/5/120521C-927D-4343-84085362F3F720EF.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_6,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://cdn.pixabay.com/photo/2024/03/05/10/38/boat-8614314_1280.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_7,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://cdn.pixabay.com/photo/2023/04/11/13/27/bird-7917250_1280.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_8,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://cdn.pixabay.com/photo/2023/02/06/10/02/man-7771583_1280.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_9,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://cdn.pixabay.com/photo/2023/08/18/10/00/sea-8198149_1280.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_10,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://cdn.pixabay.com/photo/2023/09/29/07/50/rocks-8283171_1280.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_11,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://cdn.pixabay.com/photo/2023/04/17/07/47/sunset-7931854_1280.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_12,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://cdn.pixabay.com/photo/2023/05/05/06/19/street-7971714_1280.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_13,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://cdn.pixabay.com/photo/2023/04/16/11/27/bridge-7930004_960_720.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_14,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://d2rdb56lmj4es2.cloudfront.net/data/photo/2022/6/20/0620225-C019-4DCB-9F20F125BA6B7BC1.jpg\",\n                    alt: \"Slika 3\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_15,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          })\n        ]),\n        _: 1\n      })\n    ]),\n    _: 1\n  }))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
-      "start": 1721074014642,
-      "end": 1721074014652,
+      "start": 1721074658338,
+      "end": 1721074658346,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -62,160 +62,160 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1721074014652,
-      "end": 1721074014652,
+      "start": 1721074658346,
+      "end": 1721074658346,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1721074014652,
-      "end": 1721074014652,
+      "start": 1721074658346,
+      "end": 1721074658346,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1721074014652,
-      "end": 1721074014652,
+      "start": 1721074658346,
+      "end": 1721074658346,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1721074014652,
-      "end": 1721074014652,
+      "start": 1721074658346,
+      "end": 1721074658346,
       "order": "normal"
     },
     {
       "name": "vuetify:import",
       "result": "const _sfc_main = {}\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Yellowstone National Park\", -1)\nconst _hoisted_2 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Winter views\", -1)\nconst _hoisted_3 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Landscape Island\", -1)\nconst _hoisted_4 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Skyline sign\", -1)\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Alps mountain\", -1)\nconst _hoisted_6 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Beautiful Autumn Landscape\", -1)\nconst _hoisted_7 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Boat and sea\", -1)\nconst _hoisted_8 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Bird in river\", -1)\nconst _hoisted_9 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Man model on telephone\", -1)\nconst _hoisted_10 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Sea and ocean\", -1)\nconst _hoisted_11 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Rocks and mountains\", -1)\nconst _hoisted_12 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Sunset\", -1)\nconst _hoisted_13 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Street architecture\", -1)\nconst _hoisted_14 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Bridge\", -1)\nconst _hoisted_15 = /*#__PURE__*/_createElementVNode(\"p\", { style: { textTransform: 'uppercase', color: 'cyan', fontSize: '20px' } }, \"Rain in the Sage Steppe\", -1)\n\nfunction _sfc_render(_ctx, _cache) {\n                                                     \n                                                           \n                                                                 \n                                                       \n                                                     \n                                                     \n                                                                 \n\n  return (_openBlock(), _createBlock(_component_v_container, { align: \"center\" }, {\n    default: _withCtx(() => [\n      _createVNode(_component_v_row, { class: \"flex justify-center\" }, {\n        default: _withCtx(() => [\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, {\n                color: \"blue-grey-lighten-1\",\n                class: \"mx-auto\"\n              }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://d2rdb56lmj4es2.cloudfront.net/data/photo/2021/7/3/070321B-DED1-4807-9CB3EA04DDDFF6AD.jpg\",\n                    alt: \"Slika 1\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_1,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://d2rdb56lmj4es2.cloudfront.net/data/photo/2021/3/29/0329214-CD61-4099-B7007E2B9F68EBE9.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_2,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://cdn.pixabay.com/photo/2024/02/11/12/44/landscape-8566451_1280.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_3,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://d2rdb56lmj4es2.cloudfront.net/data/photo/2022/1/21/0121228-C715-493A-8196DF8BD5CACF83.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_4,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://cdn.pixabay.com/photo/2023/04/13/09/56/alps-7922246_1280.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_5,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://d2rdb56lmj4es2.cloudfront.net/data/photo/2021/12/5/120521C-927D-4343-84085362F3F720EF.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_6,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://cdn.pixabay.com/photo/2024/03/05/10/38/boat-8614314_1280.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_7,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://cdn.pixabay.com/photo/2023/04/11/13/27/bird-7917250_1280.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_8,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://cdn.pixabay.com/photo/2023/02/06/10/02/man-7771583_1280.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_9,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://cdn.pixabay.com/photo/2023/08/18/10/00/sea-8198149_1280.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_10,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://cdn.pixabay.com/photo/2023/09/29/07/50/rocks-8283171_1280.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_11,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://cdn.pixabay.com/photo/2023/04/17/07/47/sunset-7931854_1280.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_12,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://cdn.pixabay.com/photo/2023/05/05/06/19/street-7971714_1280.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_13,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://cdn.pixabay.com/photo/2023/04/16/11/27/bridge-7930004_960_720.jpg\",\n                    alt: \"Slika 2\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_14,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_v_col, null, {\n            default: _withCtx(() => [\n              _createVNode(_component_v_card, { color: \"blue-grey-lighten-1\" }, {\n                default: _withCtx(() => [\n                  _createVNode(_component_v_img, {\n                    src: \"https://d2rdb56lmj4es2.cloudfront.net/data/photo/2022/6/20/0620225-C019-4DCB-9F20F125BA6B7BC1.jpg\",\n                    alt: \"Slika 3\",\n                    class: \"my-3\",\n                    width: \"370\",\n                    height: \"300\"\n                  }),\n                  _createVNode(_component_v_card_text, null, {\n                    default: _withCtx(() => [\n                      _hoisted_15,\n                      _createVNode(_component_v_spacer)\n                    ]),\n                    _: 1\n                  })\n                ]),\n                _: 1\n              })\n            ]),\n            _: 1\n          })\n        ]),\n        _: 1\n      })\n    ]),\n    _: 1\n  }))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])\n\n/* Vuetify */\nimport { VCardText as _component_v_card_text, VCard as _component_v_card } from \"vuetify/lib/components/VCard/index.mjs\"\nimport { VSpacer as _component_v_spacer, VCol as _component_v_col, VRow as _component_v_row, VContainer as _component_v_container } from \"vuetify/lib/components/VGrid/index.mjs\"\nimport { VImg as _component_v_img } from \"vuetify/lib/components/VImg/index.mjs\"\n\n",
-      "start": 1721074014653,
-      "end": 1721074014653,
+      "start": 1721074658346,
+      "end": 1721074658347,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1721074014653,
-      "end": 1721074014653,
+      "start": 1721074658347,
+      "end": 1721074658347,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1721074014653,
-      "end": 1721074014653,
+      "start": 1721074658347,
+      "end": 1721074658347,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1721074014653,
-      "end": 1721074014653,
+      "start": 1721074658347,
+      "end": 1721074658347,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1721074014653,
-      "end": 1721074014653,
+      "start": 1721074658347,
+      "end": 1721074658347,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1721074014653,
-      "end": 1721074014653,
+      "start": 1721074658347,
+      "end": 1721074658347,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1721074014653,
-      "end": 1721074014653,
+      "start": 1721074658347,
+      "end": 1721074658347,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1721074014653,
-      "end": 1721074014653,
+      "start": 1721074658347,
+      "end": 1721074658347,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1721074014653,
-      "end": 1721074014653,
+      "start": 1721074658347,
+      "end": 1721074658347,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1721074014653,
-      "end": 1721074014653,
+      "start": 1721074658347,
+      "end": 1721074658347,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1721074014653,
-      "end": 1721074014653,
+      "start": 1721074658347,
+      "end": 1721074658347,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1721074014653,
-      "end": 1721074014653,
+      "start": 1721074658347,
+      "end": 1721074658348,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1721074014653,
-      "end": 1721074014653,
+      "start": 1721074658348,
+      "end": 1721074658348,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1721074014653,
-      "end": 1721074014657,
+      "start": 1721074658348,
+      "end": 1721074658351,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1721074014657,
-      "end": 1721074014657,
+      "start": 1721074658351,
+      "end": 1721074658352,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1721074014657,
-      "end": 1721074014657,
+      "start": 1721074658352,
+      "end": 1721074658352,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1721074014657,
-      "end": 1721074014657,
+      "start": 1721074658352,
+      "end": 1721074658352,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1721074014657,
-      "end": 1721074014657,
+      "start": 1721074658352,
+      "end": 1721074658352,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1721074014657,
-      "end": 1721074014657,
+      "start": 1721074658352,
+      "end": 1721074658352,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1721074014657,
-      "end": 1721074014658,
+      "start": 1721074658352,
+      "end": 1721074658352,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1721074014658,
-      "end": 1721074014658,
+      "start": 1721074658352,
+      "end": 1721074658352,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1721074014658,
-      "end": 1721074014658,
+      "start": 1721074658352,
+      "end": 1721074658352,
       "order": "normal"
     }
   ]

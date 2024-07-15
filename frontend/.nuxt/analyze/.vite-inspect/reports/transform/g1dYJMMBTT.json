@@ -4,57 +4,57 @@
     {
       "name": "vite:load-fallback",
       "result": "<template>\r\n  <div style=\"padding: 20px; padding-top: 80px; background-color: #ffffff;\">\r\n    <p style=\"font-style: ;\">\r\n    <br>\r\n      Dobrodošli u vašu destinaciju za vrhunsku online prodaju i kupovinu umjetnina. <br>\r\n      <br>\r\n      U srcu naše misije je strast prema umjetnosti i želja da približimo ovo jedinstveno iskustvo ljubiteljima umjetnosti širom svijeta. <br>\r\n      <br>\r\n      Ovdje predstavljamo inovativnu platformu koja spaja stručnost u umjetnosti s prednostima suvremene tehnologije, stvarajući tako prostor gdje se umjetnici mogu izraziti, a ljubitelji umjetnosti mogu pronaći inspiraciju i jedinstvena umjetnička djela. <br>\r\n      <br>\r\n      Naša vizija je stvoriti most između talentiranih umjetnika i entuzijastičnih kolekcionara, nudeći im siguran, jednostavan i stručan način za istraživanje, pregledavanje i stjecanje umjetničkih djela. Mi nismo samo online trgovina; mi smo zajednica koja slavi raznolikost umjetničkih izraza i podržava umjetnike na njihovom putu. <br>\r\n      <br>\r\n      Ovdje ćete pronaći širok spektar umjetničkih stilova, tehnika i formi, od slika i skulptura do digitalnih umjetničkih djela. Naša stranica nudi korisnicima ne samo priliku za kupovinu jedinstvenih umjetničkih djela, već i prostor za povezivanje s umjetnicima, sudjelovanje u raznim umjetničkim događanjima i stvaranje zajednice koja cijeni ljepotu i kreativnost. <br>\r\n      <br>\r\n      Započnite svoju umjetničku avanturu i doživite spoj strasti prema umjetnosti i suvremenog načina trgovine. <br>\r\n      <br>\r\n      S nama, svaka slika ima svoju priču, a svaki kolekcionar pronalazi svoj dragulj.\r\n    </p>\r\n  </div>\r\n</template>\r\n",
-      "start": 1721074013862,
-      "end": 1721074014541,
+      "start": 1721074657571,
+      "end": 1721074658265,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1721074014541,
-      "end": 1721074014541,
+      "start": 1721074658265,
+      "end": 1721074658265,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1721074014541,
-      "end": 1721074014541,
+      "start": 1721074658265,
+      "end": 1721074658266,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1721074014541,
-      "end": 1721074014541,
+      "start": 1721074658266,
+      "end": 1721074658266,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1721074014541,
-      "end": 1721074014541,
+      "start": 1721074658266,
+      "end": 1721074658266,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1721074014541,
-      "end": 1721074014541,
+      "start": 1721074658266,
+      "end": 1721074658266,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1721074014541,
-      "end": 1721074014541,
+      "start": 1721074658266,
+      "end": 1721074658266,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1721074014541,
-      "end": 1721074014541,
+      "start": 1721074658266,
+      "end": 1721074658266,
       "order": "normal"
     },
     {
       "name": "vite:vue",
       "result": "const _sfc_main = {}\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, createStaticVNode as _createStaticVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { style: {\"padding\":\"20px\",\"padding-top\":\"80px\",\"background-color\":\"#ffffff\"} }\nconst _hoisted_2 = /*#__PURE__*/_createStaticVNode(\"<p style=\\\"font-style:;\\\"><br> Dobrodošli u vašu destinaciju za vrhunsku online prodaju i kupovinu umjetnina. <br><br> U srcu naše misije je strast prema umjetnosti i želja da približimo ovo jedinstveno iskustvo ljubiteljima umjetnosti širom svijeta. <br><br> Ovdje predstavljamo inovativnu platformu koja spaja stručnost u umjetnosti s prednostima suvremene tehnologije, stvarajući tako prostor gdje se umjetnici mogu izraziti, a ljubitelji umjetnosti mogu pronaći inspiraciju i jedinstvena umjetnička djela. <br><br> Naša vizija je stvoriti most između talentiranih umjetnika i entuzijastičnih kolekcionara, nudeći im siguran, jednostavan i stručan način za istraživanje, pregledavanje i stjecanje umjetničkih djela. Mi nismo samo online trgovina; mi smo zajednica koja slavi raznolikost umjetničkih izraza i podržava umjetnike na njihovom putu. <br><br> Ovdje ćete pronaći širok spektar umjetničkih stilova, tehnika i formi, od slika i skulptura do digitalnih umjetničkih djela. Naša stranica nudi korisnicima ne samo priliku za kupovinu jedinstvenih umjetničkih djela, već i prostor za povezivanje s umjetnicima, sudjelovanje u raznim umjetničkim događanjima i stvaranje zajednice koja cijeni ljepotu i kreativnost. <br><br> Započnite svoju umjetničku avanturu i doživite spoj strasti prema umjetnosti i suvremenog načina trgovine. <br><br> S nama, svaka slika ima svoju priču, a svaki kolekcionar pronalazi svoj dragulj. </p>\", 1)\nconst _hoisted_3 = [\n  _hoisted_2\n]\n\nfunction _sfc_render(_ctx, _cache) {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, _hoisted_3))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
-      "start": 1721074014541,
-      "end": 1721074014545,
+      "start": 1721074658266,
+      "end": 1721074658269,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -62,125 +62,125 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1721074014545,
-      "end": 1721074014545,
+      "start": 1721074658269,
+      "end": 1721074658269,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1721074014545,
-      "end": 1721074014546,
+      "start": 1721074658269,
+      "end": 1721074658269,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1721074014546,
-      "end": 1721074014546,
+      "start": 1721074658269,
+      "end": 1721074658269,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1721074014546,
-      "end": 1721074014546,
+      "start": 1721074658270,
+      "end": 1721074658270,
       "order": "normal"
     },
     {
       "name": "vuetify:import",
       "result": "const _sfc_main = {}\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, createStaticVNode as _createStaticVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { style: {\"padding\":\"20px\",\"padding-top\":\"80px\",\"background-color\":\"#ffffff\"} }\nconst _hoisted_2 = /*#__PURE__*/_createStaticVNode(\"<p style=\\\"font-style:;\\\"><br> Dobrodošli u vašu destinaciju za vrhunsku online prodaju i kupovinu umjetnina. <br><br> U srcu naše misije je strast prema umjetnosti i želja da približimo ovo jedinstveno iskustvo ljubiteljima umjetnosti širom svijeta. <br><br> Ovdje predstavljamo inovativnu platformu koja spaja stručnost u umjetnosti s prednostima suvremene tehnologije, stvarajući tako prostor gdje se umjetnici mogu izraziti, a ljubitelji umjetnosti mogu pronaći inspiraciju i jedinstvena umjetnička djela. <br><br> Naša vizija je stvoriti most između talentiranih umjetnika i entuzijastičnih kolekcionara, nudeći im siguran, jednostavan i stručan način za istraživanje, pregledavanje i stjecanje umjetničkih djela. Mi nismo samo online trgovina; mi smo zajednica koja slavi raznolikost umjetničkih izraza i podržava umjetnike na njihovom putu. <br><br> Ovdje ćete pronaći širok spektar umjetničkih stilova, tehnika i formi, od slika i skulptura do digitalnih umjetničkih djela. Naša stranica nudi korisnicima ne samo priliku za kupovinu jedinstvenih umjetničkih djela, već i prostor za povezivanje s umjetnicima, sudjelovanje u raznim umjetničkim događanjima i stvaranje zajednice koja cijeni ljepotu i kreativnost. <br><br> Započnite svoju umjetničku avanturu i doživite spoj strasti prema umjetnosti i suvremenog načina trgovine. <br><br> S nama, svaka slika ima svoju priču, a svaki kolekcionar pronalazi svoj dragulj. </p>\", 1)\nconst _hoisted_3 = [\n  _hoisted_2\n]\n\nfunction _sfc_render(_ctx, _cache) {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, _hoisted_3))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
-      "start": 1721074014546,
-      "end": 1721074014546,
+      "start": 1721074658270,
+      "end": 1721074658270,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1721074014546,
-      "end": 1721074014546,
+      "start": 1721074658270,
+      "end": 1721074658270,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1721074014546,
-      "end": 1721074014546,
+      "start": 1721074658270,
+      "end": 1721074658270,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1721074014546,
-      "end": 1721074014546,
+      "start": 1721074658270,
+      "end": 1721074658270,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1721074014546,
-      "end": 1721074014546,
+      "start": 1721074658270,
+      "end": 1721074658270,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1721074014547,
-      "end": 1721074014547,
+      "start": 1721074658270,
+      "end": 1721074658271,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1721074014547,
-      "end": 1721074014547,
+      "start": 1721074658271,
+      "end": 1721074658271,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1721074014547,
-      "end": 1721074014547,
+      "start": 1721074658271,
+      "end": 1721074658271,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1721074014547,
-      "end": 1721074014547,
+      "start": 1721074658271,
+      "end": 1721074658271,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1721074014547,
-      "end": 1721074014547,
+      "start": 1721074658271,
+      "end": 1721074658271,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1721074014547,
-      "end": 1721074014547,
+      "start": 1721074658271,
+      "end": 1721074658271,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1721074014547,
-      "end": 1721074014547,
+      "start": 1721074658271,
+      "end": 1721074658271,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1721074014547,
-      "end": 1721074014547,
+      "start": 1721074658271,
+      "end": 1721074658271,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1721074014547,
-      "end": 1721074014548,
+      "start": 1721074658271,
+      "end": 1721074658272,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1721074014548,
-      "end": 1721074014548,
+      "start": 1721074658272,
+      "end": 1721074658272,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
       "result": "\nconst __nuxt_page_meta = null\nexport default __nuxt_page_meta\n",
-      "start": 1721074014548,
-      "end": 1721074014549,
+      "start": 1721074658272,
+      "end": 1721074658273,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -193,38 +193,38 @@
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1721074014549,
-      "end": 1721074014549,
+      "start": 1721074658273,
+      "end": 1721074658273,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1721074014549,
-      "end": 1721074014549,
+      "start": 1721074658273,
+      "end": 1721074658273,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1721074014549,
-      "end": 1721074014549,
+      "start": 1721074658273,
+      "end": 1721074658273,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1721074014549,
-      "end": 1721074014549,
+      "start": 1721074658273,
+      "end": 1721074658273,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1721074014549,
-      "end": 1721074014549,
+      "start": 1721074658273,
+      "end": 1721074658273,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1721074014549,
-      "end": 1721074014549,
+      "start": 1721074658273,
+      "end": 1721074658273,
       "order": "normal"
     }
   ]
