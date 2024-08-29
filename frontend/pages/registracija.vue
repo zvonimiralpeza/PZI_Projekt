@@ -15,6 +15,10 @@
                 <v-btn type="submit" color="green">Potvrdi</v-btn>
               </v-form>
               <br>
+              <v-snackbar v-model="snackbar.show" :color="snackbar.color" top>
+                {{ snackbar.message }}
+                <v-btn color="white" text @click="snackbar.show = false">Close</v-btn>
+              </v-snackbar>
             </v-card-text>
           </v-card>
         </v-col>
@@ -22,10 +26,6 @@
     </v-container>
   </div>
 </template>
-
-
-
-
 
 <script>
 export default {
@@ -35,25 +35,53 @@ export default {
       prezime: '',
       brojTelefona: '',
       email: '',
-      lozinka: ''
+      lozinka: '',
+      snackbar: {
+        show: false,
+        message: '',
+        color: ''
+      }
     };
   },
   methods: {
     async submitForm() {
       try {
-        const response = await $fetch(`${this.$config.public.BASE_URL}/users`, {
+        const response = await fetch(`${this.$config.public.BASE_URL}/users`, {
           method: 'POST',
-          body: {
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
             first_name: this.ime,
             last_name: this.prezime,
             email: this.email,
             phone: this.brojTelefona,
             password: this.lozinka,
             role: 'Normal'
-          }
+          })
         });
+        
+        if (response.ok) {
+          this.snackbar.message = 'Registracija uspješna!';
+          this.snackbar.color = 'green';
+          this.snackbar.show = true;
+          // Clear form fields after successful registration
+          this.ime = '';
+          this.prezime = '';
+          this.brojTelefona = '';
+          this.email = '';
+          this.lozinka = '';
+        } else {
+          const error = await response.json();
+          this.snackbar.message = `Registracija neuspješna: ${error.message}`;
+          this.snackbar.color = 'red';
+          this.snackbar.show = true;
+        }
       } catch (error) {
-        console.log(error);
+        console.error('Error:', error);
+        this.snackbar.message = 'Greška pri registraciji. Pokušajte ponovo.';
+        this.snackbar.color = 'red';
+        this.snackbar.show = true;
       }
     }
   }

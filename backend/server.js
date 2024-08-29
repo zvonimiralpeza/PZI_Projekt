@@ -7,9 +7,13 @@ const port = 5000;
 
 app.use(cors());
 
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
+
 // Create and connect to the SQLite database
 const db = new sqlite3.Database('mydatabase.db');
 
+db.run('DROP TABLE IF EXISTS users')
 // Create a simple table
 db.run(`
   CREATE TABLE IF NOT EXISTS users (
@@ -26,16 +30,24 @@ db.run(`
     console.error('Error creating table:', err.message);
   } else {
     // Insert admin user
-    db.run(`
-      INSERT INTO users (first_name, last_name, email, phone, password, role)
-      VALUES ('Admin', 'Adminic', 'admin@slike.com', 1234567890, 'admin', 'Admin')
-    `);
+    bcrypt.hash('admin', saltRounds, (err, hashedPassword) => {
+      if (err) {
+        return res.status(500).json({ error: 'Error hashing password.' });
+      }
+
+      db.run('INSERT INTO users (first_name, last_name, email, phone, password, role) VALUES (?, ?, ?, ?, ?, ?)', 
+        ['Admin', 'Adminic', 'admin@slike.com', 1234567890, hashedPassword, 'Admin']);
+    });
 
     // Insert superadmin user
-    db.run(`
-      INSERT INTO users (first_name, last_name, email, phone, password, role)
-      VALUES ('Superadmin', 'Superadminic', 'superadmin@slike.com', 9876543210, 'superadmin', 'Superadmin')
-    `);
+    bcrypt.hash('superadmin', saltRounds, (err, hashedPassword) => {
+      if (err) {
+        return res.status(500).json({ error: 'Error hashing password.' });
+      }
+
+      db.run('INSERT INTO users (first_name, last_name, email, phone, password, role) VALUES (?, ?, ?, ?, ?, ?)', 
+        ['Superadmin', 'Superadminic', 'superadmin@slike.com', 9876543210, hashedPassword, 'Superadmin']);
+    });
   }
 });
 
@@ -72,19 +84,36 @@ app.get('/users', (req, res) => {
 // Example API route to add a new user
 app.post('/users', (req, res) => {
   const { first_name, last_name, email, phone, password, role } = req.body;
+  
   if (!first_name || !last_name || !email || !phone || !password || !role) {
-    res.status(400).json({ error: 'Missing required properties!.' });
-    return;
+    return res.status(400).json({ error: 'Missing required properties!' });
   }
 
-  db.run('INSERT INTO users (first_name, last_name, email, phone, password, role) VALUES (?, ?, ?, ?, ?, ?)', 
-    [first_name, last_name, email, phone, password, role], 
-    function (err) {
+  // Check if the email already exists
+  db.get('SELECT * FROM users WHERE email = ?', [email], (err, row) => {
+    if (err) {
+      return res.status(500).json({ error: 'Internal server error.' });
+    }
+
+    if (row) {
+      return res.status(400).json({ error: 'Email already exists.' });
+    }
+
+    // If email does not exist, proceed with password hashing and user creation
+    bcrypt.hash(password, saltRounds, (err, hashedPassword) => {
       if (err) {
-        res.status(500).json({ error: err.message });
-        return;
+        return res.status(500).json({ error: 'Error hashing password.' });
       }
-      res.json({ id: this.lastID });
+
+      db.run('INSERT INTO users (first_name, last_name, email, phone, password, role) VALUES (?, ?, ?, ?, ?, ?)', 
+        [first_name, last_name, email, phone, hashedPassword, role], 
+        function (err) {
+          if (err) {
+            return res.status(500).json({ error: err.message });
+          }
+          res.json({ id: this.lastID });
+      });
+    });
   });
 });
 
@@ -100,21 +129,33 @@ app.get('/products', (req, res) => {
 });
 
 
-app.post('/products', (req, res) => {
-  const { name, url, price, author, technique, year, seller_id } = req.body;
-  if (!name || !url || !price || !author || !technique || !year || !seller_id) {
-    res.status(400).json({ error: 'Name, url, price, author, technique, year, and seller_id are required.' });
-    return;
+app.post('/login', (req, res) => {
+  const { email, password } = req.body;
+  if (!email || !password) {
+    return res.status(400).json({ error: 'Email and password are required.' });
   }
 
-  db.run('INSERT INTO products (name, url, price, author, technique, year, seller_id) VALUES (?, ?, ?, ?, ?, ?, ?)', 
-    [name, url, price, author, technique, year, seller_id], 
-    function (err) {
+  db.get('SELECT * FROM users WHERE email = ?', [email], (err, row) => {
+    if (err) {
+      console.error('Error during login:', err.message);
+      return res.status(500).json({ error: 'Internal server error.' });
+    }
+
+    if (!row) {
+      return res.status(401).json({ error: 'Invalid email or password.' });
+    }
+
+    bcrypt.compare(password, row.password, (err, result) => {
       if (err) {
-        res.status(500).json({ error: err.message });
-        return;
+        return res.status(500).json({ error: 'Error comparing passwords.' });
       }
-      res.json({ id: this.lastID });
+
+      if (!result) {
+        return res.status(401).json({ error: 'Invalid email or password.' });
+      }
+
+      res.json({ user: row });
+    });
   });
 });
 
