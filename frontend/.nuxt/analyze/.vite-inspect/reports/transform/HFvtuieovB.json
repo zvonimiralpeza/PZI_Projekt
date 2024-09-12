@@ -4,99 +4,99 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createHead as createClientHead, setHeadInjectionHandler } from \"@unhead/vue\";\nimport { renderDOMHead } from \"@unhead/dom\";\nimport { defineNuxtPlugin, useNuxtApp } from \"#app/nuxt\";\nimport unheadPlugins from \"#build/unhead-plugins.mjs\";\nexport default defineNuxtPlugin({\n  name: \"nuxt:head\",\n  enforce: \"pre\",\n  setup(nuxtApp) {\n    const head = import.meta.server ? nuxtApp.ssrContext.head : createClientHead({\n      plugins: unheadPlugins\n    });\n    setHeadInjectionHandler(\n      // need a fresh instance of the nuxt app to avoid parallel requests interfering with each other\n      () => useNuxtApp().vueApp._context.provides.usehead\n    );\n    nuxtApp.vueApp.use(head);\n    if (import.meta.client) {\n      let pauseDOMUpdates = true;\n      const syncHead = async () => {\n        pauseDOMUpdates = false;\n        await renderDOMHead(head);\n      };\n      head.hooks.hook(\"dom:beforeRender\", (context) => {\n        context.shouldRender = !pauseDOMUpdates;\n      });\n      nuxtApp.hooks.hook(\"page:start\", () => {\n        pauseDOMUpdates = true;\n      });\n      nuxtApp.hooks.hook(\"page:finish\", () => {\n        if (!nuxtApp.isHydrating) {\n          syncHead();\n        }\n      });\n      nuxtApp.hooks.hook(\"app:error\", syncHead);\n      nuxtApp.hooks.hook(\"app:suspense:resolve\", syncHead);\n    }\n  }\n});\n",
-      "start": 1725173497623,
-      "end": 1725173497774,
+      "start": 1726158879753,
+      "end": 1726158879922,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1725173497775,
-      "end": 1725173497775,
+      "start": 1726158879922,
+      "end": 1726158879922,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1725173497775,
-      "end": 1725173497775,
+      "start": 1726158879922,
+      "end": 1726158879922,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1725173497775,
-      "end": 1725173497775,
+      "start": 1726158879922,
+      "end": 1726158879922,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1725173497775,
-      "end": 1725173497775,
+      "start": 1726158879922,
+      "end": 1726158879922,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1725173497775,
-      "end": 1725173497775,
+      "start": 1726158879922,
+      "end": 1726158879922,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1725173497775,
-      "end": 1725173497775,
+      "start": 1726158879922,
+      "end": 1726158879922,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1725173497775,
-      "end": 1725173497775,
+      "start": 1726158879922,
+      "end": 1726158879922,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1725173497775,
-      "end": 1725173497775,
+      "start": 1726158879922,
+      "end": 1726158879922,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1725173497775,
-      "end": 1725173497775,
+      "start": 1726158879922,
+      "end": 1726158879922,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1725173497775,
-      "end": 1725173497775,
+      "start": 1726158879922,
+      "end": 1726158879922,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1725173497775,
-      "end": 1725173497779,
+      "start": 1726158879923,
+      "end": 1726158879925,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1725173497779,
-      "end": 1725173497779,
+      "start": 1726158879925,
+      "end": 1726158879925,
       "order": "normal"
     },
     {
       "name": "vuetify:import",
-      "start": 1725173497779,
-      "end": 1725173497779,
+      "start": 1726158879925,
+      "end": 1726158879926,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1725173497780,
-      "end": 1725173497780,
+      "start": 1726158879926,
+      "end": 1726158879926,
       "order": "normal"
     },
     {
       "name": "replace",
       "result": "import { createHead as createClientHead, setHeadInjectionHandler } from \"@unhead/vue\";\nimport { renderDOMHead } from \"@unhead/dom\";\nimport { defineNuxtPlugin, useNuxtApp } from \"#app/nuxt\";\nimport unheadPlugins from \"#build/unhead-plugins.mjs\";\nexport default defineNuxtPlugin({\n  name: \"nuxt:head\",\n  enforce: \"pre\",\n  setup(nuxtApp) {\n    const head = false ? nuxtApp.ssrContext.head : createClientHead({\n      plugins: unheadPlugins\n    });\n    setHeadInjectionHandler(\n      // need a fresh instance of the nuxt app to avoid parallel requests interfering with each other\n      () => useNuxtApp().vueApp._context.provides.usehead\n    );\n    nuxtApp.vueApp.use(head);\n    if (true) {\n      let pauseDOMUpdates = true;\n      const syncHead = async () => {\n        pauseDOMUpdates = false;\n        await renderDOMHead(head);\n      };\n      head.hooks.hook(\"dom:beforeRender\", (context) => {\n        context.shouldRender = !pauseDOMUpdates;\n      });\n      nuxtApp.hooks.hook(\"page:start\", () => {\n        pauseDOMUpdates = true;\n      });\n      nuxtApp.hooks.hook(\"page:finish\", () => {\n        if (!nuxtApp.isHydrating) {\n          syncHead();\n        }\n      });\n      nuxtApp.hooks.hook(\"app:error\", syncHead);\n      nuxtApp.hooks.hook(\"app:suspense:resolve\", syncHead);\n    }\n  }\n});\n",
-      "start": 1725173497780,
-      "end": 1725173497780,
+      "start": 1726158879926,
+      "end": 1726158879927,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -109,116 +109,116 @@
     },
     {
       "name": "ssr-styles",
-      "start": 1725173497780,
-      "end": 1725173497780,
+      "start": 1726158879927,
+      "end": 1726158879927,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1725173497780,
-      "end": 1725173497781,
+      "start": 1726158879927,
+      "end": 1726158879927,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1725173497781,
-      "end": 1725173497781,
+      "start": 1726158879927,
+      "end": 1726158879927,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1725173497781,
-      "end": 1725173497781,
+      "start": 1726158879927,
+      "end": 1726158879927,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1725173497781,
-      "end": 1725173497781,
+      "start": 1726158879927,
+      "end": 1726158879927,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1725173497781,
-      "end": 1725173497781,
+      "start": 1726158879927,
+      "end": 1726158879927,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1725173497781,
-      "end": 1725173497783,
+      "start": 1726158879927,
+      "end": 1726158879936,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1725173497783,
-      "end": 1725173497783,
+      "start": 1726158879936,
+      "end": 1726158879936,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1725173497783,
-      "end": 1725173497783,
+      "start": 1726158879936,
+      "end": 1726158879936,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1725173497783,
-      "end": 1725173497783,
+      "start": 1726158879936,
+      "end": 1726158879936,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1725173497783,
-      "end": 1725173497783,
+      "start": 1726158879936,
+      "end": 1726158879936,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1725173497783,
-      "end": 1725173497785,
+      "start": 1726158879936,
+      "end": 1726158879938,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1725173497785,
-      "end": 1725173497785,
+      "start": 1726158879938,
+      "end": 1726158879938,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1725173497785,
-      "end": 1725173497785,
+      "start": 1726158879938,
+      "end": 1726158879938,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1725173497785,
-      "end": 1725173497785,
+      "start": 1726158879938,
+      "end": 1726158879938,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1725173497785,
-      "end": 1725173497785,
+      "start": 1726158879938,
+      "end": 1726158879938,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1725173497785,
-      "end": 1725173497785,
+      "start": 1726158879938,
+      "end": 1726158879938,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1725173497785,
-      "end": 1725173497785,
+      "start": 1726158879939,
+      "end": 1726158879939,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1725173497785,
-      "end": 1725173497785,
+      "start": 1726158879939,
+      "end": 1726158879939,
       "order": "normal"
     }
   ]

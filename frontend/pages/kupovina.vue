@@ -35,6 +35,9 @@
             <v-card-actions>
               <v-btn @click="redirectToPayPal()" color="yellow">Kupi</v-btn>
               <v-btn @click="deleteImage(slika.id)" color="red" v-if="user && user.role === 'Admin'">Obriši sliku</v-btn>
+              <NuxtLink :to="{ name: 'edit', query: { id: slika.id } }"  v-if="user && user.role === 'Admin'">
+                Uredi sliku
+              </NuxtLink>
             </v-card-actions>
           </v-card>
         </v-col>

@@ -4,39 +4,39 @@
     {
       "name": "vite:load-fallback",
       "result": "import '@mdi/font/css/materialdesignicons.css'\r\nimport 'vuetify/styles'\r\nimport { createVuetify } from 'vuetify'\r\n\r\nexport default defineNuxtPlugin((app) => {\r\n  const vuetify = createVuetify({\r\n    // ... your configuration\r\n  })\r\n  app.vueApp.use(vuetify)\r\n})\r\n",
-      "start": 1725173497624,
-      "end": 1725173498147,
+      "start": 1726158879754,
+      "end": 1726158880265,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1725173498147,
-      "end": 1725173498148,
+      "start": 1726158880265,
+      "end": 1726158880265,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1725173498148,
-      "end": 1725173498148,
+      "start": 1726158880265,
+      "end": 1726158880265,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1725173498148,
-      "end": 1725173498148,
+      "start": 1726158880265,
+      "end": 1726158880265,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1725173498148,
-      "end": 1725173498148,
+      "start": 1726158880265,
+      "end": 1726158880265,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
       "result": "import \"@mdi/font/css/materialdesignicons.css\";\nimport \"vuetify/styles\";\nimport { createVuetify } from \"vuetify\";\nexport default defineNuxtPlugin((app) => {\n  const vuetify = createVuetify({\n    // ... your configuration\n  });\n  app.vueApp.use(vuetify);\n});\n",
-      "start": 1725173498148,
-      "end": 1725173498313,
+      "start": 1726158880265,
+      "end": 1726158880443,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -52,129 +52,129 @@
     },
     {
       "name": "vite:json",
-      "start": 1725173498313,
-      "end": 1725173498313,
+      "start": 1726158880443,
+      "end": 1726158880443,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1725173498313,
-      "end": 1725173498313,
+      "start": 1726158880443,
+      "end": 1726158880443,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1725173498313,
-      "end": 1725173498313,
+      "start": 1726158880443,
+      "end": 1726158880443,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1725173498313,
-      "end": 1725173498313,
+      "start": 1726158880443,
+      "end": 1726158880443,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1725173498314,
-      "end": 1725173498314,
+      "start": 1726158880443,
+      "end": 1726158880443,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1725173498314,
-      "end": 1725173498314,
+      "start": 1726158880444,
+      "end": 1726158880444,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1725173498314,
-      "end": 1725173498314,
+      "start": 1726158880444,
+      "end": 1726158880444,
       "order": "normal"
     },
     {
       "name": "vuetify:import",
-      "start": 1725173498314,
-      "end": 1725173498314,
+      "start": 1726158880444,
+      "end": 1726158880444,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1725173498314,
-      "end": 1725173498314,
+      "start": 1726158880444,
+      "end": 1726158880444,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1725173498314,
-      "end": 1725173498314,
+      "start": 1726158880444,
+      "end": 1726158880444,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1725173498314,
-      "end": 1725173498314,
+      "start": 1726158880444,
+      "end": 1726158880444,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1725173498314,
-      "end": 1725173498314,
+      "start": 1726158880444,
+      "end": 1726158880445,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1725173498314,
-      "end": 1725173498314,
+      "start": 1726158880445,
+      "end": 1726158880445,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1725173498314,
-      "end": 1725173498314,
+      "start": 1726158880445,
+      "end": 1726158880445,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1725173498314,
-      "end": 1725173498314,
+      "start": 1726158880445,
+      "end": 1726158880445,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1725173498315,
-      "end": 1725173498315,
+      "start": 1726158880445,
+      "end": 1726158880445,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1725173498315,
-      "end": 1725173498315,
+      "start": 1726158880445,
+      "end": 1726158880445,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1725173498315,
-      "end": 1725173498315,
+      "start": 1726158880445,
+      "end": 1726158880445,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1725173498315,
-      "end": 1725173498315,
+      "start": 1726158880445,
+      "end": 1726158880445,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1725173498315,
-      "end": 1725173498315,
+      "start": 1726158880445,
+      "end": 1726158880445,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
       "result": "import { defineNuxtPlugin } from '#app/nuxt';\nimport \"@mdi/font/css/materialdesignicons.css\";\nimport \"vuetify/styles\";\nimport { createVuetify } from \"vuetify\";\nexport default defineNuxtPlugin((app) => {\n  const vuetify = createVuetify({\n    // ... your configuration\n  });\n  app.vueApp.use(vuetify);\n});\n",
-      "start": 1725173498315,
-      "end": 1725173498318,
+      "start": 1726158880445,
+      "end": 1726158880447,
       "order": "post",
       "sourcemaps": {
         "version": 3,
@@ -187,50 +187,50 @@
     },
     {
       "name": "unctx:transform",
-      "start": 1725173498318,
-      "end": 1725173498319,
+      "start": 1726158880447,
+      "end": 1726158880447,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1725173498319,
-      "end": 1725173498319,
+      "start": 1726158880447,
+      "end": 1726158880447,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1725173498319,
-      "end": 1725173498319,
+      "start": 1726158880447,
+      "end": 1726158880447,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1725173498319,
-      "end": 1725173498319,
+      "start": 1726158880448,
+      "end": 1726158880448,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1725173498319,
-      "end": 1725173498319,
+      "start": 1726158880448,
+      "end": 1726158880448,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1725173498319,
-      "end": 1725173498319,
+      "start": 1726158880448,
+      "end": 1726158880448,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1725173498319,
-      "end": 1725173498319,
+      "start": 1726158880448,
+      "end": 1726158880448,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1725173498319,
-      "end": 1725173498319,
+      "start": 1726158880448,
+      "end": 1726158880448,
       "order": "normal"
     }
   ]

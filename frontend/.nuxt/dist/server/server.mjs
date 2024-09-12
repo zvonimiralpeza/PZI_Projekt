@@ -477,7 +477,15 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import("./_nuxt/Akcija-0052e906.js").then((m) => m.default || m)
+    component: () => import("./_nuxt/Akcija-72b235c3.js").then((m) => m.default || m)
+  },
+  {
+    name: "edit",
+    path: "/edit",
+    meta: {},
+    alias: [],
+    redirect: void 0,
+    component: () => import("./_nuxt/edit-723782b7.js").then((m) => m.default || m)
   },
   {
     name: "index",
@@ -485,7 +493,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import("./_nuxt/index-54bde301.js").then((m) => m.default || m)
+    component: () => import("./_nuxt/index-780a588a.js").then((m) => m.default || m)
   },
   {
     name: "kupovina",
@@ -493,7 +501,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import("./_nuxt/kupovina-8ae5e7cd.js").then((m) => m.default || m)
+    component: () => import("./_nuxt/kupovina-d616a216.js").then((m) => m.default || m)
   },
   {
     name: "login",
@@ -501,7 +509,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import("./_nuxt/login-5dfe46ae.js").then((m) => m.default || m)
+    component: () => import("./_nuxt/login-d22c033e.js").then((m) => m.default || m)
   },
   {
     name: "Onama",
@@ -517,7 +525,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import("./_nuxt/prodaja-2493f9d8.js").then((m) => m.default || m)
+    component: () => import("./_nuxt/prodaja-21149c71.js").then((m) => m.default || m)
   },
   {
     name: "registracija",
@@ -525,7 +533,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import("./_nuxt/registracija-d7adcb24.js").then((m) => m.default || m)
+    component: () => import("./_nuxt/registracija-5e5da344.js").then((m) => m.default || m)
   },
   {
     name: "test",
@@ -533,7 +541,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0,
-    component: () => import("./_nuxt/test-dfc19bde.js").then((m) => m.default || m)
+    component: () => import("./_nuxt/test-6cbdffdd.js").then((m) => m.default || m)
   }
 ];
 const _wrapIf = (component, props, slots) => {
@@ -8707,7 +8715,7 @@ let entry;
 }
 const entry$1 = (ctx) => entry(ctx);
 export {
-  useBackgroundColor as $,
+  useLocale as $,
   genOverlays as A,
   VDefaultsProvider as B,
   makeBorderProps as C,
@@ -8727,28 +8735,28 @@ export {
   useLink as Q,
   Ripple as R,
   LoaderSlot as S,
-  deepEqual as T,
+  VBtn as T,
   useProxiedModel as U,
   VContainer as V,
-  getUid as W,
-  filterInputAttrs as X,
-  wrapInArray as Y,
-  useTextColor as Z,
+  consoleWarn as W,
+  makeTransitionProps as X,
+  VSlideYTransition as Y,
+  MaybeTransition as Z,
   _export_sfc as _,
   __nuxt_component_0 as a,
-  matchesSelector as a0,
-  omit as a1,
-  makeGroupProps as a2,
-  useGroup as a3,
-  EventProp as a4,
-  makeGroupItemProps as a5,
-  useLocale as a6,
-  useGroupItem as a7,
-  VExpandXTransition as a8,
-  getCurrentInstance as a9,
-  pick as aA,
-  Intersect$1 as aB,
-  callEvent as aC,
+  getCurrentInstanceName as a0,
+  EventProp as a1,
+  useRtl as a2,
+  getUid as a3,
+  useBackgroundColor as a4,
+  useTextColor as a5,
+  convertToUnit as a6,
+  VExpandXTransition as a7,
+  isOn as a8,
+  pick as a9,
+  mapWritableState as aA,
+  VApp as aB,
+  useUsersStore as aC,
   eventName as aD,
   destructComputed as aE,
   parseAnchor as aF,
@@ -8761,32 +8769,32 @@ export {
   IN_BROWSER as aM,
   useRouter as aN,
   VProgressLinear as aO,
-  defineComponent as aa,
-  useSsrBoot as ab,
-  MaybeTransition as ac,
-  VExpandTransition as ad,
-  deprecate as ae,
-  convertToUnit as af,
-  getPropertyFromItem as ag,
-  focusChild as ah,
-  focusableChildren as ai,
-  getNextElement as aj,
-  useResizeObserver as ak,
-  useDisplay as al,
-  clamp as am,
-  debounce as an,
-  useToggleScope as ao,
-  makeTransitionProps as ap,
-  ensureValidVNode as aq,
-  mapWritableState as ar,
-  VApp as as,
-  VBtn as at,
-  useUsersStore as au,
-  VSlideYTransition as av,
-  getCurrentInstanceName as aw,
-  consoleWarn as ax,
-  useRtl as ay,
-  isOn as az,
+  wrapInArray as aa,
+  useToggleScope as ab,
+  Intersect$1 as ac,
+  filterInputAttrs as ad,
+  callEvent as ae,
+  deepEqual as af,
+  matchesSelector as ag,
+  omit as ah,
+  makeGroupProps as ai,
+  useGroup as aj,
+  makeGroupItemProps as ak,
+  useGroupItem as al,
+  getCurrentInstance as am,
+  defineComponent as an,
+  useSsrBoot as ao,
+  VExpandTransition as ap,
+  deprecate as aq,
+  getPropertyFromItem as ar,
+  focusChild as as,
+  focusableChildren as at,
+  getNextElement as au,
+  useResizeObserver as av,
+  useDisplay as aw,
+  clamp as ax,
+  debounce as ay,
+  ensureValidVNode as az,
   VRow as b,
   createError as c,
   VCol as d,
