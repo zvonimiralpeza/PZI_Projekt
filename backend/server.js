@@ -174,6 +174,37 @@ app.delete('/products/:productId', (req, res) => {
   });
 });
 
+app.put('/products/:productId', (req, res) => {
+  const productId = req.params.productId;
+  const { name, url, price, author, technique, year, seller_id } = req.body;
+
+  // Check if all required fields are provided
+  if (!name || !url || !price || !author || !technique || !year || !seller_id) {
+    return res.status(400).json({ error: 'All fields are required.' });
+  }
+
+  // SQL query to update the product details
+  const query = `
+    UPDATE products 
+    SET name = ?, url = ?, price = ?, author = ?, technique = ?, year = ?, seller_id = ? 
+    WHERE id = ?
+  `;
+
+  db.run(query, [name, url, price, author, technique, year, seller_id, productId], function (err) {
+    if (err) {
+      return res.status(500).json({ error: 'Error updating product: ' + err.message });
+    }
+
+    // Check if any row was updated
+    if (this.changes === 0) {
+      return res.status(404).json({ error: 'Product not found.' });
+    }
+
+    // Successfully updated
+    res.json({ message: 'Product updated successfully.' });
+  });
+});
+
 
 app.post('/login', (req, res) => {
   const { email, password } = req.body;
