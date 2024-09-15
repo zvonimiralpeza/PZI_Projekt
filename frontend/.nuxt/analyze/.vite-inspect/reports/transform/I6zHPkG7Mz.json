@@ -4,99 +4,99 @@
     {
       "name": "vite:load-fallback",
       "result": "import { createApp, createSSRApp, nextTick } from \"vue\";\nimport \"#build/paths.mjs\";\nimport \"#build/fetch.mjs\";\nimport { applyPlugins, createNuxtApp } from \"./nuxt.js\";\nimport \"#build/css\";\nimport plugins from \"#build/plugins\";\nimport RootComponent from \"#build/root-component.mjs\";\nimport { vueAppRootContainer } from \"#build/nuxt.config.mjs\";\nlet entry;\nif (import.meta.server) {\n  entry = async function createNuxtAppServer(ssrContext) {\n    const vueApp = createApp(RootComponent);\n    const nuxt = createNuxtApp({ vueApp, ssrContext });\n    try {\n      await applyPlugins(nuxt, plugins);\n      await nuxt.hooks.callHook(\"app:created\", vueApp);\n    } catch (err) {\n      await nuxt.hooks.callHook(\"app:error\", err);\n      nuxt.payload.error = nuxt.payload.error || err;\n    }\n    if (ssrContext?._renderResponse) {\n      throw new Error(\"skipping render\");\n    }\n    return vueApp;\n  };\n}\nif (import.meta.client) {\n  if (import.meta.dev && import.meta.webpackHot) {\n    import.meta.webpackHot.accept();\n  }\n  let vueAppPromise;\n  entry = async function initApp() {\n    if (vueAppPromise) {\n      return vueAppPromise;\n    }\n    const isSSR = Boolean(\n      window.__NUXT__?.serverRendered || document.getElementById(\"__NUXT_DATA__\")?.dataset.ssr === \"true\"\n    );\n    const vueApp = isSSR ? createSSRApp(RootComponent) : createApp(RootComponent);\n    const nuxt = createNuxtApp({ vueApp });\n    async function handleVueError(err) {\n      await nuxt.callHook(\"app:error\", err);\n      nuxt.payload.error = nuxt.payload.error || err;\n    }\n    vueApp.config.errorHandler = handleVueError;\n    try {\n      await applyPlugins(nuxt, plugins);\n    } catch (err) {\n      handleVueError(err);\n    }\n    try {\n      await nuxt.hooks.callHook(\"app:created\", vueApp);\n      await nuxt.hooks.callHook(\"app:beforeMount\", vueApp);\n      vueApp.mount(vueAppRootContainer);\n      await nuxt.hooks.callHook(\"app:mounted\", vueApp);\n      await nextTick();\n    } catch (err) {\n      handleVueError(err);\n    }\n    if (vueApp.config.errorHandler === handleVueError)\n      vueApp.config.errorHandler = void 0;\n    return vueApp;\n  };\n  vueAppPromise = entry().catch((error) => {\n    console.error(\"Error while mounting app:\", error);\n  });\n}\nexport default (ctx) => entry(ctx);\n",
-      "start": 1726159547593,
-      "end": 1726159547604,
+      "start": 1726412113175,
+      "end": 1726412113179,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1726159547606,
-      "end": 1726159547606,
+      "start": 1726412113180,
+      "end": 1726412113181,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1726159547607,
-      "end": 1726159547608,
+      "start": 1726412113181,
+      "end": 1726412113183,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1726159547608,
-      "end": 1726159547609,
+      "start": 1726412113183,
+      "end": 1726412113183,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1726159547609,
-      "end": 1726159547610,
+      "start": 1726412113184,
+      "end": 1726412113184,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1726159547610,
-      "end": 1726159547610,
+      "start": 1726412113184,
+      "end": 1726412113185,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1726159547610,
-      "end": 1726159547610,
+      "start": 1726412113185,
+      "end": 1726412113185,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1726159547610,
-      "end": 1726159547611,
+      "start": 1726412113185,
+      "end": 1726412113186,
       "order": "normal"
     },
     {
       "name": "vite:vue",
-      "start": 1726159547611,
-      "end": 1726159547612,
+      "start": 1726412113186,
+      "end": 1726412113187,
       "order": "normal"
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1726159547612,
-      "end": 1726159547613,
+      "start": 1726412113187,
+      "end": 1726412113188,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1726159547613,
-      "end": 1726159547614,
+      "start": 1726412113188,
+      "end": 1726412113189,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1726159547614,
-      "end": 1726159547614,
+      "start": 1726412113189,
+      "end": 1726412113190,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1726159547614,
-      "end": 1726159547615,
+      "start": 1726412113190,
+      "end": 1726412113190,
       "order": "normal"
     },
     {
       "name": "vuetify:import",
-      "start": 1726159547615,
-      "end": 1726159547616,
+      "start": 1726412113190,
+      "end": 1726412113193,
       "order": "normal"
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1726159547616,
-      "end": 1726159547617,
+      "start": 1726412113193,
+      "end": 1726412113194,
       "order": "normal"
     },
     {
       "name": "replace",
       "result": "import { createApp, createSSRApp, nextTick } from \"vue\";\nimport \"#build/paths.mjs\";\nimport \"#build/fetch.mjs\";\nimport { applyPlugins, createNuxtApp } from \"./nuxt.js\";\nimport \"#build/css\";\nimport plugins from \"#build/plugins\";\nimport RootComponent from \"#build/root-component.mjs\";\nimport { vueAppRootContainer } from \"#build/nuxt.config.mjs\";\nlet entry;\nif (false) {\n  entry = async function createNuxtAppServer(ssrContext) {\n    const vueApp = createApp(RootComponent);\n    const nuxt = createNuxtApp({ vueApp, ssrContext });\n    try {\n      await applyPlugins(nuxt, plugins);\n      await nuxt.hooks.callHook(\"app:created\", vueApp);\n    } catch (err) {\n      await nuxt.hooks.callHook(\"app:error\", err);\n      nuxt.payload.error = nuxt.payload.error || err;\n    }\n    if (ssrContext?._renderResponse) {\n      throw new Error(\"skipping render\");\n    }\n    return vueApp;\n  };\n}\nif (true) {\n  if (false && import.meta.webpackHot) {\n    import.meta.webpackHot.accept();\n  }\n  let vueAppPromise;\n  entry = async function initApp() {\n    if (vueAppPromise) {\n      return vueAppPromise;\n    }\n    const isSSR = Boolean(\n      window.__NUXT__?.serverRendered || document.getElementById(\"__NUXT_DATA__\")?.dataset.ssr === \"true\"\n    );\n    const vueApp = isSSR ? createSSRApp(RootComponent) : createApp(RootComponent);\n    const nuxt = createNuxtApp({ vueApp });\n    async function handleVueError(err) {\n      await nuxt.callHook(\"app:error\", err);\n      nuxt.payload.error = nuxt.payload.error || err;\n    }\n    vueApp.config.errorHandler = handleVueError;\n    try {\n      await applyPlugins(nuxt, plugins);\n    } catch (err) {\n      handleVueError(err);\n    }\n    try {\n      await nuxt.hooks.callHook(\"app:created\", vueApp);\n      await nuxt.hooks.callHook(\"app:beforeMount\", vueApp);\n      vueApp.mount(vueAppRootContainer);\n      await nuxt.hooks.callHook(\"app:mounted\", vueApp);\n      await nextTick();\n    } catch (err) {\n      handleVueError(err);\n    }\n    if (vueApp.config.errorHandler === handleVueError)\n      vueApp.config.errorHandler = void 0;\n    return vueApp;\n  };\n  vueAppPromise = entry().catch((error) => {\n    console.error(\"Error while mounting app:\", error);\n  });\n}\nexport default (ctx) => entry(ctx);\n",
-      "start": 1726159547617,
-      "end": 1726159547625,
+      "start": 1726412113194,
+      "end": 1726412113201,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -109,116 +109,116 @@
     },
     {
       "name": "ssr-styles",
-      "start": 1726159547625,
-      "end": 1726159547629,
+      "start": 1726412113201,
+      "end": 1726412113206,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1726159547629,
-      "end": 1726159547631,
+      "start": 1726412113206,
+      "end": 1726412113208,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1726159547631,
-      "end": 1726159547632,
+      "start": 1726412113208,
+      "end": 1726412113208,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1726159547632,
-      "end": 1726159547633,
+      "start": 1726412113209,
+      "end": 1726412113209,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1726159547633,
-      "end": 1726159547634,
+      "start": 1726412113209,
+      "end": 1726412113210,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1726159547634,
-      "end": 1726159547634,
+      "start": 1726412113210,
+      "end": 1726412113210,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1726159547634,
-      "end": 1726159547659,
+      "start": 1726412113211,
+      "end": 1726412113235,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1726159547659,
-      "end": 1726159547660,
+      "start": 1726412113235,
+      "end": 1726412113236,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1726159547660,
-      "end": 1726159547660,
+      "start": 1726412113236,
+      "end": 1726412113236,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1726159547660,
-      "end": 1726159547660,
+      "start": 1726412113236,
+      "end": 1726412113236,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1726159547660,
-      "end": 1726159547661,
+      "start": 1726412113236,
+      "end": 1726412113237,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1726159547661,
-      "end": 1726159547662,
+      "start": 1726412113237,
+      "end": 1726412113238,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1726159547662,
-      "end": 1726159547662,
+      "start": 1726412113238,
+      "end": 1726412113238,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1726159547662,
-      "end": 1726159547663,
+      "start": 1726412113238,
+      "end": 1726412113239,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1726159547663,
-      "end": 1726159547663,
+      "start": 1726412113239,
+      "end": 1726412113239,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1726159547663,
-      "end": 1726159547663,
+      "start": 1726412113239,
+      "end": 1726412113239,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1726159547663,
-      "end": 1726159547664,
+      "start": 1726412113239,
+      "end": 1726412113240,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1726159547664,
-      "end": 1726159547665,
+      "start": 1726412113240,
+      "end": 1726412113241,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1726159547665,
-      "end": 1726159547686,
+      "start": 1726412113241,
+      "end": 1726412113243,
       "order": "normal"
     }
   ]

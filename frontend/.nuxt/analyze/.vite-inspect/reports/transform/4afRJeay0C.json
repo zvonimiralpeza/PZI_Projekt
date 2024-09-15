@@ -4,57 +4,57 @@
     {
       "name": "vite:load-fallback",
       "result": "<template>\r\n  <div>\r\n    <v-container>\r\n      <v-row justify=\"center\">\r\n        <v-col cols=\"12\" sm=\"8\" md=\"6\">\r\n          <v-card class=\"small-card\">\r\n            <v-card-title class=\"text-h6 text-center\" style=\"font-family: ; color: #2b9300;\">Registracija</v-card-title>\r\n            <v-card-text>\r\n              <v-form @submit.prevent=\"submitForm\">\r\n                <v-text-field v-model=\"ime\" label=\"Ime\" required persistent></v-text-field>\r\n                <v-text-field v-model=\"prezime\" label=\"Prezime\" required persistent></v-text-field>\r\n                <v-text-field v-model=\"brojTelefona\" label=\"Broj telefona\" required persistent></v-text-field>\r\n                <v-text-field v-model=\"email\" label=\"Email\" required persistent></v-text-field>\r\n                <v-text-field v-model=\"lozinka\" label=\"Lozinka\" type=\"password\" required persistent autocomplete=\"current-password\"></v-text-field>\r\n                <v-btn type=\"submit\" color=\"green\">Potvrdi</v-btn>\r\n              </v-form>\r\n              <br>\r\n              <v-snackbar v-model=\"snackbar.show\" :color=\"snackbar.color\" top>\r\n                {{ snackbar.message }}\r\n                <v-btn color=\"white\" text @click=\"snackbar.show = false\">Close</v-btn>\r\n              </v-snackbar>\r\n            </v-card-text>\r\n          </v-card>\r\n        </v-col>\r\n      </v-row>\r\n    </v-container>\r\n  </div>\r\n</template>\r\n\r\n<script>\r\nexport default {\r\n  data() {\r\n    return {\r\n      ime: '',\r\n      prezime: '',\r\n      brojTelefona: '',\r\n      email: '',\r\n      lozinka: '',\r\n      snackbar: {\r\n        show: false,\r\n        message: '',\r\n        color: ''\r\n      }\r\n    };\r\n  },\r\n  methods: {\r\n    async submitForm() {\r\n      try {\r\n        const response = await fetch(`${this.$config.public.BASE_URL}/users`, {\r\n          method: 'POST',\r\n          headers: {\r\n            'Content-Type': 'application/json'\r\n          },\r\n          body: JSON.stringify({\r\n            first_name: this.ime,\r\n            last_name: this.prezime,\r\n            email: this.email,\r\n            phone: this.brojTelefona,\r\n            password: this.lozinka,\r\n            role: 'Normal'\r\n          })\r\n        });\r\n        \r\n        if (response.ok) {\r\n          this.snackbar.message = 'Registracija uspješna!';\r\n          this.snackbar.color = 'green';\r\n          this.snackbar.show = true;\r\n          // Clear form fields after successful registration\r\n          this.ime = '';\r\n          this.prezime = '';\r\n          this.brojTelefona = '';\r\n          this.email = '';\r\n          this.lozinka = '';\r\n        } else {\r\n          const error = await response.json();\r\n          this.snackbar.message = `Registracija neuspješna: ${error.message}`;\r\n          this.snackbar.color = 'red';\r\n          this.snackbar.show = true;\r\n        }\r\n      } catch (error) {\r\n        console.error('Error:', error);\r\n        this.snackbar.message = 'Greška pri registraciji. Pokušajte ponovo.';\r\n        this.snackbar.color = 'red';\r\n        this.snackbar.show = true;\r\n      }\r\n    }\r\n  }\r\n}\r\n</script>\r\n\r\n<style scoped>\r\n/* Dodatni stilovi za umanjenu karticu */\r\n.small-card {\r\n  width: 100%; /* Prilagođavanje širine prema potrebi */\r\n  margin-top: 20px; /* Prilagođavanje razmaka s vrha */\r\n}\r\n</style>\r\n",
-      "start": 1726159549389,
-      "end": 1726159549943,
+      "start": 1726412114498,
+      "end": 1726412115209,
       "sourcemaps": null
     },
     {
       "name": "nuxt:layer-aliasing",
-      "start": 1726159549943,
-      "end": 1726159549943,
+      "start": 1726412115209,
+      "end": 1726412115209,
       "order": "pre"
     },
     {
       "name": "nuxt:server-devonly:transform",
-      "start": 1726159549943,
-      "end": 1726159549943,
+      "start": 1726412115209,
+      "end": 1726412115209,
       "order": "pre"
     },
     {
       "name": "nuxt:client-fallback-auto-id",
-      "start": 1726159549944,
-      "end": 1726159549944,
+      "start": 1726412115210,
+      "end": 1726412115210,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1726159549944,
-      "end": 1726159549944,
+      "start": 1726412115210,
+      "end": 1726412115210,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1726159549944,
-      "end": 1726159549944,
+      "start": 1726412115210,
+      "end": 1726412115210,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1726159549944,
-      "end": 1726159549944,
+      "start": 1726412115210,
+      "end": 1726412115210,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1726159549944,
-      "end": 1726159549944,
+      "start": 1726412115210,
+      "end": 1726412115210,
       "order": "normal"
     },
     {
       "name": "vite:vue",
       "result": "\r\nconst _sfc_main = {\r\n  data() {\r\n    return {\r\n      ime: '',\r\n      prezime: '',\r\n      brojTelefona: '',\r\n      email: '',\r\n      lozinka: '',\r\n      snackbar: {\r\n        show: false,\r\n        message: '',\r\n        color: ''\r\n      }\r\n    };\r\n  },\r\n  methods: {\r\n    async submitForm() {\r\n      try {\r\n        const response = await fetch(`${this.$config.public.BASE_URL}/users`, {\r\n          method: 'POST',\r\n          headers: {\r\n            'Content-Type': 'application/json'\r\n          },\r\n          body: JSON.stringify({\r\n            first_name: this.ime,\r\n            last_name: this.prezime,\r\n            email: this.email,\r\n            phone: this.brojTelefona,\r\n            password: this.lozinka,\r\n            role: 'Normal'\r\n          })\r\n        });\r\n        \r\n        if (response.ok) {\r\n          this.snackbar.message = 'Registracija uspješna!';\r\n          this.snackbar.color = 'green';\r\n          this.snackbar.show = true;\r\n          // Clear form fields after successful registration\r\n          this.ime = '';\r\n          this.prezime = '';\r\n          this.brojTelefona = '';\r\n          this.email = '';\r\n          this.lozinka = '';\r\n        } else {\r\n          const error = await response.json();\r\n          this.snackbar.message = `Registracija neuspješna: ${error.message}`;\r\n          this.snackbar.color = 'red';\r\n          this.snackbar.show = true;\r\n        }\r\n      } catch (error) {\r\n        console.error('Error:', error);\r\n        this.snackbar.message = 'Greška pri registraciji. Pokušajte ponovo.';\r\n        this.snackbar.color = 'red';\r\n        this.snackbar.show = true;\r\n      }\r\n    }\r\n  }\r\n}\r\n\nimport { createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, withModifiers as _withModifiers, createElementVNode as _createElementVNode, toDisplayString as _toDisplayString, openBlock as _openBlock, createElementBlock as _createElementBlock, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-e213c7bb\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"br\", null, null, -1))\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_v_card_title = _resolveComponent(\"v-card-title\")\n  const _component_v_text_field = _resolveComponent(\"v-text-field\")\n  const _component_v_btn = _resolveComponent(\"v-btn\")\n  const _component_v_form = _resolveComponent(\"v-form\")\n  const _component_v_snackbar = _resolveComponent(\"v-snackbar\")\n  const _component_v_card_text = _resolveComponent(\"v-card-text\")\n  const _component_v_card = _resolveComponent(\"v-card\")\n  const _component_v_col = _resolveComponent(\"v-col\")\n  const _component_v_row = _resolveComponent(\"v-row\")\n  const _component_v_container = _resolveComponent(\"v-container\")\n\n  return (_openBlock(), _createElementBlock(\"div\", null, [\n    _createVNode(_component_v_container, null, {\n      default: _withCtx(() => [\n        _createVNode(_component_v_row, { justify: \"center\" }, {\n          default: _withCtx(() => [\n            _createVNode(_component_v_col, {\n              cols: \"12\",\n              sm: \"8\",\n              md: \"6\"\n            }, {\n              default: _withCtx(() => [\n                _createVNode(_component_v_card, { class: \"small-card\" }, {\n                  default: _withCtx(() => [\n                    _createVNode(_component_v_card_title, {\n                      class: \"text-h6 text-center\",\n                      style: {\"font-family\":\"\",\"color\":\"#2b9300\"}\n                    }, {\n                      default: _withCtx(() => [\n                        _createTextVNode(\"Registracija\")\n                      ]),\n                      _: 1\n                    }),\n                    _createVNode(_component_v_card_text, null, {\n                      default: _withCtx(() => [\n                        _createVNode(_component_v_form, {\n                          onSubmit: _withModifiers($options.submitForm, [\"prevent\"])\n                        }, {\n                          default: _withCtx(() => [\n                            _createVNode(_component_v_text_field, {\n                              modelValue: $data.ime,\n                              \"onUpdate:modelValue\": _cache[0] || (_cache[0] = $event => (($data.ime) = $event)),\n                              label: \"Ime\",\n                              required: \"\",\n                              persistent: \"\"\n                            }, null, 8, [\"modelValue\"]),\n                            _createVNode(_component_v_text_field, {\n                              modelValue: $data.prezime,\n                              \"onUpdate:modelValue\": _cache[1] || (_cache[1] = $event => (($data.prezime) = $event)),\n                              label: \"Prezime\",\n                              required: \"\",\n                              persistent: \"\"\n                            }, null, 8, [\"modelValue\"]),\n                            _createVNode(_component_v_text_field, {\n                              modelValue: $data.brojTelefona,\n                              \"onUpdate:modelValue\": _cache[2] || (_cache[2] = $event => (($data.brojTelefona) = $event)),\n                              label: \"Broj telefona\",\n                              required: \"\",\n                              persistent: \"\"\n                            }, null, 8, [\"modelValue\"]),\n                            _createVNode(_component_v_text_field, {\n                              modelValue: $data.email,\n                              \"onUpdate:modelValue\": _cache[3] || (_cache[3] = $event => (($data.email) = $event)),\n                              label: \"Email\",\n                              required: \"\",\n                              persistent: \"\"\n                            }, null, 8, [\"modelValue\"]),\n                            _createVNode(_component_v_text_field, {\n                              modelValue: $data.lozinka,\n                              \"onUpdate:modelValue\": _cache[4] || (_cache[4] = $event => (($data.lozinka) = $event)),\n                              label: \"Lozinka\",\n                              type: \"password\",\n                              required: \"\",\n                              persistent: \"\",\n                              autocomplete: \"current-password\"\n                            }, null, 8, [\"modelValue\"]),\n                            _createVNode(_component_v_btn, {\n                              type: \"submit\",\n                              color: \"green\"\n                            }, {\n                              default: _withCtx(() => [\n                                _createTextVNode(\"Potvrdi\")\n                              ]),\n                              _: 1\n                            })\n                          ]),\n                          _: 1\n                        }, 8, [\"onSubmit\"]),\n                        _hoisted_1,\n                        _createVNode(_component_v_snackbar, {\n                          modelValue: $data.snackbar.show,\n                          \"onUpdate:modelValue\": _cache[6] || (_cache[6] = $event => (($data.snackbar.show) = $event)),\n                          color: $data.snackbar.color,\n                          top: \"\"\n                        }, {\n                          default: _withCtx(() => [\n                            _createTextVNode(_toDisplayString($data.snackbar.message) + \" \", 1),\n                            _createVNode(_component_v_btn, {\n                              color: \"white\",\n                              text: \"\",\n                              onClick: _cache[5] || (_cache[5] = $event => ($data.snackbar.show = false))\n                            }, {\n                              default: _withCtx(() => [\n                                _createTextVNode(\"Close\")\n                              ]),\n                              _: 1\n                            })\n                          ]),\n                          _: 1\n                        }, 8, [\"modelValue\", \"color\"])\n                      ]),\n                      _: 1\n                    })\n                  ]),\n                  _: 1\n                })\n              ]),\n              _: 1\n            })\n          ]),\n          _: 1\n        })\n      ]),\n      _: 1\n    })\n  ]))\n}\n\nimport \"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/registracija.vue?vue&type=style&index=0&scoped=e213c7bb&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-e213c7bb\"]])",
-      "start": 1726159549944,
-      "end": 1726159549949,
+      "start": 1726412115210,
+      "end": 1726412115214,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -62,160 +62,160 @@
     },
     {
       "name": "vite:vue-jsx",
-      "start": 1726159549949,
-      "end": 1726159549949,
+      "start": 1726412115214,
+      "end": 1726412115214,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1726159549949,
-      "end": 1726159549950,
+      "start": 1726412115214,
+      "end": 1726412115214,
       "order": "normal"
     },
     {
       "name": "nuxt:remove-plugin-metadata",
-      "start": 1726159549950,
-      "end": 1726159549950,
+      "start": 1726412115214,
+      "end": 1726412115214,
       "order": "normal"
     },
     {
       "name": "nuxt:chunk-error",
-      "start": 1726159549950,
-      "end": 1726159549950,
+      "start": 1726412115214,
+      "end": 1726412115214,
       "order": "normal"
     },
     {
       "name": "vuetify:import",
       "result": "\r\nconst _sfc_main = {\r\n  data() {\r\n    return {\r\n      ime: '',\r\n      prezime: '',\r\n      brojTelefona: '',\r\n      email: '',\r\n      lozinka: '',\r\n      snackbar: {\r\n        show: false,\r\n        message: '',\r\n        color: ''\r\n      }\r\n    };\r\n  },\r\n  methods: {\r\n    async submitForm() {\r\n      try {\r\n        const response = await fetch(`${this.$config.public.BASE_URL}/users`, {\r\n          method: 'POST',\r\n          headers: {\r\n            'Content-Type': 'application/json'\r\n          },\r\n          body: JSON.stringify({\r\n            first_name: this.ime,\r\n            last_name: this.prezime,\r\n            email: this.email,\r\n            phone: this.brojTelefona,\r\n            password: this.lozinka,\r\n            role: 'Normal'\r\n          })\r\n        });\r\n        \r\n        if (response.ok) {\r\n          this.snackbar.message = 'Registracija uspješna!';\r\n          this.snackbar.color = 'green';\r\n          this.snackbar.show = true;\r\n          // Clear form fields after successful registration\r\n          this.ime = '';\r\n          this.prezime = '';\r\n          this.brojTelefona = '';\r\n          this.email = '';\r\n          this.lozinka = '';\r\n        } else {\r\n          const error = await response.json();\r\n          this.snackbar.message = `Registracija neuspješna: ${error.message}`;\r\n          this.snackbar.color = 'red';\r\n          this.snackbar.show = true;\r\n        }\r\n      } catch (error) {\r\n        console.error('Error:', error);\r\n        this.snackbar.message = 'Greška pri registraciji. Pokušajte ponovo.';\r\n        this.snackbar.color = 'red';\r\n        this.snackbar.show = true;\r\n      }\r\n    }\r\n  }\r\n}\r\n\nimport { createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, withModifiers as _withModifiers, createElementVNode as _createElementVNode, toDisplayString as _toDisplayString, openBlock as _openBlock, createElementBlock as _createElementBlock, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-e213c7bb\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"br\", null, null, -1))\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n                                                                   \n                                                                   \n                                                     \n                                                       \n                                                               \n                                                                 \n                                                       \n                                                     \n                                                     \n                                                                 \n\n  return (_openBlock(), _createElementBlock(\"div\", null, [\n    _createVNode(_component_v_container, null, {\n      default: _withCtx(() => [\n        _createVNode(_component_v_row, { justify: \"center\" }, {\n          default: _withCtx(() => [\n            _createVNode(_component_v_col, {\n              cols: \"12\",\n              sm: \"8\",\n              md: \"6\"\n            }, {\n              default: _withCtx(() => [\n                _createVNode(_component_v_card, { class: \"small-card\" }, {\n                  default: _withCtx(() => [\n                    _createVNode(_component_v_card_title, {\n                      class: \"text-h6 text-center\",\n                      style: {\"font-family\":\"\",\"color\":\"#2b9300\"}\n                    }, {\n                      default: _withCtx(() => [\n                        _createTextVNode(\"Registracija\")\n                      ]),\n                      _: 1\n                    }),\n                    _createVNode(_component_v_card_text, null, {\n                      default: _withCtx(() => [\n                        _createVNode(_component_v_form, {\n                          onSubmit: _withModifiers($options.submitForm, [\"prevent\"])\n                        }, {\n                          default: _withCtx(() => [\n                            _createVNode(_component_v_text_field, {\n                              modelValue: $data.ime,\n                              \"onUpdate:modelValue\": _cache[0] || (_cache[0] = $event => (($data.ime) = $event)),\n                              label: \"Ime\",\n                              required: \"\",\n                              persistent: \"\"\n                            }, null, 8, [\"modelValue\"]),\n                            _createVNode(_component_v_text_field, {\n                              modelValue: $data.prezime,\n                              \"onUpdate:modelValue\": _cache[1] || (_cache[1] = $event => (($data.prezime) = $event)),\n                              label: \"Prezime\",\n                              required: \"\",\n                              persistent: \"\"\n                            }, null, 8, [\"modelValue\"]),\n                            _createVNode(_component_v_text_field, {\n                              modelValue: $data.brojTelefona,\n                              \"onUpdate:modelValue\": _cache[2] || (_cache[2] = $event => (($data.brojTelefona) = $event)),\n                              label: \"Broj telefona\",\n                              required: \"\",\n                              persistent: \"\"\n                            }, null, 8, [\"modelValue\"]),\n                            _createVNode(_component_v_text_field, {\n                              modelValue: $data.email,\n                              \"onUpdate:modelValue\": _cache[3] || (_cache[3] = $event => (($data.email) = $event)),\n                              label: \"Email\",\n                              required: \"\",\n                              persistent: \"\"\n                            }, null, 8, [\"modelValue\"]),\n                            _createVNode(_component_v_text_field, {\n                              modelValue: $data.lozinka,\n                              \"onUpdate:modelValue\": _cache[4] || (_cache[4] = $event => (($data.lozinka) = $event)),\n                              label: \"Lozinka\",\n                              type: \"password\",\n                              required: \"\",\n                              persistent: \"\",\n                              autocomplete: \"current-password\"\n                            }, null, 8, [\"modelValue\"]),\n                            _createVNode(_component_v_btn, {\n                              type: \"submit\",\n                              color: \"green\"\n                            }, {\n                              default: _withCtx(() => [\n                                _createTextVNode(\"Potvrdi\")\n                              ]),\n                              _: 1\n                            })\n                          ]),\n                          _: 1\n                        }, 8, [\"onSubmit\"]),\n                        _hoisted_1,\n                        _createVNode(_component_v_snackbar, {\n                          modelValue: $data.snackbar.show,\n                          \"onUpdate:modelValue\": _cache[6] || (_cache[6] = $event => (($data.snackbar.show) = $event)),\n                          color: $data.snackbar.color,\n                          top: \"\"\n                        }, {\n                          default: _withCtx(() => [\n                            _createTextVNode(_toDisplayString($data.snackbar.message) + \" \", 1),\n                            _createVNode(_component_v_btn, {\n                              color: \"white\",\n                              text: \"\",\n                              onClick: _cache[5] || (_cache[5] = $event => ($data.snackbar.show = false))\n                            }, {\n                              default: _withCtx(() => [\n                                _createTextVNode(\"Close\")\n                              ]),\n                              _: 1\n                            })\n                          ]),\n                          _: 1\n                        }, 8, [\"modelValue\", \"color\"])\n                      ]),\n                      _: 1\n                    })\n                  ]),\n                  _: 1\n                })\n              ]),\n              _: 1\n            })\n          ]),\n          _: 1\n        })\n      ]),\n      _: 1\n    })\n  ]))\n}\n\nimport \"C:/Users/DT User/Desktop/ProjektPZI/frontend/pages/registracija.vue?vue&type=style&index=0&scoped=e213c7bb&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-e213c7bb\"]])\n\n/* Vuetify */\nimport { VBtn as _component_v_btn } from \"vuetify/lib/components/VBtn/index.mjs\"\nimport { VCardTitle as _component_v_card_title, VCardText as _component_v_card_text, VCard as _component_v_card } from \"vuetify/lib/components/VCard/index.mjs\"\nimport { VForm as _component_v_form } from \"vuetify/lib/components/VForm/index.mjs\"\nimport { VCol as _component_v_col, VRow as _component_v_row, VContainer as _component_v_container } from \"vuetify/lib/components/VGrid/index.mjs\"\nimport { VSnackbar as _component_v_snackbar } from \"vuetify/lib/components/VSnackbar/index.mjs\"\nimport { VTextField as _component_v_text_field } from \"vuetify/lib/components/VTextField/index.mjs\"\n\n",
-      "start": 1726159549950,
-      "end": 1726159549950,
+      "start": 1726412115214,
+      "end": 1726412115215,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "nuxt:components:imports",
-      "start": 1726159549950,
-      "end": 1726159549950,
+      "start": 1726412115215,
+      "end": 1726412115215,
       "order": "normal"
     },
     {
       "name": "replace",
-      "start": 1726159549950,
-      "end": 1726159549950,
+      "start": 1726412115215,
+      "end": 1726412115216,
       "order": "normal"
     },
     {
       "name": "ssr-styles",
-      "start": 1726159549950,
-      "end": 1726159549950,
+      "start": 1726412115216,
+      "end": 1726412115216,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1726159549950,
-      "end": 1726159549950,
+      "start": 1726412115216,
+      "end": 1726412115216,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1726159549950,
-      "end": 1726159549950,
+      "start": 1726412115216,
+      "end": 1726412115216,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1726159549950,
-      "end": 1726159549950,
+      "start": 1726412115216,
+      "end": 1726412115216,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1726159549950,
-      "end": 1726159549950,
+      "start": 1726412115216,
+      "end": 1726412115216,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1726159549950,
-      "end": 1726159549950,
+      "start": 1726412115216,
+      "end": 1726412115216,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1726159549950,
-      "end": 1726159549950,
+      "start": 1726412115216,
+      "end": 1726412115216,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1726159549950,
-      "end": 1726159549950,
+      "start": 1726412115217,
+      "end": 1726412115217,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1726159549950,
-      "end": 1726159549950,
+      "start": 1726412115217,
+      "end": 1726412115217,
       "order": "normal"
     },
     {
       "name": "nuxt:composable-keys",
-      "start": 1726159549950,
-      "end": 1726159549951,
+      "start": 1726412115217,
+      "end": 1726412115217,
       "order": "post"
     },
     {
       "name": "nuxt:imports-transform",
-      "start": 1726159549951,
-      "end": 1726159549953,
+      "start": 1726412115217,
+      "end": 1726412115221,
       "order": "post"
     },
     {
       "name": "unctx:transform",
-      "start": 1726159549953,
-      "end": 1726159549953,
+      "start": 1726412115221,
+      "end": 1726412115221,
       "order": "post"
     },
     {
       "name": "nuxt:pages-macros-transform",
-      "start": 1726159549953,
-      "end": 1726159549953,
+      "start": 1726412115221,
+      "end": 1726412115221,
       "order": "post"
     },
     {
       "name": "nuxt:runtime-paths-dep",
-      "start": 1726159549953,
-      "end": 1726159549953,
+      "start": 1726412115221,
+      "end": 1726412115221,
       "order": "post"
     },
     {
       "name": "nuxt:route-injection-plugin",
-      "start": 1726159549953,
-      "end": 1726159549953,
+      "start": 1726412115221,
+      "end": 1726412115221,
       "order": "post"
     },
     {
       "name": "nuxt:components-loader",
-      "start": 1726159549953,
-      "end": 1726159549953,
+      "start": 1726412115221,
+      "end": 1726412115221,
       "order": "post"
     },
     {
       "name": "nuxt:tree-shake-composables:transform",
-      "start": 1726159549953,
-      "end": 1726159549953,
+      "start": 1726412115221,
+      "end": 1726412115221,
       "order": "post"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1726159549953,
-      "end": 1726159549954,
+      "start": 1726412115221,
+      "end": 1726412115222,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1726159549954,
-      "end": 1726159549954,
+      "start": 1726412115222,
+      "end": 1726412115222,
       "order": "normal"
     }
   ]
