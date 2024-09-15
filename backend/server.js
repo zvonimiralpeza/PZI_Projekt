@@ -5,7 +5,10 @@ const cors = require('cors');
 const app = express();
 const port = 5000;
 
-app.use(cors());
+app.use(cors({
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT']
+}));
 
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
