@@ -20,7 +20,7 @@ const client_manifest = {
     "file": "VTextField.36399791.css",
     "src": "VTextField.css"
   },
-  "_VCard.e5b34edc.js": {
+  "_VCard.2cadbc38.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
@@ -28,7 +28,7 @@ const client_manifest = {
     "css": [
       "VCard.fb0072d0.css"
     ],
-    "file": "VCard.e5b34edc.js",
+    "file": "VCard.2cadbc38.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -39,18 +39,18 @@ const client_manifest = {
     "prefetch": true,
     "preload": true
   },
-  "_VForm.c48a33f6.js": {
+  "_VForm.8feb3687.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "VForm.c48a33f6.js",
+    "file": "VForm.8feb3687.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_VTextField.f43ddc1b.js"
+      "_VTextField.33b3bea0.js"
     ]
   },
-  "_VOverlay.09b93e8d.js": {
+  "_VOverlay.f9cdbb3b.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
@@ -58,10 +58,10 @@ const client_manifest = {
     "css": [
       "VOverlay.ec701ff3.css"
     ],
-    "file": "VOverlay.09b93e8d.js",
+    "file": "VOverlay.f9cdbb3b.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_VTextField.f43ddc1b.js"
+      "_VTextField.33b3bea0.js"
     ]
   },
   "VOverlay.ec701ff3.css": {
@@ -70,7 +70,7 @@ const client_manifest = {
     "prefetch": true,
     "preload": true
   },
-  "_VTextField.f43ddc1b.js": {
+  "_VTextField.33b3bea0.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
@@ -78,7 +78,7 @@ const client_manifest = {
     "css": [
       "VTextField.36399791.css"
     ],
-    "file": "VTextField.f43ddc1b.js",
+    "file": "VTextField.33b3bea0.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -89,23 +89,23 @@ const client_manifest = {
     "prefetch": true,
     "preload": true
   },
-  "_dialog-transition.5a79d139.js": {
+  "_dialog-transition.5143d28d.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "dialog-transition.5a79d139.js",
+    "file": "dialog-transition.5143d28d.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_VTextField.f43ddc1b.js"
+      "_VTextField.33b3bea0.js"
     ]
   },
-  "_vue.f36acd1f.89479e0d.js": {
+  "_vue.f36acd1f.4d6c2a8a.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "vue.f36acd1f.89479e0d.js",
+    "file": "vue.f36acd1f.4d6c2a8a.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -147,10 +147,10 @@ const client_manifest = {
     "prefetch": true,
     "preload": true,
     "css": [],
-    "file": "error-404.66c7877b.js",
+    "file": "error-404.6cef3f88.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_vue.f36acd1f.89479e0d.js"
+      "_vue.f36acd1f.4d6c2a8a.js"
     ],
     "isDynamicEntry": true,
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue"
@@ -174,9 +174,9 @@ const client_manifest = {
     "prefetch": true,
     "preload": true,
     "css": [],
-    "file": "error-500.31b5b58f.js",
+    "file": "error-500.59698e66.js",
     "imports": [
-      "_vue.f36acd1f.89479e0d.js",
+      "_vue.f36acd1f.4d6c2a8a.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
     "isDynamicEntry": true,
@@ -213,7 +213,7 @@ const client_manifest = {
       "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
       "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue"
     ],
-    "file": "entry.5d2ac74f.js",
+    "file": "entry.bcefcb11.js",
     "isEntry": true,
     "src": "node_modules/nuxt/dist/app/entry.js",
     "_globalCSS": true
@@ -249,10 +249,10 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "Akcija.777bb02e.js",
+    "file": "Akcija.fe41555a.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_VCard.e5b34edc.js"
+      "_VCard.2cadbc38.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/Akcija.vue"
@@ -262,7 +262,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "Onama.08642c09.js",
+    "file": "Onama.bdd86e73.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -274,12 +274,12 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "edit.5402fcac.js",
+    "file": "edit.dd18821a.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_VCard.e5b34edc.js",
-      "_VForm.c48a33f6.js",
-      "_VTextField.f43ddc1b.js"
+      "_VCard.2cadbc38.js",
+      "_VForm.8feb3687.js",
+      "_VTextField.33b3bea0.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/edit.vue"
@@ -289,10 +289,10 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "index.005dccde.js",
+    "file": "index.afc2a806.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_VCard.e5b34edc.js"
+      "_VCard.2cadbc38.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/index.vue"
@@ -310,13 +310,13 @@ const client_manifest = {
     "prefetch": true,
     "preload": true,
     "css": [],
-    "file": "kupovina.f5f4b6f3.js",
+    "file": "kupovina.f2be71e8.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_VTextField.f43ddc1b.js",
-      "_dialog-transition.5a79d139.js",
-      "_VOverlay.09b93e8d.js",
-      "_VCard.e5b34edc.js"
+      "_VTextField.33b3bea0.js",
+      "_dialog-transition.5143d28d.js",
+      "_VOverlay.f9cdbb3b.js",
+      "_VCard.2cadbc38.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/kupovina.vue"
@@ -340,14 +340,14 @@ const client_manifest = {
     "prefetch": true,
     "preload": true,
     "css": [],
-    "file": "login.22354bf9.js",
+    "file": "login.24732acf.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_VOverlay.09b93e8d.js",
-      "_VTextField.f43ddc1b.js",
-      "_dialog-transition.5a79d139.js",
-      "_VCard.e5b34edc.js",
-      "_VForm.c48a33f6.js"
+      "_VOverlay.f9cdbb3b.js",
+      "_VTextField.33b3bea0.js",
+      "_dialog-transition.5143d28d.js",
+      "_VCard.2cadbc38.js",
+      "_VForm.8feb3687.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/login.vue"
@@ -363,12 +363,12 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "prodaja.27eedbb2.js",
+    "file": "prodaja.a967bce3.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_VCard.e5b34edc.js",
-      "_VForm.c48a33f6.js",
-      "_VTextField.f43ddc1b.js"
+      "_VCard.2cadbc38.js",
+      "_VForm.8feb3687.js",
+      "_VTextField.33b3bea0.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/prodaja.vue"
@@ -386,13 +386,13 @@ const client_manifest = {
     "prefetch": true,
     "preload": true,
     "css": [],
-    "file": "registracija.bf863a21.js",
+    "file": "registracija.589f3491.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_VCard.e5b34edc.js",
-      "_VForm.c48a33f6.js",
-      "_VTextField.f43ddc1b.js",
-      "_VOverlay.09b93e8d.js"
+      "_VCard.2cadbc38.js",
+      "_VForm.8feb3687.js",
+      "_VTextField.33b3bea0.js",
+      "_VOverlay.f9cdbb3b.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/registracija.vue"
@@ -408,7 +408,7 @@ const client_manifest = {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "test.779b5bbf.js",
+    "file": "test.df29e9d4.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ],

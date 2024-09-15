@@ -20,7 +20,7 @@ import { dirname, resolve } from 'file://C:/Users/DT%20User/Desktop/ProjektPZI/f
 
 const inlineAppConfig = {
   "nuxt": {
-    "buildId": "eedbf69f-4ec0-441c-9654-636ae6353164"
+    "buildId": "f4c6a97b-8681-45f9-8c90-ba9cd144394f"
   }
 };
 
@@ -58,7 +58,7 @@ const _inlineRuntimeConfig = {
     }
   },
   "public": {
-    "BASE_URL": "art.studenti.sum.ba"
+    "BASE_URL": "http://art.studenti.sum.ba"
   }
 };
 const ENV_PREFIX = "NITRO_";
