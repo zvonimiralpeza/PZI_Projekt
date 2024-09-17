@@ -7,7 +7,7 @@ const port = 5009;
 
 app.use(cors({
   origin: '*',
-  methods: ['GET', 'POST', 'PUT']
+  methods: ['GET', 'POST', 'PUT', 'DELETE']
 }));
 
 const bcrypt = require('bcrypt');
@@ -131,6 +131,23 @@ app.get('/products', (req, res) => {
   });
 });
 
+app.post('/products', (req, res) => {
+  const { name, url, price, author, technique, year, seller_id } = req.body;
+  if (!name || !url || !price || !author || !technique || !year || !seller_id) {
+    res.status(400).json({ error: 'Name, url, price, author, technique, year, and seller_id are required.' });
+    return;
+  }
+
+  db.run('INSERT INTO products (name, url, price, author, technique, year, seller_id) VALUES (?, ?, ?, ?, ?, ?, ?)', 
+    [name, url, price, author, technique, year, seller_id], 
+    function (err) {
+      if (err) {
+        res.status(500).json({ error: err.message });
+        return;
+      }
+      res.json({ id: this.lastID });
+  });
+})
 
 app.post('/login', (req, res) => {
   const { email, password } = req.body;
